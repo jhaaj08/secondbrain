@@ -1,0 +1,57 @@
+[
+  {
+    "note_id": "real-world-applications-of-probability",
+    "source_note": "Main/Statistics/Application of Probability.md",
+    "title": "Real-World Applications of Probability",
+    "domain": "application-of-probability",
+    "tags": [
+      "probability",
+      "applications",
+      "statistics",
+      "set-theory",
+      "venn-diagrams"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "How can you calculate the probability of neither of two events occurring using their individual and joint probabilities?",
+        "answer": "You calculate the probability of neither event occurring by first finding the probability of either event occurring using P(A \u222a B) = P(A) + P(B) - P(A \u2229 B) and then using P(neither) = 1 - P(A \u222a B)."
+      },
+      {
+        "type": "cloze",
+        "text": "The {{complement rule}} is used to find the probability of an event not occurring.",
+        "hint": "Think about event and non-event probability relationships."
+      },
+      {
+        "type": "mcq",
+        "question": "A clothing store analyzes that 30% of customers buy shirts, 20% buy pants, and 10% buy both shirts and pants. What is the percentage of customers who buy neither?",
+        "options": {
+          "A": "60%",
+          "B": "50%",
+          "C": "40%",
+          "D": "30%"
+        },
+        "answer": "A",
+        "explanation": "Using the complement of the union of the probabilities, 1 - (0.3 + 0.2 - 0.1) = 0.6, which means 60% buy neither."
+      },
+      {
+        "type": "basic",
+        "question": "In a group of 100 students, 45 pass Math, 60 pass English, and 25 pass both. How many do not pass either?",
+        "answer": "20 students do not pass either subject, calculated using 100 - (45 + 60 - 25)."
+      },
+      {
+        "type": "mcq",
+        "question": "What visualization tool is suggested for solving probability word problems involving intersections?",
+        "options": {
+          "A": "Line graphs",
+          "B": "Pie charts",
+          "C": "Venn diagrams",
+          "D": "Bar charts"
+        },
+        "answer": "C",
+        "explanation": "Venn diagrams help visualize intersections and unions in probability."
+      }
+    ]
+  }
+]

@@ -1,0 +1,114 @@
+{
+  "domain": "deep-learning",
+  "generated": "2026-05-23",
+  "note_count": 67,
+  "question_count": 13,
+  "questions": [
+    {
+      "type": "short_answer",
+      "topic": "Backpropagation Through Time",
+      "question": "Explain how Backpropagation Through Time (BPTT) aids in training Recurrent Neural Networks.",
+      "answer": "BPTT aids in training RNNs by unrolling the network across time steps to calculate the loss and update weights. It adjusts for temporal dependencies by computing gradients with respect to the recurrent weights, enabling effective learning of sequences."
+    },
+    {
+      "type": "scenario",
+      "topic": "Adaptive Learning Rates",
+      "prompt": "You are training a model with sparse data and notice the learning rate is not effective. How would you adjust this using an adaptive learning rate strategy, and why?",
+      "answer": "Using AdaGrad would be advisable as it adjusts learning rates based on the accumulation of past gradients, which works well with sparse data. It increases learning rates for infrequent features, ensuring even minor features are adequately updated."
+    },
+    {
+      "type": "mcq",
+      "topic": "ReLU Activation",
+      "question": "How does the Leaky ReLU activation function differ from the traditional ReLU?",
+      "options": {
+        "A": "It flips all negative inputs to positive.",
+        "B": "It allows a small gradient for negative inputs.",
+        "C": "It only outputs zero for negative inputs.",
+        "D": "It is purely linear."
+      },
+      "answer": "B",
+      "explanation": "Leaky ReLU allows a small non-zero gradient for negative inputs, mitigating the 'dead neuron' problem where neurons become inactive."
+    },
+    {
+      "type": "short_answer",
+      "topic": "Encoder-Decoder Architecture",
+      "question": "Describe the role of an encoder-decoder architecture in natural language processing tasks, such as machine translation.",
+      "answer": "The encoder processes input data into a fixed-size context vector, while the decoder generates the output based on this vector. This architecture is used to translate input sequences into different language outputs by understanding the context."
+    },
+    {
+      "type": "scenario",
+      "topic": "Regularization",
+      "prompt": "Your deep learning model is overfitting the training data. Discuss two regularization techniques you would consider to reduce overfitting.",
+      "answer": "Applying L2 regularization to penalize large weights can reduce overfitting by smoothing the model's response to input fluctuations. Additionally, implementing dropout can prevent co-adaptation of neurons by randomly deactivating them during training, encouraging independence and robustness."
+    },
+    {
+      "type": "mcq",
+      "topic": "Optimization Algorithms",
+      "question": "Which optimization algorithm adjusts learning rates based on an exponentially weighted average of past squared gradients?",
+      "options": {
+        "A": "Adam",
+        "B": "RMSProp",
+        "C": "SGD",
+        "D": "AdaGrad"
+      },
+      "answer": "B",
+      "explanation": "RMSProp improves on AdaGrad by incorporating an exponentially weighted moving average of squared gradients, providing a more balanced approach to prevent rapid learning rate decay."
+    },
+    {
+      "type": "short_answer",
+      "topic": "LSTM Cells",
+      "question": "How do LSTM cells prevent the vanishing gradient problem found in standard RNNs?",
+      "answer": "LSTM cells use gating mechanisms to control information flow across time steps. The forget gate, input gate, and output gate regulate what information is retained, discarded, or output, allowing gradients to be preserved over longer sequences and mitigating vanishing gradients."
+    },
+    {
+      "type": "scenario",
+      "topic": "Batch vs. Mini-Batch Gradient Descent",
+      "prompt": "For a large dataset with millions of records, which type of gradient descent would you choose and why?",
+      "answer": "Mini-Batch Gradient Descent is ideal for handling large datasets, as it balances computational efficiency and convergence stability. It uses batches smaller than the dataset size, reducing memory usage and speeding up convergence through more frequent updates."
+    },
+    {
+      "type": "mcq",
+      "topic": "Attention Mechanism",
+      "question": "What problem does the attention mechanism solve in RNN Encoder-Decoder models?",
+      "options": {
+        "A": "Handling noise in data",
+        "B": "Increasing training speed",
+        "C": "Resolving the information bottleneck",
+        "D": "Improving memory usage"
+      },
+      "answer": "C",
+      "explanation": "The attention mechanism allows the decoder to dynamically focus on different parts of the input sequence, alleviating the bottleneck of relying on a fixed-size context vector."
+    },
+    {
+      "type": "short_answer",
+      "topic": "Convolutional Layers",
+      "question": "Explain the primary benefit of using convolutional layers over fully connected layers in image processing tasks.",
+      "answer": "Convolutional layers reduce the number of parameters by taking advantage of local connectivity and parameter sharing, which allows them to efficiently capture spatial hierarchies in images, making them more suitable for image processing."
+    },
+    {
+      "type": "scenario",
+      "topic": "Sequence Learning",
+      "prompt": "You are building an RNN for time series prediction but experiencing difficulty with long sequences. What advanced networks would you consider using and why?",
+      "answer": "Switching to LSTM or GRU networks would be beneficial since they mitigate vanishing gradient issues through gating mechanisms, enabling the network to learn long-term dependencies effectively."
+    },
+    {
+      "type": "mcq",
+      "topic": "AdaMax",
+      "question": "How does AdaMax address the initial bias problem present in Adam?",
+      "options": {
+        "A": "By using more complex bias correction",
+        "B": "By eliminating the need for a bias correction due to L Infinity Norm",
+        "C": "By initializing histories to non-zero values",
+        "D": "By reducing the learning rate incrementally"
+      },
+      "answer": "B",
+      "explanation": "AdaMax uses the L Infinity Norm, which does not suffer from initial zero bias, eliminating the requirement for bias correction."
+    },
+    {
+      "type": "short_answer",
+      "topic": "Pooling Layers",
+      "question": "Why are pooling layers crucial in Convolutional Neural Networks?",
+      "answer": "Pooling layers help downsample feature maps, significantly reducing the computational load and model size while providing translation invariance by focusing the model on the presence of features rather than their exact positions."
+    }
+  ]
+}

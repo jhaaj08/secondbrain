@@ -1,0 +1,83 @@
+{
+  "domain": "application-of-probability",
+  "generated": "2026-05-23",
+  "note_count": 1,
+  "question_count": 9,
+  "questions": [
+    {
+      "type": "mcq",
+      "topic": "complement rule",
+      "question": "Which rule is used to determine the probability of an event not occurring?",
+      "options": {
+        "A": "Addition rule",
+        "B": "Complement rule",
+        "C": "Multiplication rule",
+        "D": "Bayes' rule"
+      },
+      "answer": "B",
+      "explanation": "The complement rule is applied to find the probability of an event not occurring by subtracting the probability of the event from 1."
+    },
+    {
+      "type": "short_answer",
+      "topic": "Joint probability",
+      "question": "Explain how joint probability is used to calculate the probability of both events occurring in a scenario.",
+      "answer": "Joint probability is used to calculate the probability that two events both occur by finding the intersection of probabilities of each individual event."
+    },
+    {
+      "type": "scenario",
+      "topic": "probability calculation",
+      "prompt": "A music store has determined that the probability of a customer buying a guitar is 0.25, and the probability of buying a piano is 0.15. Additionally, 5% of customers buy both. Calculate the probability of a customer buying neither a guitar nor a piano.",
+      "answer": "The probability of buying either a guitar or a piano is P(G \u222a P) = P(G) + P(P) - P(G \u2229 P) = 0.25 + 0.15 - 0.05 = 0.35. Therefore, the probability of buying neither is 1 - 0.35 = 0.65."
+    },
+    {
+      "type": "mcq",
+      "topic": "Venn diagrams",
+      "question": "Which type of graphical representation is most useful for visualizing the relationships between multiple event probabilities?",
+      "options": {
+        "A": "Line graphs",
+        "B": "Pie charts",
+        "C": "Venn diagrams",
+        "D": "Histograms"
+      },
+      "answer": "C",
+      "explanation": "Venn diagrams are particularly useful for depicting sets and showing the intersection and union of events, aiding in probability calculations."
+    },
+    {
+      "type": "short_answer",
+      "topic": "Union of events",
+      "question": "Describe the process and formula to find the probability of the union of two events.",
+      "answer": "To find the probability of the union of two events, use the formula P(A \u222a B) = P(A) + P(B) - P(A \u2229 B), which accounts for the probability of each event happening minus the overlap (joint probability) of both events happening."
+    },
+    {
+      "type": "scenario",
+      "topic": "real-world application",
+      "prompt": "A delivery company observes that 40% of deliveries are on time, 30% are early, and 10% are both on time and early. What is the probability that a delivery is either on time or early, but not both?",
+      "answer": "The probability of a delivery being either on time or early is P(On time \u222a Early) = P(On time) + P(Early) - P(On time \u2229 Early) = 0.40 + 0.30 - 0.10 = 0.60. However, since we need to exclude those that are both, the probability is 0.60 - 0.10 = 0.50."
+    },
+    {
+      "type": "mcq",
+      "topic": "Probability of neither event",
+      "question": "A firm determines that 35% of callers inquire about services, 25% about products, with an overlap of 15%. What percentage of callers inquire about neither services nor products?",
+      "options": {
+        "A": "45%",
+        "B": "55%",
+        "C": "65%",
+        "D": "75%"
+      },
+      "answer": "B",
+      "explanation": "Calculate by finding the probability of inquiring about either: P(S \u222a P) = 0.35 + 0.25 - 0.15 = 0.45. So, the probability of inquiring about neither is 1 - 0.45 = 0.55."
+    },
+    {
+      "type": "short_answer",
+      "topic": "Intersection vs Union",
+      "question": "Compare intersections and unions of events in terms of probability computation.",
+      "answer": "Intersections focus on the probability that two or more events happen together, using P(A \u2229 B). Unions calculate the probability of at least one of the events occurring using P(A \u222a B). Unions consider overlap using the formula P(A) + P(B) - P(A \u2229 B)."
+    },
+    {
+      "type": "scenario",
+      "topic": "events and outcomes",
+      "prompt": "A die is rolled and a coin is flipped. Calculate the probability that the die shows a number greater than 4 and the coin shows heads.",
+      "answer": "The probability of the die showing a number greater than 4 (5 or 6) is 2/6 = 1/3. The probability of the coin showing heads is 1/2. The combined probability of both independent events occurring is (1/3) * (1/2) = 1/6."
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "domain": "general",
+  "generated": "2026-05-23",
+  "note_count": 145,
+  "question_count": 15,
+  "questions": [
+    {
+      "type": "mcq",
+      "topic": "symbol grounding",
+      "question": "What is the primary challenge addressed by the Symbol Grounding Problem in AI?",
+      "options": {
+        "A": "Enhancing computational speed",
+        "B": "Understanding how symbols gain meaning through real-world interactions",
+        "C": "Increasing hardware compatibility",
+        "D": "Reducing system design complexity"
+      },
+      "answer": "B",
+      "explanation": "The Symbol Grounding Problem explores how abstract symbols become meaningful through connections to real-world objects and concepts."
+    },
+    {
+      "type": "short_answer",
+      "topic": "Dartmouth Conference",
+      "question": "Explain the significance of the 1956 Dartmouth Conference to the field of Artificial Intelligence.",
+      "answer": "The 1956 Dartmouth Conference is considered the birthplace of AI as a field of study, as it proposed that every aspect of learning or intelligence could be precisely described so that it could be simulated by machines."
+    },
+    {
+      "type": "scenario",
+      "topic": "biological naturalism",
+      "prompt": "A new AI model claims to simulate human understanding. How might Biological Naturalism critique this claim?",
+      "answer": "Biological Naturalism would argue that true understanding is a biological process dependent on the specific physical-chemical properties of the brain, which cannot be replicated merely by simulating behavioral responses or processing information like machines."
+    },
+    {
+      "type": "mcq",
+      "topic": "constraint satisfaction problems",
+      "question": "What is the purpose of the AC-3 algorithm in solving Constraint Satisfaction Problems (CSPs)?",
+      "options": {
+        "A": "To assign random values to hasten solving",
+        "B": "To solve the problem complexity exactly",
+        "C": "To add more constraints and reduce possibilities",
+        "D": "To eliminate impossible domain values by checking graph edges"
+      },
+      "answer": "D",
+      "explanation": "The AC-3 algorithm performs constraint propagation by examining edges in the constraint graph to remove values that violate constraints, thus reducing the search space."
+    },
+    {
+      "type": "short_answer",
+      "topic": "Logic Theorist",
+      "question": "What was the main contribution of the Logic Theorist to the field of AI?",
+      "answer": "The Logic Theorist was one of the first AI programs capable of proving mathematical theorems by applying heuristic search strategies, demonstrating machine reasoning similar to human problem-solving."
+    },
+    {
+      "type": "scenario",
+      "topic": "intelligent agents",
+      "prompt": "A self-driving car uses sensors to navigate and make real-time decisions on the road. Which core components of intelligent agents does this illustrate, and how?",
+      "answer": "The self-driving car exemplifies perception (by using sensors to gather environmental data), deliberation (by processing information to make driving decisions), and autonomy (by executing those decisions without human intervention)."
+    },
+    {
+      "type": "mcq",
+      "topic": "Turing Test",
+      "question": "What is the core idea behind the Turing Test as proposed by Alan Turing in 1950?",
+      "options": {
+        "A": "To assess a machine's programming efficiency",
+        "B": "To evaluate a machine's ability to exhibit behavior indistinguishable from a human",
+        "C": "To test a machine's mathematical capabilities",
+        "D": "To measure the speed of a machine's processing power"
+      },
+      "answer": "B",
+      "explanation": "The Turing Test focuses on evaluating whether a machine can exhibit human-like intelligence to the extent that a human judge cannot reliably distinguish between a machine and a human during interactions."
+    },
+    {
+      "type": "short_answer",
+      "topic": "Winograd Schema Challenge",
+      "question": "Why is the Winograd Schema Challenge considered a difficult problem for AI systems?",
+      "answer": "The Winograd Schema Challenge tests an AI's ability to resolve linguistic ambiguities using common sense reasoning, which requires understanding context and real-world knowledge, areas where AI has historically struggled."
+    },
+    {
+      "type": "mcq",
+      "topic": "ensemble learning",
+      "question": "How does bagging help to improve the performance of ensemble methods in machine learning?",
+      "options": {
+        "A": "By ensuring all models focus only on the most important features",
+        "B": "By training models on different random subsets of data, reducing model variance",
+        "C": "By averaging the predictions of models trained on identical datasets",
+        "D": "By increasing the bias across all models uniformly"
+      },
+      "answer": "B",
+      "explanation": "Bagging reduces overfitting by training each model in the ensemble on different random samples of the data, thus reducing variance and improving generalization."
+    },
+    {
+      "type": "scenario",
+      "topic": "Perceptron model",
+      "prompt": "Suppose you have implemented a Perceptron to classify emails as spam or not spam. The model performs poorly. What limitations of Perceptrons might be causing this, and how could you address them?",
+      "answer": "Perceptrons are limited to solving linearly separable problems. If the email classification task involves non-linear boundaries, a single Perceptron will not suffice. Using a multi-layer perceptron (neural network) with activation functions like sigmoid or ReLU could address this limitation."
+    },
+    {
+      "type": "short_answer",
+      "topic": "feedforward neural networks",
+      "question": "How does a feedforward neural network differ in training compared to a simple Perceptron model?",
+      "answer": "A feedforward neural network consists of multiple layers, allowing for more complex decision boundaries and the capability to solve non-linearly separable problems. Unlike a simple Perceptron, it uses backpropagation to update weights across layers, optimizing the network to minimize a loss function."
+    },
+    {
+      "type": "mcq",
+      "topic": "early AI programs",
+      "question": "What strategy did the General Problem Solver (GPS) introduce that was influential in AI problem-solving approaches?",
+      "options": {
+        "A": "Brute force search",
+        "B": "Means-ends analysis",
+        "C": "Game theory tactics",
+        "D": "Reinforcement learning"
+      },
+      "answer": "B",
+      "explanation": "The General Problem Solver (GPS) introduced means-ends analysis, which involves comparing the current state to the goal state and finding operators to reduce the difference, a central strategy in problem-solving."
+    },
+    {
+      "type": "scenario",
+      "topic": "AI search algorithms",
+      "prompt": "You design a pathfinding algorithm for a robot that traverses a maze. Why might incorporating both an Open List and a Closed List in your algorithm be beneficial?",
+      "answer": "Using an Open List helps manage unexplored nodes, allowing the algorithm to prioritize which nodes to expand next. Meanwhile, a Closed List prevents redundant exploration by keeping track of already visited nodes, enhancing efficiency and avoiding loops."
+    },
+    {
+      "type": "short_answer",
+      "topic": "neural network models",
+      "question": "Why is the sigmoid function preferred over the step function in neural networks?",
+      "answer": "The sigmoid function outputs values in a continuous range (0 to 1) and is differentiable, providing a gradient for effective learning via backpropagation, unlike the step function, which provides no gradient for learning."
+    },
+    {
+      "type": "mcq",
+      "topic": "regularization techniques",
+      "question": "How does L2 Regularization mitigate overfitting in machine learning models?",
+      "options": {
+        "A": "By adding noise to the input data",
+        "B": "By penalizing large weights, encouraging simpler models",
+        "C": "By averaging model predictions",
+        "D": "By reducing the model complexity at test time"
+      },
+      "answer": "B",
+      "explanation": "L2 Regularization discourages large weight values by adding a penalty term to the loss function, which helps prevent overfitting by simplifying the model."
+    }
+  ]
+}

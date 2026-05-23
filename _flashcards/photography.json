@@ -1,0 +1,136 @@
+[
+  {
+    "note_id": "use-cloning",
+    "source_note": "Main/Photography/Clone.md",
+    "title": "Use Cloning",
+    "domain": "photography",
+    "tags": [
+      "photography",
+      "feature-implementation",
+      "genai-alternatives"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "Why might someone choose the cloning technique over GenAI for feature implementation in photography?",
+        "answer": "Cloning offers more precise control over feature boundaries, leading to better results in adding similar features."
+      },
+      {
+        "type": "cloze",
+        "text": "For optimal results in cloning, employ the '{{feather as 100}}' technique to effectively merge boundaries.",
+        "hint": "It's a technique related to boundary merging."
+      },
+      {
+        "type": "mcq",
+        "question": "What is one advantage of using the cloning technique in photography?",
+        "options": {
+          "A": "Faster processing time",
+          "B": "Precise control over feature boundaries",
+          "C": "Automatic feature generation",
+          "D": "Higher color accuracy"
+        },
+        "answer": "B",
+        "explanation": "Cloning allows for precise control over feature boundaries, which is one of its main advantages."
+      },
+      {
+        "type": "basic",
+        "question": "What recommended setting can enhance the merging of boundaries in the cloning technique?",
+        "answer": "Using the 'feather as 100' setting is recommended for effectively merging boundaries."
+      }
+    ]
+  },
+  {
+    "note_id": "workflow-for-raw-photography-editing",
+    "source_note": "Main/Photography/Editing Workflow.md",
+    "title": "Workflow for RAW Photography Editing",
+    "domain": "photography",
+    "tags": [
+      "photography",
+      "workflow",
+      "lightroom",
+      "photo-editing",
+      "raw"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "Why is it important to shoot in RAW format instead of JPEG for photography editing?",
+        "answer": "Shooting in RAW format is important because it stores more light and color information, allowing recovery of details such as blown skies, dark shadows, and textures, which JPEG format does not provide."
+      },
+      {
+        "type": "cloze",
+        "text": "When editing photos, {{white balance}} should be adjusted before exposure because it affects the entire mood of the image.",
+        "hint": "STEP 3 \u2014 White Balance FIRST"
+      },
+      {
+        "type": "mcq",
+        "question": "What is a common consequence of excessive shadow lifting in photography editing?",
+        "options": {
+          "A": "Sharper textures",
+          "B": "Higher contrast",
+          "C": "Improved color saturation",
+          "D": "Washed out and noisy shadows"
+        },
+        "answer": "D",
+        "explanation": "Excessive shadow lifting introduces noise and can make shadows appear gray and washed out, which ruins the image's mood."
+      },
+      {
+        "type": "cloze",
+        "question": "In the context of photo editing, why should vibrance be increased instead of saturation?",
+        "options": {
+          "A": "To increase image contrast",
+          "B": "To protect skin tones and already saturated colors",
+          "C": "To sharpen the details of the image",
+          "D": "To enhance overall brightness",
+          "answer": "B",
+          "explanation": "Increasing vibrance instead of saturation helps in preserving skin tones and preventing already saturated colors from becoming oversaturated."
+        },
+        "text": "Using local masks in photo editing allows you to {{direct viewer attention}} by making targeted changes, such as darkening the sky or brightening the subject.",
+        "hint": "Local Masks (Most Important Skill)"
+      },
+      {
+        "type": "basic",
+        "question": "What is the benefit of applying lens corrections first in a photo editing workflow?",
+        "answer": "Applying lens corrections first helps in fixing technical distortions like chromatic aberration and lens distortion, ensuring a proper base for further image enhancements."
+      }
+    ]
+  },
+  {
+    "note_id": "use-of-masks-in-photography",
+    "source_note": "Main/Photography/Masks.md",
+    "title": "Use of Masks in Photography",
+    "domain": "photography",
+    "tags": [
+      "photography",
+      "masks",
+      "editing"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary benefit of using masks in photography?",
+        "answer": "Using masks allows for precise adjustments and targeted edits to specific areas of a photograph."
+      },
+      {
+        "type": "cloze",
+        "text": "To create a more natural look in an edited image, it is recommended to use the {{feather tool}} to soften the edges of a mask.",
+        "hint": "A tool used to blend edges."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the purpose of the feather tool when using masks in photography?",
+        "options": {
+          "A": "To sharpen the image",
+          "B": "To soften the edges of the mask",
+          "C": "To change the color",
+          "D": "To resize the photo"
+        },
+        "answer": "B",
+        "explanation": "The feather tool is used to soften the edges of a mask, helping to ensure a seamless transition between masked and unmasked areas."
+      }
+    ]
+  }
+]

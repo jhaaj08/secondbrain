@@ -1,0 +1,1508 @@
+{
+  "Main/$L_1$ and $L_2$ Norms.md": {
+    "mtime": 1779522375.2603178,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 5
+  },
+  "Main/().md": {
+    "mtime": 1779522377.9941788,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 4
+  },
+  "Main/AI Search Methods/1956 Dartmouth Conference.md": {
+    "mtime": 1779522381.6354713,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/AI Search Methods/Biological Naturalism.md": {
+    "mtime": 1779522385.3592796,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/AI Search Methods/Classic Puzzles - Water Jug, 8-Puzzle, River Crossing.md": {
+    "mtime": 1779522389.2752829,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/AI Search Methods/Constraint Satisfaction Problems (CSP) and Mathematical Graphs.md": {
+    "mtime": 1779522393.8468318,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/AI Search Methods/Core components - Memory, Learning, Inference, and Pattern Recognition.md": {
+    "mtime": 1779522397.3404586,
+    "flashcarded_at": "2026-05-23",
+    "domain": "ai-tools",
+    "cards_count": 7
+  },
+  "Main/AI Search Methods/Early Milestones - Logic Theorist & General Problem Solver.md": {
+    "mtime": 1779522400.8303485,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/AI Search Methods/Index.md": {
+    "mtime": 1779522405.9757764,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/AI Search Methods/List Management - The Open List (Frontier) and Closed List (Explored).md": {
+    "mtime": 1779522409.344557,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/AI Search Methods/Model-based vs. Knowledge-based Reasoning.md": {
+    "mtime": 1779522414.1150694,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/AI Search Methods/Path Reconstruction via Parent Pointers.md": {
+    "mtime": 1779522417.3880248,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/AI Search Methods/Philosophical Lineage - From Descartes' Dualism to Babbage\u2019s Engine.md": {
+    "mtime": 1779522421.9402685,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/AI Search Methods/Satisfaction vs. Optimization (TSP).md": {
+    "mtime": 1779522425.4369667,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/AI Search Methods/Semiotic Systems and Socially Agreed-upon Symbols.md": {
+    "mtime": 1779522427.5622978,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/AI Search Methods/Signal Processing vs. Neuro-Fuzzy vs. Symbolic Layers.md": {
+    "mtime": 1779522431.6411192,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/AI Search Methods/State Space Graph vs. Search Tree.md": {
+    "mtime": 1779522435.827132,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/AI Search Methods/States, Move Generators, and Goal Test Functions.md": {
+    "mtime": 1779522439.8197808,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/AI Search Methods/Symbolic Knowledge Representation vs. Machine Learning.md": {
+    "mtime": 1779522444.099432,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/AI Search Methods/Syntactics vs. Semantics.md": {
+    "mtime": 1779522448.8268907,
+    "flashcarded_at": "2026-05-23",
+    "domain": "ai-tools",
+    "cards_count": 5
+  },
+  "Main/AI Search Methods/The \"Generate and Test\" cycle.md": {
+    "mtime": 1779522452.07853,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/AI Search Methods/The \"Intelligent Agent\" (Perception, Deliberation, Autonomy).md": {
+    "mtime": 1779522456.6524565,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/AI Search Methods/The Chinese Room Argument.md": {
+    "mtime": 1779522459.798418,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/AI Search Methods/The Physical Symbol System Hypothesis.md": {
+    "mtime": 1779522462.493287,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/AI Search Methods/Turing Test & The Imitation Game.md": {
+    "mtime": 1779522465.047116,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/AI Search Methods/Untitled.md": {
+    "mtime": 1779522468.2706373,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 5
+  },
+  "Main/AI Search Methods/Winograd Schema Challenge.md": {
+    "mtime": 1779522472.7767713,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Activation Functions.md": {
+    "mtime": 1779522478.9016402,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/AdaDelta.md": {
+    "mtime": 1779522484.9736116,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/AdaGrad.md": {
+    "mtime": 1779522491.791168,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Adam.md": {
+    "mtime": 1779522496.7287552,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Adamax and Maxprop.md": {
+    "mtime": 1779522505.475002,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Adaptive Learning Rates.md": {
+    "mtime": 1779522511.1478117,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Application of Encoder Decoder Models.md": {
+    "mtime": 1779522516.6392736,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Attention Mechanism.md": {
+    "mtime": 1779522521.4451807,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/BackPropagation.md": {
+    "mtime": 1779522525.3764994,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 5
+  },
+  "Main/Artificial Intelligence/Backpropagation Pseudocode.md": {
+    "mtime": 1779522533.3195858,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Backpropagation through time.md": {
+    "mtime": 1779522537.0350404,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Bias vs Variance.md": {
+    "mtime": 1779522542.6214666,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Constructing 2 D Tower Function.md": {
+    "mtime": 1779522545.11312,
+    "flashcarded_at": "2026-05-23",
+    "domain": "ai-tools",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Continuous Bag of Words Model.md": {
+    "mtime": 1779522554.0689127,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Contour Plots.md": {
+    "mtime": 1779522557.091815,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 5
+  },
+  "Main/Artificial Intelligence/Convolution Neural Networks.md": {
+    "mtime": 1779522565.3343418,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Cosine Annealing.md": {
+    "mtime": 1779522569.04874,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Data Feeding Strategies.md": {
+    "mtime": 1779522571.7854512,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Dataset Augmentation & Parameter Sharing.md": {
+    "mtime": 1779522577.2847366,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Distributed Representations of Words.md": {
+    "mtime": 1779522582.5558412,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Dropout.md": {
+    "mtime": 1779522589.1254864,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Early Stopping.md": {
+    "mtime": 1779522597.042239,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Ensemble Methods.md": {
+    "mtime": 1779522604.905074,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Errors & Error Surfaces in Detail.md": {
+    "mtime": 1779522668.131976,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Estimate Error from Test Data.md": {
+    "mtime": 1779522676.0747728,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Evaluating Word Representations.md": {
+    "mtime": 1779522680.5837102,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/FFNN Architecture and Forward Pass.md": {
+    "mtime": 1779522683.6560714,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Feed Forward Neural Network (FFNN).md": {
+    "mtime": 1779522686.4367096,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Feed Forward Neural Network.md": {
+    "mtime": 1779522691.0524938,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Feedforward Neural Network (FFNN).md": {
+    "mtime": 1779522693.9568808,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/GloVe Representation.md": {
+    "mtime": 1779522698.5218625,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Gory Details of Backpropagation through Time.md": {
+    "mtime": 1779522705.4583988,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Gradient Descent - Recap.md": {
+    "mtime": 1779522711.5350852,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Gradient Descent on the Map.md": {
+    "mtime": 1779522714.3408947,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Artificial Intelligence/Gradient Descent.md": {
+    "mtime": 1779522716.9354029,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Gradient wrt Hidden Layer.md": {
+    "mtime": 1779522725.0541165,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Gradient wrt Output Layer.md": {
+    "mtime": 1779522732.986698,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Gradient wrt Parameters.md": {
+    "mtime": 1779522740.8328385,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/How Activation Functions Came into being ?.md": {
+    "mtime": 1779522747.2738373,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/How LSTMs avoid the problem of vanishing gradient.md": {
+    "mtime": 1779522753.3832521,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Initialization Problem.md": {
+    "mtime": 1779522758.4715662,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Injecting Noise at Outputs.md": {
+    "mtime": 1779522766.1010165,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Injecting Noise at the Inputs.md": {
+    "mtime": 1779522774.3834908,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Introduction to Bias & Variance.md": {
+    "mtime": 1779522781.618512,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Introduction to Encoder Decoder Model.md": {
+    "mtime": 1779522788.0259728,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Introduction to Transformer Architecture.md": {
+    "mtime": 1779522792.404732,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/L1 Norm.md": {
+    "mtime": 1779522795.1807723,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Artificial Intelligence/L1 vs L2 Regularization.md": {
+    "mtime": 1779522798.6333692,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/L2 Norm.md": {
+    "mtime": 1779522801.7268767,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Artificial Intelligence/LSTM and GRU.md": {
+    "mtime": 1779522808.396772,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Learning Rate Scheduling.md": {
+    "mtime": 1779522811.324676,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Learning Rates Schemes.md": {
+    "mtime": 1779522816.5591836,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Learning parameters Intuition.md": {
+    "mtime": 1779522821.1611547,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Loss Function.md": {
+    "mtime": 1779522823.5373363,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 5
+  },
+  "Main/Artificial Intelligence/Machine Learning Model.md": {
+    "mtime": 1779522826.1578808,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Mean Squared Error.md": {
+    "mtime": 1779522829.5355783,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Momentum Based Gradient.md": {
+    "mtime": 1779522836.0155602,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Motivation from Biological Neurons.md": {
+    "mtime": 1779522840.4106886,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/NADAM.md": {
+    "mtime": 1779522847.0918949,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Nesterov Gradient Descent.md": {
+    "mtime": 1779522854.7477336,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Norm.md": {
+    "mtime": 1779522857.9641707,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/One Hot Representation of words.md": {
+    "mtime": 1779522862.4622395,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Optmization Algorithm.md": {
+    "mtime": 1779522869.4371452,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Partial Derivatives.md": {
+    "mtime": 1779522871.8169668,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 4
+  },
+  "Main/Artificial Intelligence/Perceptron Learning Algorithm.md": {
+    "mtime": 1779522878.5824125,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Perceptrons.md": {
+    "mtime": 1779522884.1234012,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Pooling.md": {
+    "mtime": 1779522886.8052468,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 5
+  },
+  "Main/Artificial Intelligence/Proof of Tower Function.md": {
+    "mtime": 1779522889.8928795,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Artificial Intelligence/RMSProp.md": {
+    "mtime": 1779522894.1447585,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/ReLU vs Leaky ReLU.md": {
+    "mtime": 1779522900.4388404,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Recurrent Learning Networks.md": {
+    "mtime": 1779522906.6833053,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Recurrent Neural Networks.md": {
+    "mtime": 1779522914.1902828,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Regularization.md": {
+    "mtime": 1779522925.425379,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Relationship between SvD and Word2Vec.md": {
+    "mtime": 1779522929.3098698,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Representation Power of Network of Perceptron.md": {
+    "mtime": 1779522935.6783319,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/ResNet.md": {
+    "mtime": 1779522942.6150122,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Scheduled Learning Rate.md": {
+    "mtime": 1779522950.6174312,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Selective Read, Selective Write and Selective Forget.md": {
+    "mtime": 1779522954.704549,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Sequence Learning Problems.md": {
+    "mtime": 1779522958.3154986,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Sigmoid Neuron.md": {
+    "mtime": 1779522961.3395162,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/Singular Value Decomposition for Learning Word Representations.md": {
+    "mtime": 1779522965.6944656,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Skip Gram Model.md": {
+    "mtime": 1779522970.949455,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Stochastic vs Batch Gradient.md": {
+    "mtime": 1779522976.88097,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Story of Neural Networks.md": {
+    "mtime": 1779522982.852367,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Strategies Connection to the graph.md": {
+    "mtime": 1779522985.130022,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 5
+  },
+  "Main/Artificial Intelligence/Supervised Machine Learning.md": {
+    "mtime": 1779522987.5767412,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 5
+  },
+  "Main/Artificial Intelligence/Taylor Series.md": {
+    "mtime": 1779522993.4679897,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/The Problem of Exploding & Vanishing Gradient.md": {
+    "mtime": 1779523007.0091047,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/The Update Rule & 180\u00b0 Movement (The \"Step\").md": {
+    "mtime": 1779523010.2094874,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 4
+  },
+  "Main/Artificial Intelligence/Training Error vs Test Error.md": {
+    "mtime": 1779529098.0275412,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Transition to MP Neuron -> Rosenblatt Perceptron.md": {
+    "mtime": 1779529104.2486098,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/True Error vs Model Complexcity.md": {
+    "mtime": 1779529166.1324263,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Artificial Intelligence/Word Representations.md": {
+    "mtime": 1779529170.7460792,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 6
+  },
+  "Main/Artificial Intelligence/construct tower functions.md": {
+    "mtime": 1779529174.7143993,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Biology/Alpha Carbon.md": {
+    "mtime": 1779529177.5562532,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 6
+  },
+  "Main/Biology/COSMIC (Catalogue of Somatic Mutations in Cancer).md": {
+    "mtime": 1779529180.0289812,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 5
+  },
+  "Main/Biology/COSMIC database mutation table.md": {
+    "mtime": 1779529183.4185238,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 6
+  },
+  "Main/Biology/Cancer.md": {
+    "mtime": 1779529187.9398339,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Biology/Compartive analysis with known Kinase Mutants.md": {
+    "mtime": 1779529192.7964177,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 6
+  },
+  "Main/Biology/Construct Residue Contact Graphs.md": {
+    "mtime": 1779529196.208252,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 6
+  },
+  "Main/Biology/Cross-referencing mutations with ClinVar.md": {
+    "mtime": 1779533773.8127854,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 6
+  },
+  "Main/Biology/Functional Rewiring of Orphan Kinases by Cancer Mutations.md": {
+    "mtime": 1779533777.4287002,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 6
+  },
+  "Main/Biology/GCN works.md": {
+    "mtime": 1779535213.1353757,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 5
+  },
+  "Main/Biology/GCN(Graph Convulation Network).md": {
+    "mtime": 1779535218.1516051,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Biology/Generate Residue Embeddings.md": {
+    "mtime": 1779535222.3469305,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 7
+  },
+  "Main/Biology/Genotype.md": {
+    "mtime": 1779535226.574643,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 7
+  },
+  "Main/Biology/Kinases.md": {
+    "mtime": 1779535231.5260227,
+    "flashcarded_at": "2026-05-23",
+    "domain": "cancer",
+    "cards_count": 7
+  },
+  "Main/Biology/MAPK pathway.md": {
+    "mtime": 1779535235.2448378,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 6
+  },
+  "Main/Biology/MELK.md": {
+    "mtime": 1779535237.408017,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Biology/Orphan Kinases.md": {
+    "mtime": 1779535239.5247753,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 5
+  },
+  "Main/Biology/Phosphorylation.md": {
+    "mtime": 1779535242.6792278,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 6
+  },
+  "Main/Biology/Protein Structure.md": {
+    "mtime": 1779535245.7233255,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 6
+  },
+  "Main/Biology/Reproducible Snakemake file.md": {
+    "mtime": 1779535250.0986798,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 7
+  },
+  "Main/Biology/Saliency Analysis and Functional Shift Detection.md": {
+    "mtime": 1779535253.9134438,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 7
+  },
+  "Main/Biology/Structure Prediction with OmegaFold.md": {
+    "mtime": 1779535257.53142,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 7
+  },
+  "Main/Biology/Substrates.md": {
+    "mtime": 1779535259.5133893,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 3
+  },
+  "Main/Biology/TTK & MELK - Good Choices.md": {
+    "mtime": 1779535261.4962742,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 4
+  },
+  "Main/Biology/TTK.md": {
+    "mtime": 1779535263.4969869,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 4
+  },
+  "Main/Biology/UniProt.md": {
+    "mtime": 1779535265.9220798,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Co-occurrence Matrix.md": {
+    "mtime": 1779535269.5810652,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/JOIN Types in SQL.md": {
+    "mtime": 1779535271.2817683,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Max Pooling vs Average Pooling.md": {
+    "mtime": 1779535273.1334033,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/McCulloch-Pitts (MP) Neuron and Thresholding Logic.md": {
+    "mtime": 1779535278.1132011,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 7
+  },
+  "Main/Mechanics of Pooling.md": {
+    "mtime": 1779535280.7340336,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Natural Join.md": {
+    "mtime": 1779535283.4510713,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Ongoing Projects/Second Brain.md": {
+    "mtime": 1779543121.103875,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Ongoing Projects/Stitch.md": {
+    "mtime": 1779543128.2102146,
+    "flashcarded_at": "2026-05-23",
+    "domain": "ai-tools",
+    "cards_count": 7
+  },
+  "Main/Other Stuff.md": {
+    "mtime": 1779535298.6359615,
+    "cards_count": 0,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general"
+  },
+  "Main/Photography/Clone.md": {
+    "mtime": 1779390753.896668,
+    "flashcarded_at": "2026-05-23",
+    "domain": "photography",
+    "cards_count": 4
+  },
+  "Main/Photography/Editing Workflow.md": {
+    "mtime": 1779390767.553463,
+    "flashcarded_at": "2026-05-23",
+    "domain": "photography",
+    "cards_count": 5
+  },
+  "Main/Photography/Masks.md": {
+    "mtime": 1779390770.5806098,
+    "flashcarded_at": "2026-05-23",
+    "domain": "photography",
+    "cards_count": 3
+  },
+  "Main/Pointwise Mutual Information.md": {
+    "mtime": 1779535301.996775,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Protein Latent/Allosteric Blind Spot.md": {
+    "mtime": 1779535305.2353334,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 6
+  },
+  "Main/Protein Latent/Displacement Vector.md": {
+    "mtime": 1779535308.8483682,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 6
+  },
+  "Main/Protein Latent/Epistasis.md": {
+    "mtime": 1779535314.3531559,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 7
+  },
+  "Main/Protein Latent/LATERN - Latent Space Hypothesis Paper.md": {
+    "mtime": 1779535319.2159255,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Protein Latent/Lantern Hypotheis.md": {
+    "mtime": 1779535327.2965853,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 7
+  },
+  "Main/Protein Latent/Parametric and Non Parametric Models.md": {
+    "mtime": 1779535329.8230665,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Protein Latent/Prior Work.md": {
+    "mtime": 1779535334.9529073,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 6
+  },
+  "Main/Protein Latent/Research Flow.md": {
+    "mtime": 1779535341.0050762,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Protein Latent/The Biological Language.md": {
+    "mtime": 1779535343.9701061,
+    "flashcarded_at": "2026-05-23",
+    "domain": "computational-biology",
+    "cards_count": 6
+  },
+  "Main/Python/if __name__==\"main\".md": {
+    "mtime": 1779535346.2363596,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Python/sys.argv.md": {
+    "mtime": 1779535349.5774112,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/SQL Aliasing.md": {
+    "mtime": 1779535351.635871,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Singular Value Decomposition or Learning Word Representations.md": {
+    "mtime": 1779535354.0291896,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Singular Value Decomposition.md": {
+    "mtime": 1779535358.0384157,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Software Engineering/Content  Filtering Logic.md": {
+    "mtime": 1779535362.6378758,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Software Engineering/Content Ingestion Module \u2014 Architecture Brief.md": {
+    "mtime": 1779535365.4848049,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Software Engineering/Index.md": {
+    "mtime": 1779535371.7068114,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Software Engineering/Stitch App.md": {
+    "mtime": 1779535373.5935779,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Statistics/Application of Probability.md": {
+    "mtime": 1779535378.0842214,
+    "flashcarded_at": "2026-05-23",
+    "domain": "application-of-probability",
+    "cards_count": 5
+  },
+  "Main/Statistics/Applications of Permutation & Combination.md": {
+    "mtime": 1779535381.4186797,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Axiomatic Foundation (Kolmogorov).md": {
+    "mtime": 1779535384.702255,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Bayes' Theorem - Breast Cancer Screening Example.md": {
+    "mtime": 1779535388.7850628,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Card Shuffle Probabilties.md": {
+    "mtime": 1779535392.28329,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Chebyshev\u2019s Inequality.md": {
+    "mtime": 1779535394.9784555,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Choosing books with combination.md": {
+    "mtime": 1779535400.1965322,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Circular Permutations with Reflections.md": {
+    "mtime": 1779535403.0314555,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Statistics/Classical Probability & Equally Likely Outcome.md": {
+    "mtime": 1779535406.2197804,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Combination.md": {
+    "mtime": 1779535408.3189793,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Statistics/Combinations.md": {
+    "mtime": 1779535411.962641,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Conditional Probability & Detection Logic.md": {
+    "mtime": 1779535415.4129746,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Statistics/Conditional Probability & Independence.md": {
+    "mtime": 1779535420.1437302,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Conditional Probability using contingency table.md": {
+    "mtime": 1779535426.1993916,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Statistics/Conditional Probability with Dice & General Formula.md": {
+    "mtime": 1779535430.3101387,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Conditional Probability- Battery Life Scenario.md": {
+    "mtime": 1779535433.6968882,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Counting Principles \u2013 Permutations, Combinations, and Structured Outcomes.md": {
+    "mtime": 1779535437.4476564,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Counting Straight Lines (Geometric Combinatorics).md": {
+    "mtime": 1779535440.1980124,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Covariance.md": {
+    "mtime": 1779535444.1739907,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Statistics/Cumulative Distribution Function (CDF).md": {
+    "mtime": 1779535446.365585,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Statistics/Errors.md": {
+    "mtime": 1779535449.8690917,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Events and Basic Operations.md": {
+    "mtime": 1779535453.4896133,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Statistics/Expectation.md": {
+    "mtime": 1779535459.4512722,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Factorials \u2013 Definition & Meaning**.md": {
+    "mtime": 1779535463.2599301,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Geometric Probability with an area.md": {
+    "mtime": 1779535466.0191667,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Hypergeometric Probability.md": {
+    "mtime": 1779535469.8858485,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Statistics/Independence - Properties & Extensions.md": {
+    "mtime": 1779535473.9550498,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Independence of Events in Modified Card Decks.md": {
+    "mtime": 1779535478.4344785,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Independent Events & Multiplication rule.md": {
+    "mtime": 1779535482.1347225,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Statistics/Independent Events & Union Probability.md": {
+    "mtime": 1779535485.2840693,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Intro to Probability.md": {
+    "mtime": 1779535489.1432328,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Statistics/Level of Significance.md": {
+    "mtime": 1779535491.505291,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Statistics/Markov Inequality.md": {
+    "mtime": 1779535493.9845994,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 4
+  },
+  "Main/Statistics/Maximum Likelihood Estimation.md": {
+    "mtime": 1779535496.2764907,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Mean Under Linear Transformation.md": {
+    "mtime": 1779535497.5629478,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 3
+  },
+  "Main/Statistics/Method of Moments.md": {
+    "mtime": 1779535499.6491902,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Multiplication rule & Conditional Probability.md": {
+    "mtime": 1779535503.1384826,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/P&C Mixed Concepts MCQ.md": {
+    "mtime": 1779535506.5977564,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/PDF(Probability Density Function).md": {
+    "mtime": 1779535510.4938562,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Statistics/Percentile.md": {
+    "mtime": 1779535513.78841,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Statistics/Permutations with Identical Objects & Circular Arrangements.md": {
+    "mtime": 1779535517.3843744,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Permutuation.md": {
+    "mtime": 1779535520.7210464,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Statistics/Poisson Binomial Decomposition.md": {
+    "mtime": 1779535525.8384316,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Poisson Distributions.md": {
+    "mtime": 1779535528.5985231,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Probability Mass Function (PMF).md": {
+    "mtime": 1779535532.5196629,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Problem - Permutation with Positional Constraints.md": {
+    "mtime": 1779535535.6860697,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Roommate Paring Civil vs CS.md": {
+    "mtime": 1779535540.0044782,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Statistics/Sampling Distribution of Sample Mean.md": {
+    "mtime": 1779535542.5274944,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Statistics/Sampling without replacement.md": {
+    "mtime": 1779535546.0443447,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Standard Deviation.md": {
+    "mtime": 1779535547.3592083,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 3
+  },
+  "Main/Statistics/Uniform Distribution.md": {
+    "mtime": 1779535551.8993647,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Untitled 1.md": {
+    "mtime": 1779535554.0440893,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Untitled.md": {
+    "mtime": 1779535558.1335275,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Variance.md": {
+    "mtime": 1779535560.5686996,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Venn Diagrams & Set based probability.md": {
+    "mtime": 1779535564.3033206,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/Voter Data - Conditional & Joint Probabilities.md": {
+    "mtime": 1779535568.8567922,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Statistics/p value.md": {
+    "mtime": 1779535570.6925504,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/The Symbol Grounding Problem.md": {
+    "mtime": 1779535573.5857542,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Translation Invariance.md": {
+    "mtime": 1779535576.753041,
+    "flashcarded_at": "2026-05-23",
+    "domain": "deep-learning",
+    "cards_count": 6
+  },
+  "Main/Web Dev/CRUD Operations.md": {
+    "mtime": 1779535580.2677164,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Web Dev/CSS Box Model.md": {
+    "mtime": 1779535582.8063436,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Web Dev/CSS Specificity.md": {
+    "mtime": 1779535585.2030065,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Web Dev/CSS.md": {
+    "mtime": 1779535587.8073282,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  },
+  "Main/Web Dev/Group Actions by Controller.md": {
+    "mtime": 1779535591.8180058,
+    "flashcarded_at": "2026-05-23",
+    "domain": "model-view-controller",
+    "cards_count": 7
+  },
+  "Main/Web Dev/Jinja Loop and Templating Syntax in Flask Templates.md": {
+    "mtime": 1779535595.4108934,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Web Dev/MVC Origins \u2013 Modern Application Development.md": {
+    "mtime": 1779535599.1622422,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Web Dev/MVC on Web.md": {
+    "mtime": 1779535602.474752,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Web Dev/Model View Controller.md": {
+    "mtime": 1779535606.0611646,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Web Dev/Networking Bandwidth Calculation.md": {
+    "mtime": 1779535609.627438,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Web Dev/Number Bases.md": {
+    "mtime": 1779535613.2328126,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Web Dev/PyHTML vs Jinja2.md": {
+    "mtime": 1779535617.8097937,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 7
+  },
+  "Main/Web Dev/SQL Basics.md": {
+    "mtime": 1779535619.989624,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/Web Dev/Unicode Encodings.md": {
+    "mtime": 1779535625.4863822,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 6
+  },
+  "Main/ucs.md": {
+    "mtime": 1779535627.8729284,
+    "flashcarded_at": "2026-05-23",
+    "domain": "general",
+    "cards_count": 5
+  }
+}

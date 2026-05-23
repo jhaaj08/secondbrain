@@ -1,0 +1,24 @@
+# Environment / secrets
+.env
+
+# SQLite database files
+*.db
+*.db-shm
+*.db-wal
+
+# Local vault sample dirs (personal notes, not for VCS)
+vault_raw/
+vault_refined/
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Claude Code local settings
+.claude/settings.local.json

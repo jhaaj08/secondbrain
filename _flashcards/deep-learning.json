@@ -1,0 +1,4023 @@
+[
+  {
+    "note_id": "backpropagation-through-time-and-adagrad-introduction",
+    "source_note": "Main/$L_1$ and $L_2$ Norms.md",
+    "title": "Backpropagation Through Time and AdaGrad Introduction",
+    "domain": "deep-learning",
+    "tags": [
+      "backpropagation",
+      "adagrad",
+      "neural-networks",
+      "optimization",
+      "machine-learning"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the main purpose of Backpropagation Through Time (BPTT) in training Recurrent Neural Networks?",
+        "answer": "BPTT adjusts the weights of an RNN to account for the temporal component, helping retain important information over time and improving sequence learning tasks."
+      },
+      {
+        "type": "basic",
+        "question": "How does AdaGrad adjust the learning rate for each parameter during optimization?",
+        "answer": "AdaGrad adapts the learning rate based on the past gradients, resulting in larger updates for infrequent and smaller updates for frequent parameters."
+      },
+      {
+        "type": "cloze",
+        "text": "Backpropagation Through Time is crucial for effectively training {{Recurrent Neural Networks}}.",
+        "hint": "RNNs"
+      },
+      {
+        "type": "mcq",
+        "question": "What problem does Backpropagation Through Time address in Recurrent Neural Networks?",
+        "options": {
+          "A": "Convergence speed",
+          "B": "Static data handling",
+          "C": "Retaining information over time",
+          "D": "Generalization to new tasks"
+        },
+        "answer": "C",
+        "explanation": "BPTT helps RNNs retain information over time by adjusting network weights for temporal dependencies."
+      },
+      {
+        "type": "mcq",
+        "question": "In what scenario is AdaGrad particularly advantageous?",
+        "options": {
+          "A": "Dense data with uniform feature distribution",
+          "B": "Sparse data with infrequently observed features",
+          "C": "Real-time data processing",
+          "D": "Large-scale image recognition"
+        },
+        "answer": "B",
+        "explanation": "AdaGrad is advantageous in scenarios with sparse data, as it adjusts learning rates to better handle infrequently observed features."
+      }
+    ]
+  },
+  {
+    "note_id": "adam-notes",
+    "source_note": "Main/AI Search Methods/Untitled.md",
+    "title": "ADAM Notes",
+    "domain": "deep-learning",
+    "tags": [
+      "optimization-algorithms",
+      "neural-networks",
+      "learning-rate",
+      "bias-correction"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What are the two optimization techniques combined in ADAM?",
+        "answer": "ADAM combines the techniques of AdaGrad and RMSProp."
+      },
+      {
+        "type": "cloze",
+        "text": "ADAM includes a {{bias correction}} mechanism which stabilizes updates in early training.",
+        "hint": "Ensures stability in parameter updates."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the primary purpose of the bias correction mechanism in the ADAM optimizer?",
+        "options": {
+          "A": "Accelerate convergence",
+          "B": "Stabilize updates in early training",
+          "C": "Reduce model complexity",
+          "D": "Improve model accuracy"
+        },
+        "answer": "B",
+        "explanation": "The bias correction mechanism stabilizes updates by addressing initial parameter biases."
+      },
+      {
+        "type": "basic",
+        "question": "How does ADAM's adaptive learning rate benefit the learning process?",
+        "answer": "It adjusts the learning rate for each parameter, improving performance and convergence."
+      },
+      {
+        "type": "mcq",
+        "question": "Which of the following is NOT a variant of the ADAM optimizer?",
+        "options": {
+          "A": "Adamax",
+          "B": "NADAM",
+          "C": "SGD",
+          "D": "RMSProp"
+        },
+        "answer": "C",
+        "explanation": "SGD is not a variant of ADAM but a different optimization technique."
+      }
+    ]
+  },
+  {
+    "note_id": "the-big-three-sigmoid-tanh-relu",
+    "source_note": "Main/Artificial Intelligence/Activation Functions.md",
+    "title": "The Big Three: Sigmoid, Tanh, and ReLU",
+    "domain": "deep-learning",
+    "tags": [
+      "activation-functions",
+      "deep-learning",
+      "gradient-descent",
+      "neural-networks"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the key advantage of using the Tanh function over Sigmoid in hidden layers?",
+        "answer": "Tanh is zero-centered, which helps balance gradients and direct the optimizer more efficiently toward the minimum."
+      },
+      {
+        "type": "cloze",
+        "text": "ReLU avoids the vanishing gradient problem for positive values by maintaining a constant gradient of {{1.0}}.",
+        "hint": "Standard gradient in positive region"
+      },
+      {
+        "type": "mcq",
+        "question": "Which activation function is most suitable for the final layer of a binary classifier?",
+        "options": {
+          "A": "Tanh",
+          "B": "ReLU",
+          "C": "Sigmoid",
+          "D": "Softmax"
+        },
+        "answer": "C",
+        "explanation": "Sigmoid maps inputs to a range of (0,1), which is ideal for binary class probabilities."
+      },
+      {
+        "type": "basic",
+        "question": "What is the 'dead ReLU' phenomenon and its solution?",
+        "answer": "The 'dead ReLU' phenomenon occurs when neurons output zero from negative inputs, causing gradients to also be zero. The solution is Leaky ReLU, which introduces a small gradient for negative inputs."
+      },
+      {
+        "type": "cloze",
+        "text": "Both Sigmoid and Tanh can suffer from the {{vanishing gradient}} problem with extreme input values.",
+        "hint": "A gradient issue"
+      },
+      {
+        "type": "mcq",
+        "question": "Which of the following activation functions is zero-centered?",
+        "options": {
+          "A": "Sigmoid",
+          "B": "Tanh",
+          "C": "ReLU",
+          "D": "Softmax"
+        },
+        "answer": "B",
+        "explanation": "Tanh is zero-centered because its range is (-1, 1), symmetric around zero."
+      },
+      {
+        "type": "mcq",
+        "question": "Which activation function group includes non-monotonic functions such as Swish and GELU?",
+        "options": {
+          "A": "The Monotonic Group",
+          "B": "The Non-Monotonic Group",
+          "C": "The Sigmoid Family",
+          "D": "The Linear Group"
+        },
+        "answer": "B",
+        "explanation": "The Non-Monotonic Group includes functions with small undulations that can aid in smoother optimization and better gradient flow."
+      }
+    ]
+  },
+  {
+    "note_id": "adadelta-and-its-features",
+    "source_note": "Main/Artificial Intelligence/AdaDelta.md",
+    "title": "AdaDelta and Its Features",
+    "domain": "deep-learning",
+    "tags": [
+      "adaptive-learning",
+      "optimization-algorithms",
+      "machine-learning"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "How does AdaDelta eliminate the need for an initial learning rate?",
+        "answer": "AdaDelta computes updates using a ratio of two history variables ($U_T$ and $V_T$), eliminating the need for a fixed initial learning rate."
+      },
+      {
+        "type": "basic",
+        "question": "Describe the role of the history vectors $U_T$ and $V_T$ in AdaDelta.",
+        "answer": "$U_T$ tracks the accumulated magnitude of updates, and $V_T$ tracks the accumulated magnitude of gradients; both are used to adaptively adjust the update rate."
+      },
+      {
+        "type": "cloze",
+        "text": "The adaptive update rule in AdaDelta is calculated as $\\Delta = \\sqrt{\\frac{U_{T-1} + \\epsilon}{V_T + \\epsilon}} \\cdot \\nabla W$, ensuring the learning rate is {{adaptive}}."
+      },
+      {
+        "type": "mcq",
+        "question": "In what scenario does AdaDelta increase the effective learning rate?",
+        "options": {
+          "A": "When encountering a sharp curve.",
+          "B": "When transitioning to a flat region from a steep region.",
+          "C": "When the initial learning rate is small.",
+          "D": "When $V_T$ is less than $U_{T-1}$."
+        },
+        "answer": "B",
+        "explanation": "In flat regions, the effective learning rate increases as $V_T$ grows slower than $U_{T-1}$, allowing the algorithm to accelerate."
+      },
+      {
+        "type": "basic",
+        "question": "What are the benefits of using AdaDelta over AdaGrad?",
+        "answer": "AdaDelta converges faster and does not suffer from the slow decay issues that affect AdaGrad."
+      },
+      {
+        "type": "basic",
+        "question": "How does AdaDelta handle sparse feature directions?",
+        "answer": "AdaDelta moves proportionally in all parameter directions, enhancing speed and adaptability in sparse datasets."
+      },
+      {
+        "type": "mcq",
+        "question": "Why does AdaDelta rely on a one-step delay in tracking histories?",
+        "options": {
+          "A": "To simplify computation.",
+          "B": "To keep computational costs low.",
+          "C": "To dynamically adjust the learning rate.",
+          "D": "To avoid division by zero errors."
+        },
+        "answer": "C",
+        "explanation": "The one-step delay allows AdaDelta to adapt the learning rate dynamically according to the curvature of the loss surface."
+      }
+    ]
+  },
+  {
+    "note_id": "adam",
+    "source_note": "Main/Artificial Intelligence/Adam.md",
+    "title": "Adam",
+    "domain": "deep-learning",
+    "tags": [
+      "optimization-algorithm",
+      "adaptive-learning-rates",
+      "deep-learning"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What are the two main components Adam uses to adapt learning rates?",
+        "answer": "Adam uses the Momentum Term for tracking past gradients and the RMSProp Term for tracking squared gradients."
+      },
+      {
+        "type": "cloze",
+        "text": "The Momentum Term, $m_t$, in Adam serves a similar function to {{Momentum}} by tracking the history of past gradients.",
+        "hint": "Optimization Technique"
+      },
+      {
+        "type": "mcq",
+        "question": "How does Adam handle the problem of zero initialization in the moving averages?",
+        "options": {
+          "A": "By ignoring initial values",
+          "B": "Through bias correction",
+          "C": "By using a high initial learning rate",
+          "D": "By setting $\beta_1$ and $\beta_2$ to zero"
+        },
+        "answer": "B",
+        "explanation": "Bias correction scales the moving averages to match the true expected values, avoiding erratic initial updates."
+      },
+      {
+        "type": "basic",
+        "question": "What are the typical values for the decay hyperparameters in Adam?",
+        "answer": "The typical values are $\beta_1 = 0.9$ and $\beta_2 = 0.999$."
+      },
+      {
+        "type": "cloze",
+        "text": "Adam applies the final weight update using the formula: $W_{t+1} = W_t - \\\\eta \\\\frac{{\\hat{m}_t}}{{\\sqrt{\\hat{v}_t} + \\\\\\epsilon}}$. This involves bias-corrected moments and a predefined initial {{learning rate}}.",
+        "hint": "Continuous Improvement"
+      },
+      {
+        "type": "mcq",
+        "question": "What is the primary purpose of RMSProp in Adam?",
+        "options": {
+          "A": "To stabilize the learning rate",
+          "B": "To adapt learning rates based on the variance of past gradients",
+          "C": "To simplify gradient descent calculations",
+          "D": "To eliminate the need for momentum"
+        },
+        "answer": "B",
+        "explanation": "The RMSProp term tracks the history of squared gradients to adapt the learning rate for each parameter."
+      },
+      {
+        "type": "basic",
+        "question": "Why is bias correction important in Adam?",
+        "answer": "Bias correction ensures that the expected value of the moving averages matches the true expected gradient, preventing erratic updates."
+      }
+    ]
+  },
+  {
+    "note_id": "adamax-algorithm",
+    "source_note": "Main/Artificial Intelligence/Adamax and Maxprop.md",
+    "title": "AdaMax Algorithm",
+    "domain": "deep-learning",
+    "tags": [
+      "adamax",
+      "optimization",
+      "l-infinity-norm",
+      "deep-learning"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the main advantage of using the L Infinity Norm in the AdaMax algorithm?",
+        "answer": "The L Infinity Norm in AdaMax provides computational stability and eliminates the need for bias correction by maintaining a stable learning rate, especially beneficial for handling sparse features."
+      },
+      {
+        "type": "cloze",
+        "text": "AdaMax replaces the L2 Norm history accumulation in the denominator with the {{L Infinity Norm}} to enhance stability.",
+        "hint": "Think about the type of norm used in AdaMax."
+      },
+      {
+        "type": "mcq",
+        "question": "How does AdaMax handle the initial bias problem present in the Adam algorithm?",
+        "options": {
+          "A": "By using a more complex bias correction factor.",
+          "B": "By eliminating the need for a bias correction due to the L Infinity Norm.",
+          "C": "By initializing the history with non-zero values.",
+          "D": "By reducing the learning rate incrementally."
+        },
+        "answer": "B",
+        "explanation": "AdaMax eliminates the need for bias correction as the L Infinity Norm does not suffer from the initial zero bias problem."
+      },
+      {
+        "type": "basic",
+        "question": "How does the AdaMax algorithm maintain stability when dealing with sparse features?",
+        "answer": "AdaMax maintains stability with sparse features by keeping the effective learning rate constant when the gradient is zero, due to the Max Norm history essentially remaining unchanged."
+      },
+      {
+        "type": "cloze",
+        "text": "In AdaMax, the history $V_T$ is calculated using a {{maximum operation}} on the previous history and the absolute value of the current gradient.",
+        "hint": "Relates to Max Norm calculation."
+      },
+      {
+        "type": "mcq",
+        "question": "Why is the L Infinity Norm considered more computationally stable than the L2 Norm in AdaMax?",
+        "options": {
+          "A": "It involves complex computations.",
+          "B": "It eliminates the need for taking square roots.",
+          "C": "It requires less memory to store.",
+          "D": "It reduces the number of computations by removing the momentum term."
+        },
+        "answer": "B",
+        "explanation": "The L Infinity Norm is computationally more stable because it doesn't require raising values to high powers and avoids the need for square roots in computation."
+      },
+      {
+        "type": "basic",
+        "question": "What is a key difference in the update rule formula between AdaMax and Adam?",
+        "answer": "In AdaMax, the second moment $V_T$ is calculated using the Max Norm, replacing the L2 Norm used in Adam, and does not require bias correction."
+      }
+    ]
+  },
+  {
+    "note_id": "adaptive-learning-rates-in-gradient-descent",
+    "source_note": "Main/Artificial Intelligence/Adaptive Learning Rates.md",
+    "title": "Adaptive Learning Rates in Gradient Descent",
+    "domain": "deep-learning",
+    "tags": [
+      "adaptive-learning",
+      "gradient-descent",
+      "sparse-features",
+      "machine-learning"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "Why are adaptive learning rates important in gradient descent when dealing with sparse features?",
+        "answer": "Adaptive learning rates are crucial because they can increase the learning rate for sparse features, which often have small derivatives due to their infrequency, thus ensuring these features are properly considered in the learning process."
+      },
+      {
+        "type": "cloze",
+        "text": "In regions with steep gradients, the learning rate should be {{small}} to prevent overshooting.",
+        "hint": "Think about navigating steep versus gentle slopes."
+      },
+      {
+        "type": "mcq",
+        "question": "What problem do adaptive learning rates address in the context of gradient descent?",
+        "options": {
+          "A": "They prevent overfitting by randomly updating weights.",
+          "B": "They adjust learning rates based on the steepness of the error surface.",
+          "C": "They ensure that weights are updated only once per epoch.",
+          "D": "They allow the use of larger batch sizes without losing accuracy."
+        },
+        "answer": "B",
+        "explanation": "Adaptive learning rates dynamically adjust based on the gradient's steepness, which helps in optimizing both steep and gentle regions effectively."
+      },
+      {
+        "type": "basic",
+        "question": "What is the consequence of having a sparse feature in dataset on the weight updates in gradient descent?",
+        "answer": "Sparse features lead to small derivatives, resulting in minimal weight updates, which can cause the learning algorithm to overlook potentially important features."
+      },
+      {
+        "type": "cloze",
+        "text": "The derivative of the loss is multiplied by the input feature value {{(X_j)}} for any weight.",
+        "hint": "It's part of the gradient calculation formula."
+      },
+      {
+        "type": "mcq",
+        "question": "Why might a sparse feature still be important, despite its infrequency?",
+        "options": {
+          "A": "Sparse features always correspond to errors.",
+          "B": "Sparse features can provide critical information in specific contexts.",
+          "C": "Sparse features are always ignored by the model.",
+          "D": "Sparse features increase training speed."
+        },
+        "answer": "B",
+        "explanation": "Sparse features might capture rare but crucial aspects of the data, such as a renowned film director with few movies that are nonetheless influential."
+      },
+      {
+        "type": "basic",
+        "question": "How does an adaptive learning rate help in dealing with sparse features?",
+        "answer": "An adaptive learning rate can increase the learning rate for sparse features to ensure they are adequately updated, preventing their associated weights from stagnating."
+      }
+    ]
+  },
+  {
+    "note_id": "encoder-decoder-architecture",
+    "source_note": "Main/Artificial Intelligence/Application of Encoder Decoder Models.md",
+    "title": "Encoder-Decoder Architecture",
+    "domain": "deep-learning",
+    "tags": [
+      "neural-networks",
+      "machine-learning",
+      "sequence-to-sequence",
+      "cnn",
+      "rnn"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the purpose of the encoder and decoder in the encoder-decoder architecture?",
+        "answer": "The encoder processes the input, transforming it into a compact representation, while the decoder generates the output based on this representation."
+      },
+      {
+        "type": "cloze",
+        "text": "In the encoder-decoder architecture, networks are trained using {{Backpropagation through time}} to minimize the cross-entropy loss.",
+        "hint": "A key algorithm for RNN training"
+      },
+      {
+        "type": "mcq",
+        "question": "What challenge does the basic encoder-decoder model face with long sequences?",
+        "options": {
+          "A": "Overfitting to training data",
+          "B": "Insufficient model parameters",
+          "C": "Forcing the entire context into a single fixed vector",
+          "D": "Incompatibility with CNNs"
+        },
+        "answer": "C",
+        "explanation": "The challenge with long sequences is that the entire input context must be compressed into one fixed-size vector, which can lead to information loss."
+      },
+      {
+        "type": "basic",
+        "question": "How is the encoder-decoder architecture applied to image captioning tasks?",
+        "answer": "An image is encoded into a vector using a CNN; this vector is then used by an RNN to sequentially generate a descriptive sentence."
+      },
+      {
+        "type": "cloze",
+        "text": "In machine translation, the encoder processes a sequence of words in a source language, and the {{decoder}} outputs a sequence in a target language.",
+        "hint": "Part of the architecture that generates output"
+      },
+      {
+        "type": "mcq",
+        "question": "What allows the encoder-decoder model to handle different input-output combinations?",
+        "options": {
+          "A": "Fixed architecture",
+          "B": "Attention mechanism",
+          "C": "Ability to mix and match neural network types",
+          "D": "Feedforward neural networks only"
+        },
+        "answer": "C",
+        "explanation": "The model's flexibility comes from its ability to utilize different types of networks like CNNs, RNNs, or Feedforward Networks depending on the task."
+      },
+      {
+        "type": "basic",
+        "question": "What role does the attention mechanism play in the encoder-decoder architecture?",
+        "answer": "It resolves the problem of fixed context vectors in long sequences by allowing the model to focus on different parts of the input at each decoding step."
+      }
+    ]
+  },
+  {
+    "note_id": "motivation-for-attention",
+    "source_note": "Main/Artificial Intelligence/Attention Mechanism.md",
+    "title": "The Motivation for Attention",
+    "domain": "deep-learning",
+    "tags": [
+      "attention-mechanism",
+      "transformers",
+      "deep-learning",
+      "neural-networks",
+      "rnn",
+      "self-attention"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What problem does the attention mechanism solve in RNN Encoder-Decoder models?",
+        "answer": "The attention mechanism solves the problem of the information bottleneck by allowing the decoder to focus on different parts of the input sequence dynamically, instead of relying on a single, fixed-size contextual vector."
+      },
+      {
+        "type": "cloze",
+        "text": "In the attention mechanism, {{attention weights}} represent the importance of focusing on each input word when generating the output.",
+        "hint": "probability or importance measure"
+      },
+      {
+        "type": "mcq",
+        "question": "How does the Transformer architecture address the limitations of RNNs?",
+        "options": {
+          "A": "By increasing the size of the contextual vector.",
+          "B": "By using parallel processing and self-attention.",
+          "C": "By adding more layers to the network.",
+          "D": "By reducing the training dataset size."
+        },
+        "answer": "B",
+        "explanation": "The Transformer architecture abandons sequential processing for attention-based computation, allowing for parallel processing through self-attention mechanisms."
+      },
+      {
+        "type": "basic",
+        "question": "What is the role of the Query, Key, and Value in self-attention?",
+        "answer": "In self-attention, Query focuses on the current word, Key evaluates other words against the query, and Value is the word representation used to compute the attention-weighted sum."
+      },
+      {
+        "type": "cloze",
+        "text": "Multi-Headed Attention in Transformers allows the model to focus on different {{linguistic dependencies}} simultaneously.",
+        "hint": "similar to distinct filters in CNNs"
+      },
+      {
+        "type": "basic",
+        "question": "What is the purpose of masked self-attention in the Transformer decoder?",
+        "answer": "Masked self-attention ensures that a word can only attend to itself and preceding words, preventing the leakage of future information."
+      },
+      {
+        "type": "mcq",
+        "question": "What does visualizing attention weights as a matrix or heatmap show?",
+        "options": {
+          "A": "The speed of the model processing.",
+          "B": "The size of the model's vocabulary.",
+          "C": "Visual evidence of word alignment.",
+          "D": "The model's overall accuracy."
+        },
+        "answer": "C",
+        "explanation": "Visualizing attention weights as a heatmap provides visual proof of how words align and are weighted in tasks like translation."
+      }
+    ]
+  },
+  {
+    "note_id": "synthesis-movement-to-large-ffnn",
+    "source_note": "Main/Artificial Intelligence/BackPropagation.md",
+    "title": "Synthesis Movement to Large FFNN",
+    "domain": "deep-learning",
+    "tags": [
+      "neural-networks",
+      "gradient-descent",
+      "backpropagation",
+      "machine-learning",
+      "training-algorithms"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the main computational challenge when moving from a simple model to a large feedforward neural network?",
+        "answer": "The main computational challenge is deriving the partial derivatives for every single weight and bias, which is infeasible due to the large size of the parameter set."
+      },
+      {
+        "type": "cloze",
+        "text": "The efficient method to solve the computational challenge of calculating gradients in large neural networks is called {{BackPropagation}}.",
+        "hint": "Relies on the chain rule of calculus."
+      },
+      {
+        "type": "mcq",
+        "question": "What fundamental concept is backpropagation based on?",
+        "options": {
+          "A": "Fourier Transform",
+          "B": "Chain Rule of Calculus",
+          "C": "Principle of Relativity",
+          "D": "Heisenberg Uncertainty Principle"
+        },
+        "answer": "B",
+        "explanation": "Backpropagation uses the chain rule of calculus to efficiently compute the gradient of the loss function."
+      },
+      {
+        "type": "basic",
+        "question": "Why is backpropagation considered crucial for training large neural networks?",
+        "answer": "Backpropagation is crucial because it allows for efficient calculation of the gradient of the loss function with respect to all network parameters, enabling effective training."
+      },
+      {
+        "type": "cloze",
+        "text": "The gradient descent update rule is given by: $$\\theta_{t+1} = \\theta_t - \\eta \\cdot \\text{{Gradient}}$$ and remains unchanged in larger models, but the size of $\\theta$ poses a {{computational challenge}}.",
+        "hint": "It's related to the sheer quantity of parameters."
+      }
+    ]
+  },
+  {
+    "note_id": "backpropagation-algorithm-overview",
+    "source_note": "Main/Artificial Intelligence/Backpropagation Pseudocode.md",
+    "title": "Backpropagation Algorithm Overview",
+    "domain": "deep-learning",
+    "tags": [
+      "machine-learning",
+      "neural-networks",
+      "gradient-descent",
+      "backpropagation"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What are the two main phases of the Backpropagation Algorithm?",
+        "answer": "The two main phases of the Backpropagation Algorithm are the Forward Pass and the Backward Pass."
+      },
+      {
+        "type": "cloze",
+        "text": "During the Forward Pass, the algorithm must **store all intermediate values**, which are crucial for the formulas used in the {{Backward Pass}}.",
+        "hint": ""
+      },
+      {
+        "type": "mcq",
+        "question": "What is the goal of the Forward Pass in Backpropagation?",
+        "options": {
+          "A": "To update the weights and biases.",
+          "B": "To compute the loss and store intermediate values.",
+          "C": "To directly calculate gradients.",
+          "D": "To initialize the neural network parameters."
+        },
+        "answer": "B",
+        "explanation": "The Forward Pass aims to compute the loss and store intermediate values necessary for the Backward Pass."
+      },
+      {
+        "type": "basic",
+        "question": "How are gradients for weights ($W_k$) computed during the Backward Pass?",
+        "answer": "Gradients for weights ($W_k$) are computed using the gradient of the current layer's pre-activation and the activation from the previous layer, stored during the Forward Pass."
+      },
+      {
+        "type": "cloze",
+        "text": "In Backpropagation, computing $G'(a)$ for the Logistic function when $h = G(a)$ involves using the formula $G'(a) = h \times {{(1 - h)}}$.",
+        "hint": ""
+      },
+      {
+        "type": "mcq",
+        "question": "Why does Backpropagation utilize matrix operations extensively?",
+        "options": {
+          "A": "To ensure high precision in calculations.",
+          "B": "To efficiently apply computations across multiple layers.",
+          "C": "To work specifically with convolutional neural networks.",
+          "D": "To avoid using any differentiable functions."
+        },
+        "answer": "B",
+        "explanation": "Matrix operations allow for efficient computations across all layers, leveraging the power of linear algebra for scalability."
+      },
+      {
+        "type": "basic",
+        "question": "What is the relationship between the prediction ($\\hat{y}$) and the true label ($y$) in computing the output layer gradient for Cross Entropy?",
+        "answer": "For Cross Entropy and Softmax, the gradient of the loss with respect to the pre-activation of the output layer is computed as the difference between the prediction ($\\hat{y}$) and the one-hot encoded true vector ($e_l$)."
+      }
+    ]
+  },
+  {
+    "note_id": "backpropagation-through-time-bptt",
+    "source_note": "Main/Artificial Intelligence/Backpropagation through time.md",
+    "title": "Backpropagation Through Time (BPTT)",
+    "domain": "deep-learning",
+    "tags": [
+      "neural-networks",
+      "recurrent-neural-networks",
+      "backpropagation",
+      "machine-learning"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the main purpose of Backpropagation Through Time (BPTT) in training Recurrent Neural Networks?",
+        "answer": "The main purpose of BPTT is to compute the gradients of the loss function with respect to the shared parameters of Recurrent Neural Networks to train them effectively."
+      },
+      {
+        "type": "cloze",
+        "text": "The total loss in an RNN is the {{sum of individual losses at every time step}}.",
+        "hint": "It involves aggregating losses over the sequence."
+      },
+      {
+        "type": "mcq",
+        "question": "How does BPTT handle the complexity of gradients for the recurrent weights in an RNN?",
+        "options": {
+          "A": "By treating all states as constants",
+          "B": "By summing explicit and implicit derivatives",
+          "C": "By ignoring historical dependencies",
+          "D": "By applying standard backpropagation repeatedly"
+        },
+        "answer": "B",
+        "explanation": "BPTT addresses the complexity by splitting the gradient calculation into explicit and implicit derivatives and summing across historical paths."
+      },
+      {
+        "type": "cloze",
+        "text": "The computation of gradients with respect to the output layer weights ($V$) in BPTT is considered {{straightforward}}.",
+        "hint": "Compared to recurrent weight gradients."
+      },
+      {
+        "type": "basic",
+        "question": "Why is computing gradients for the recurrent matrix $W$ in an RNN considered challenging?",
+        "answer": "Because the loss at each time step depends on both the current state and all previous states, requiring a complex backward tracing of errors through time."
+      },
+      {
+        "type": "mcq",
+        "question": "What allows BPTT to correctly update gradients in gradient descent?",
+        "options": {
+          "A": "Directly computing all derivatives at once",
+          "B": "Ignoring dependencies between time steps",
+          "C": "Tracing errors strictly forward",
+          "D": "Summing derivatives across all historical paths"
+        },
+        "answer": "D",
+        "explanation": "BPTT correctly updates gradients by summing derivatives across all time steps, allowing backward error propagation through time."
+      }
+    ]
+  },
+  {
+    "note_id": "contour-plots",
+    "source_note": "Main/Artificial Intelligence/Contour Plots.md",
+    "title": "Contour Plots",
+    "domain": "deep-learning",
+    "tags": [
+      "visualization",
+      "optimization",
+      "machine-learning",
+      "data-visualization",
+      "gradients"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the main purpose of a contour plot in data visualization?",
+        "answer": "A contour plot collapsed a 3D error surface into a 2D plane to visualize the steepness and gradients of a loss function."
+      },
+      {
+        "type": "cloze",
+        "text": "Contour plots use {{color gradients}} to enhance visualization, with red typically indicating high loss and blue low loss.",
+        "hint": "Enhancement technique"
+      },
+      {
+        "type": "basic",
+        "question": "What do tightly packed contour lines signify in a contour plot?",
+        "answer": "Tightly packed contour lines indicate a steep slope, suggesting a high gradient."
+      },
+      {
+        "type": "basic",
+        "question": "What does the spacing of contour lines represent in a contour plot?",
+        "answer": "The spacing of contour lines represents the gradient's steepness with closely packed lines for steep slopes and widely spaced lines for gentle slopes."
+      },
+      {
+        "type": "mcq",
+        "question": "Which statement best describes how contour plots use color?",
+        "options": {
+          "A": "Color indicates the time gradient instead of loss.",
+          "B": "Color represents the intensity of loss, often with red for high loss and blue for low.",
+          "C": "Color is used to show the direction of gradient flow.",
+          "D": "Color is purely decorative and doesn\u2019t add informational value."
+        },
+        "answer": "B",
+        "explanation": "Contour plots often use a heatmap logic where color gradients show the intensity of the loss, with red indicating higher loss and blue lower loss."
+      }
+    ]
+  },
+  {
+    "note_id": "the-core-operation-why-convolution",
+    "source_note": "Main/Artificial Intelligence/Convolution Neural Networks.md",
+    "title": "The Core Operation: Why Convolution?",
+    "domain": "deep-learning",
+    "tags": [
+      "convolution",
+      "cnn",
+      "deep-learning",
+      "kernel",
+      "pooling"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the main advantage of using convolution over fully connected layers in neural networks?",
+        "answer": "Convolution reduces the number of weights by employing local connectivity and parameter sharing, which makes it more efficient for image processing tasks compared to fully connected layers."
+      },
+      {
+        "type": "cloze",
+        "text": "A feature map is the output of a {{convolutional layer}} in a CNN."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the purpose of using a $1 \\times 1$ convolution in a CNN?",
+        "options": {
+          "A": "To reduce spatial dimensions",
+          "B": "To increase the spatial size of feature maps",
+          "C": "To change the depth of feature maps without altering width and height",
+          "D": "To add padding around the images"
+        },
+        "answer": "C",
+        "explanation": "A $1 \\times 1$ convolution is used to adjust the depth of the feature maps while maintaining their spatial dimensions, providing an efficient way to manage memory and computational resources."
+      },
+      {
+        "type": "basic",
+        "question": "How does pooling contribute to translation invariance in CNNs?",
+        "answer": "Pooling, especially max pooling, helps in achieving translation invariance by ensuring that the output remains largely unaffected when a feature shifts by a small amount (e.g., 1 pixel)."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the effect of using a stride of 2 in a convolutional layer?",
+        "options": {
+          "A": "It increases the depth of the feature map",
+          "B": "It reduces the size of the feature map by half",
+          "C": "It keeps the input size the same",
+          "D": "It doubles the size of the feature map"
+        },
+        "answer": "B",
+        "explanation": "Using a stride of 2 effectively downscales the spatial dimensions of the feature map by half, making the network more efficient."
+      },
+      {
+        "type": "cloze",
+        "text": "In a CNN, a neuron can only examine a small {{patch}} of the input at any given time due to local connectivity."
+      },
+      {
+        "type": "mcq",
+        "question": "For an input image size of $32 \\times 32$, what is the output size after applying a $5 \\times 5$ filter with stride 1 and padding 0?",
+        "options": {
+          "A": "28 x 28",
+          "B": "32 x 32",
+          "C": "29 x 29",
+          "D": "27 x 27"
+        },
+        "answer": "A",
+        "explanation": "Using the formula $O = \\frac{I - K + 2P}{S} + 1$, we get $O = \\frac{32 - 5 + 0}{1} + 1 = 28$, resulting in an output size of $28 \\times 28$."
+      }
+    ]
+  },
+  {
+    "note_id": "sharp-minima-and-cosine-annealing",
+    "source_note": "Main/Artificial Intelligence/Cosine Annealing.md",
+    "title": "Sharp Minima and Cosine Annealing in Neural Networks",
+    "domain": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "optimization",
+      "training-strategies",
+      "cosine-annealing",
+      "model-robustness"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is a sharp minima in the context of training neural networks?",
+        "answer": "A sharp minima is a narrow valley in the loss landscape where the error is low, but the model is not robust. Small changes in data can lead to large changes in error."
+      },
+      {
+        "type": "cloze",
+        "text": "Cosine annealing with warm restarts helps models avoid {{sharp minima}}, enhancing generalization by exploring the loss landscape."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the purpose of using cosine annealing with warm restarts in training neural networks?",
+        "options": {
+          "A": "To keep the learning rate constant throughout training.",
+          "B": "To explore the loss landscape and avoid sharp minima.",
+          "C": "To increase model complexity.",
+          "D": "To remove the need for model evaluation."
+        },
+        "answer": "B",
+        "explanation": "Cosine annealing with warm restarts allows the model to explore the loss landscape effectively and avoid sharp minima, enhancing generalization."
+      },
+      {
+        "type": "basic",
+        "question": "How does the warm restart in cosine annealing affect the learning process?",
+        "answer": "The warm restart resets the learning rate to its initial high value, which can 'kick' the model out of sharp minima, aiding in finding more robust solutions."
+      },
+      {
+        "type": "cloze",
+        "text": "In cosine annealing with warm restarts, after each cycle, the learning rate is {{reset}} to a high value."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the effect of maintaining a constant learning rate compared to using cosine annealing?",
+        "options": {
+          "A": "It enhances the exploration of the loss landscape.",
+          "B": "It maintains the initial learning trajectory without escapes.",
+          "C": "It results in higher computational cost.",
+          "D": "It improves convergence speed."
+        },
+        "answer": "B",
+        "explanation": "Maintaining a constant learning rate does not include the escape mechanism of cosine annealing with warm restarts, which helps avoid sharp minima."
+      }
+    ]
+  },
+  {
+    "note_id": "dataset-augmentation-and-parameter-sharing",
+    "source_note": "Main/Artificial Intelligence/Dataset Augmentation & Parameter Sharing.md",
+    "title": "Dataset Augmentation and Parameter Sharing",
+    "domain": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "regularization",
+      "dataset-augmentation",
+      "parameter-sharing",
+      "model-complexity"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is dataset augmentation and how does it help in deep learning?",
+        "answer": "Dataset augmentation is a technique used to increase the size and diversity of training data by applying transformations such as rotation, shifting, blurring, and adding noise to existing data samples. It helps prevent overfitting by forcing the model to generalize rather than memorize specific pixel combinations."
+      },
+      {
+        "type": "cloze",
+        "text": "In Convolutional Neural Networks, {{parameter sharing}} reduces model complexity by using the same filter across different parts of the image.",
+        "hint": "technique in CNNs"
+      },
+      {
+        "type": "mcq",
+        "question": "How does parameter tying in autoencoders reduce model complexity?",
+        "options": {
+          "A": "By sharing weights between separate, independent matrices.",
+          "B": "By enforcing that one weight matrix is the transpose of another.",
+          "C": "By reducing the number of input layers.",
+          "D": "By using a dropout technique."
+        },
+        "answer": "B",
+        "explanation": "Parameter tying enforces that one matrix in autoencoders is the transpose of another, reducing the number of independent weights needed."
+      },
+      {
+        "type": "basic",
+        "question": "Why is dataset augmentation particularly beneficial for image classification?",
+        "answer": "It's beneficial because it creates variations of images (e.g., through rotation or noise addition) that help the model learn the core features of an image rather than memorizing specific pixel patterns."
+      },
+      {
+        "type": "mcq",
+        "question": "What is a potential challenge of dataset augmentation in text data?",
+        "options": {
+          "A": "Finding meaningful augmentations is easier because text is continuous.",
+          "B": "Text augmentation is easier because discrete words simplify transformations.",
+          "C": "Meaningful augmentations are harder because text involves discrete words.",
+          "D": "Text data does not require augmentation due to its inherent diversity."
+        },
+        "answer": "C",
+        "explanation": "Augmentation is challenging in text data as it involves discrete words, unlike the continuous signals in image or speech data."
+      },
+      {
+        "type": "cloze",
+        "text": "One example of parameter sharing is in {{Convolutional Neural Networks}} where the same filter is applied across different image regions.",
+        "hint": "A type of neural network"
+      }
+    ]
+  },
+  {
+    "note_id": "dropout-ensemble-methods",
+    "source_note": "Main/Artificial Intelligence/Dropout.md",
+    "title": "Dropout Ensemble Methods",
+    "domain": "deep-learning",
+    "tags": [
+      "dropout",
+      "regularization",
+      "ensemble-methods",
+      "neural-networks",
+      "deep-learning"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary computational benefit of using Dropout in neural networks?",
+        "answer": "Dropout allows a single neural network to effectively simulate an ensemble of networks without incurring the high training and inference costs of traditional ensemble methods."
+      },
+      {
+        "type": "cloze",
+        "text": "Dropout works by randomly deactivating neurons during training, creating a {{thinned network}}.",
+        "hint": "This temporary version of the network results in a different architecture."
+      },
+      {
+        "type": "mcq",
+        "question": "Which method does Dropout use to simulate an ensemble of neural networks?",
+        "options": {
+          "A": "Layer normalization",
+          "B": "Randomly deactivating a subset of neurons",
+          "C": "Batch normalization",
+          "D": "Gradient clipping"
+        },
+        "answer": "B",
+        "explanation": "Dropout simulates an ensemble by randomly deactivating neurons, which creates various network configurations without training each one individually."
+      },
+      {
+        "type": "basic",
+        "question": "How does Dropout contribute to regularization in neural networks?",
+        "answer": "By preventing neurons from co-adapting to each other, forcing them to act more independently and improving the network's robustness against missing or corrupted information."
+      },
+      {
+        "type": "cloze",
+        "text": "At test time, Dropout uses a {{scaling rule}} where the output of neurons is reduced by the retention probability used during training.",
+        "hint": "This helps mimic the averaging effect across the simulated ensemble."
+      },
+      {
+        "type": "mcq",
+        "question": "Why does Dropout help in preventing co-adaptation among neurons in a neural network?",
+        "options": {
+          "A": "It increases the network size.",
+          "B": "It reduces computational costs.",
+          "C": "It forces neurons to operate independently by randomly dropping them.",
+          "D": "It changes the activation functions used in the network."
+        },
+        "answer": "C",
+        "explanation": "By randomly dropping neurons, Dropout forces the others to operate independently and learn useful features without relying on specific patterns."
+      }
+    ]
+  },
+  {
+    "note_id": "evaluating-word-representations",
+    "source_note": "Main/Artificial Intelligence/Evaluating Word Representations.md",
+    "title": "Evaluating Word Representations",
+    "domain": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "nlp",
+      "evaluation",
+      "word-embeddings"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the purpose of evaluating word representations in NLP?",
+        "answer": "Evaluating word representations aims to assess how well they perform on tasks that mimic human linguistic understanding, such as semantic relatedness, synonym detection, and analogy tasks."
+      },
+      {
+        "type": "cloze",
+        "text": "The {{semantic relatedness}} task measures how well word vectors capture similarity or relatedness between word pairs, as judged by humans.",
+        "hint": "It involves judging the closeness of word pairs."
+      },
+      {
+        "type": "mcq",
+        "question": "Which metric is typically used to evaluate performance on the semantic relatedness task?",
+        "options": {
+          "A": "Mean Squared Error",
+          "B": "Cosine Similarity",
+          "C": "Euclidean Distance",
+          "D": "Jaccard Index"
+        },
+        "answer": "B",
+        "explanation": "Cosine Similarity is used to measure the similarity between model-generated word vectors and human-rated word pair relatedness."
+      },
+      {
+        "type": "basic",
+        "question": "How does synonym detection evaluate word representations?",
+        "answer": "Synonym detection evaluates a model's ability to distinguish true synonyms from distractors by calculating cosine similarity between word vectors and selecting the candidate with the highest similarity to the target word."
+      },
+      {
+        "type": "cloze",
+        "text": "In analogy tasks, models solve analogies by performing {{mathematical operations}} on word vectors, like subtracting and adding.",
+        "hint": "It involves numerical manipulation of vectors."
+      },
+      {
+        "type": "mcq",
+        "question": "What type of analogy task tests grammatical relations between words?",
+        "options": {
+          "A": "Semantic Analogies",
+          "B": "Syntactic Analogies",
+          "C": "Lexical Analogies",
+          "D": "Phonetic Analogies"
+        },
+        "answer": "B",
+        "explanation": "Syntactic analogies test grammar by examining relationships between words that reflect grammatical transformations."
+      }
+    ]
+  },
+  {
+    "note_id": "feed-forward-neural-network",
+    "source_note": "Main/Artificial Intelligence/FFNN Architecture and Forward Pass.md",
+    "title": "FFNN Architecture",
+    "domain": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "machine-learning",
+      "architecture",
+      "forward-pass"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What characterizes the architecture of a Feed Forward Neural Network (FFNN)?",
+        "answer": "A Feed Forward Neural Network (FFNN) is characterized by its three main layers: input, hidden, and output layers, with a strictly one-directional flow of information, from input to output."
+      },
+      {
+        "type": "cloze",
+        "text": "In a Feed Forward Neural Network during the forward pass, each neuron's calculation involves {{preactivation}} and activation steps.",
+        "hint": "The step before applying an activation function."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the primary function of the input layer in a FFNN?",
+        "options": {
+          "A": "To process output into final predictions.",
+          "B": "To accept initial data features.",
+          "C": "To store weights and biases.",
+          "D": "To apply activation functions."
+        },
+        "answer": "B",
+        "explanation": "The input layer's primary function is to accept the initial data features for processing in the network."
+      },
+      {
+        "type": "basic",
+        "question": "What is a characteristic of the forward pass in a FFNN?",
+        "answer": "The forward pass involves taking an input and pushing it through the network to generate a prediction, with each layer's output serving as the input for the next layer."
+      },
+      {
+        "type": "cloze",
+        "text": "A FFNN is considered 'deep' if it has {{multiple hidden layers}}.",
+        "hint": "This term is related to the number of layers in the architecture."
+      },
+      {
+        "type": "mcq",
+        "question": "Which function is typically used to measure the error in FFNN predictions?",
+        "options": {
+          "A": "Cross Entropy Loss",
+          "B": "Mean Squared Error",
+          "C": "Hinge Loss",
+          "D": "Kullback-Leibler Divergence"
+        },
+        "answer": "B",
+        "explanation": "Mean Squared Error is commonly used to quantify how wrong the prediction is compared to the actual output."
+      }
+    ]
+  },
+  {
+    "note_id": "single-neuron-processes",
+    "source_note": "Main/Artificial Intelligence/Feed Forward Neural Network (FFNN).md",
+    "title": "Single Neuron Processes",
+    "domain": "deep-learning",
+    "tags": [
+      "neural-networks",
+      "initialization-methods",
+      "activation-functions",
+      "gradient-descent"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What are the main components of a single neuron's process in a neural network?",
+        "answer": "The main components are preactivation (weighted sum) and activation (non-linear function)."
+      },
+      {
+        "type": "cloze",
+        "text": "The process of {{activation}} involves applying a non-linear function to the preactivation to produce the output for the next layer."
+      },
+      {
+        "type": "mcq",
+        "question": "Which aspect of training in neural networks is crucial for preventing signal explosion or vanishing?",
+        "options": {
+          "A": "Gradient Descent",
+          "B": "Initialization Methods",
+          "C": "Batch Normalization",
+          "D": "Learning Rate Scheduling"
+        },
+        "answer": "B",
+        "explanation": "Initialization Methods are used to prevent signals like preactivation and gradients from becoming too large or too small."
+      },
+      {
+        "type": "basic",
+        "question": "Why are activation functions important in neural networks?",
+        "answer": "Activation functions introduce non-linearity, allowing the network to learn complex functions and enabling the training process by preventing saturation."
+      },
+      {
+        "type": "mcq",
+        "question": "In the context of neural networks, what does the activation function ReLU stand for?",
+        "options": {
+          "A": "Restricted Exponential Learning Unit",
+          "B": "Recursive Exponential Linear Unit",
+          "C": "Rectified Linear Unit",
+          "D": "Regular Linear Unit"
+        },
+        "answer": "C",
+        "explanation": "ReLU stands for Rectified Linear Unit, a popular activation function that outputs the input directly if it is positive; otherwise, it outputs zero."
+      },
+      {
+        "type": "cloze",
+        "text": "In feedforward neural networks, neurons are organized in layers where information is processed and moved {{forward}} from input to output."
+      }
+    ]
+  },
+  {
+    "note_id": "feedforward-neural-network-ffnn",
+    "source_note": "Main/Artificial Intelligence/Feed Forward Neural Network.md",
+    "title": "Feedforward Neural Network (FFNN)",
+    "domain": "deep-learning",
+    "tags": [
+      "neural-networks",
+      "machine-learning",
+      "deep-learning",
+      "activation-function",
+      "gradient-descent"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary flow direction of information in a Feedforward Neural Network (FFNN)?",
+        "answer": "The primary flow direction of information in a Feedforward Neural Network is forward, from the input layer through the hidden layers to the output layer, with no feedback loops."
+      },
+      {
+        "type": "cloze",
+        "text": "In a FFNN, the {{activation function}} introduces non-linearity to the model.",
+        "hint": "This ensures layers don't just perform linear operations."
+      },
+      {
+        "type": "mcq",
+        "question": "What does the 'pre-activation' stage in a neuron's computation involve?",
+        "options": {
+          "A": "Applying an activation function like Sigmoid or ReLU",
+          "B": "Formulating a linear combination of inputs and weights",
+          "C": "Calculating loss function derivatives",
+          "D": "Executing backpropagation updates"
+        },
+        "answer": "B",
+        "explanation": "The 'pre-activation' stage involves a linear combination of the inputs using weights and biases."
+      },
+      {
+        "type": "basic",
+        "question": "Why are activation functions like Sigmoid, ReLU, and tanh necessary in hidden layers of a FFNN?",
+        "answer": "These activation functions introduce non-linearity, which is essential to ensure that the network can approximate complex functions and do more than just linear transformations."
+      },
+      {
+        "type": "cloze",
+        "text": "The output of a FFNN in classification tasks typically uses the {{Softmax}} function.",
+        "hint": "This function is used for generating probability distributions."
+      },
+      {
+        "type": "mcq",
+        "question": "Which matrix operation is primarily responsible for scaling connection importance between layers in a FFNN?",
+        "options": {
+          "A": "Addition of biases",
+          "B": "Application of the loss function",
+          "C": "Matrix multiplication with weights",
+          "D": "Execution of activation functions"
+        },
+        "answer": "C",
+        "explanation": "The weights matrix multiplies with the input to scale the connection importance between neurons in adjacent layers."
+      },
+      {
+        "type": "basic",
+        "question": "What is the role of gradient descent in training a FFNN?",
+        "answer": "Gradient descent is used to iteratively update the network's parameters, minimizing the loss function by calculating the gradient of the loss with respect to these parameters."
+      }
+    ]
+  },
+  {
+    "note_id": "glove-global-vectors",
+    "source_note": "Main/Artificial Intelligence/GloVe Representation.md",
+    "title": "GloVe (Global Vectors)",
+    "domain": "deep-learning",
+    "tags": [
+      "word-representation",
+      "co-occurrence",
+      "svd",
+      "prediction-based",
+      "neural-networks",
+      "natural-language-processing"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the fundamental approach of GloVe to learning word representations?",
+        "answer": "GloVe combines count-based and prediction-based models, leveraging a global co-occurrence matrix to learn word representations."
+      },
+      {
+        "type": "cloze",
+        "text": "GloVe aims to set up a learning task where the dot product of two word vectors is directly proportional to the {{probability}} of a word appearing in the context of another.",
+        "hint": "relationship between word vectors"
+      },
+      {
+        "type": "mcq",
+        "question": "What role do bias terms play in GloVe's objective function?",
+        "options": {
+          "A": "They enhance the learning rate.",
+          "B": "They account for the independent frequencies of words.",
+          "C": "They initialize the word vectors.",
+          "D": "They adjust the co-occurrence matrix."
+        },
+        "answer": "B",
+        "explanation": "Bias terms provide flexibility by accounting for the independent frequencies of words, preventing skew by frequent words."
+      },
+      {
+        "type": "cloze",
+        "text": "In GloVe, a co-occurrence matrix cell $X_{ij}$ represents the number of times a context word {{j}} appears with a target word {{i}}.",
+        "hint": "elements of co-occurrence matrix"
+      },
+      {
+        "type": "basic",
+        "question": "How does GloVe's global co-occurrence matrix differ from single word-context pair approaches?",
+        "answer": "GloVe's global co-occurrence matrix processes entire datasets at once to capture comprehensive word relationships, unlike single pair models that focus on predicting context for a specific word."
+      },
+      {
+        "type": "mcq",
+        "question": "What optimization technique is used by GloVe to minimize its loss function?",
+        "options": {
+          "A": "Stochastic Gradient Descent",
+          "B": "Gradient Descent",
+          "C": "Newton's Method",
+          "D": "Conjugate Gradient Method"
+        },
+        "answer": "B",
+        "explanation": "GloVe uses Gradient Descent to adjust word vector and bias parameters to minimize the squared difference loss function."
+      }
+    ]
+  },
+  {
+    "note_id": "gory-details-backpropagation-through-time",
+    "source_note": "Main/Artificial Intelligence/Gory Details of Backpropagation through Time.md",
+    "title": "Gory Details of Backpropagation through Time",
+    "domain": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "recurrent-neural-network",
+      "backpropagation-through-time",
+      "gradients",
+      "tensors"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary objective during Backpropagation Through Time in an RNN?",
+        "answer": "The primary objective is to calculate the gradient of the total loss function with respect to the recurrent weight matrix, W."
+      },
+      {
+        "type": "cloze",
+        "text": "In Backpropagation Through Time, calculating the gradient of the loss with respect to $W$ involves a dependency on the hidden states like {{s_t}}.",
+        "hint": "Think of the ordered structure of RNNs."
+      },
+      {
+        "type": "mcq",
+        "question": "What makes the computation of the tensor $\frac{\\partial^+ s_k}{\\partial W}$ in BPTT complex?",
+        "options": {
+          "A": "The tensor has a large number of non-zero elements.",
+          "B": "The computation requires high-dimensional integration.",
+          "C": "The tensor is a 3D structure with dimensions $d \\times d \\times d$.",
+          "D": "The tensor depends on non-linear kernel functions."
+        },
+        "answer": "C",
+        "explanation": "The complexity arises from the fact that the derivative of a vector with respect to a matrix results in a 3D tensor with dimensions $d \\times d \\times d$."
+      },
+      {
+        "type": "basic",
+        "question": "Why is the tensor $\u0000frac{\\partial^+ s_k}{\\partial W}$ considered sparse?",
+        "answer": "It is considered sparse because most of its elements are zero, only yielding non-zero values under the condition that specific indices match."
+      },
+      {
+        "type": "cloze",
+        "text": "The derivative ${\\partial s_k^p}/{\\partial a_k^p}$ is simply the derivative of the activation function, denoted as {{\\sigma'(a_k^p)}}.",
+        "hint": "Activation functions have specific derivatives."
+      },
+      {
+        "type": "mcq",
+        "question": "Which technique is used to simplify the tensor computation in BPTT?",
+        "options": {
+          "A": "Parallel computing",
+          "B": "Focusing on a single generic element",
+          "C": "Quantization",
+          "D": "Dimensionality reduction"
+        },
+        "answer": "B",
+        "explanation": "Simplifying the tensor computation involves focusing on calculating a single generic element and generalizing from there."
+      },
+      {
+        "type": "basic",
+        "question": "What role does the chain rule play in calculating gradients in BPTT for RNNs?",
+        "answer": "The chain rule breaks down the recursive dependency of derivatives across time steps and helps calculate the total gradient effectively."
+      }
+    ]
+  },
+  {
+    "note_id": "gradient-descent-and-its-limitations",
+    "source_note": "Main/Artificial Intelligence/Gradient Descent - Recap.md",
+    "title": "Gradient Descent and Its Limitations",
+    "domain": "deep-learning",
+    "tags": [
+      "optimization",
+      "learning-rate",
+      "taylor-series",
+      "neural-networks"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "Why is gradient descent preferred over guesswork algorithms or brute force search in optimization?",
+        "answer": "Gradient descent provides a principled way to update parameters by leveraging derivatives, which ensures efficient convergence without needing to map the entire loss surface, unlike guesswork or brute force methods."
+      },
+      {
+        "type": "cloze",
+        "text": "Gradient descent can get stuck on plateaus because the gradients become {{infinitesimal}}, causing very slow parameter updates.",
+        "hint": "Tiny in magnitude"
+      },
+      {
+        "type": "basic",
+        "question": "How does the geometry of the loss surface affect gradient descent's speed?",
+        "answer": "The slope of the loss surface dictates speed. On steep slopes, large gradients result in fast movement, whereas flat surfaces yield small gradients, causing slow updates."
+      },
+      {
+        "type": "mcq",
+        "question": "What is a significant limitation of gradient descent when dealing with flat loss surfaces?",
+        "options": {
+          "A": "It takes too large steps and overshoots the minimum.",
+          "B": "It fails to find any minimum due to random movements.",
+          "C": "It makes very slow progress because gradients become negligible.",
+          "D": "It cannot start unless given an initial direction."
+        },
+        "answer": "C",
+        "explanation": "On flat surfaces, gradients are tiny, leading to very small steps and slow progress toward the minimum."
+      },
+      {
+        "type": "basic",
+        "question": "What role does the Taylor Series play in the update rule of gradient descent?",
+        "answer": "The Taylor Series suggests moving in the opposite direction of the gradient to ensure a reduction in the loss, thus forming the basis of the update rule."
+      },
+      {
+        "type": "cloze",
+        "text": "Gradient descent's update rule is expressed as $W_{new} = W_{old} - \\\\eta \\\\cdot \\\\Delta W$, where $\\\\Delta W$ is the {{derivative}} of the loss with respect to parameters.",
+        "hint": "Also known as the gradient"
+      }
+    ]
+  },
+  {
+    "note_id": "backpropagation-gradients",
+    "source_note": "Main/Artificial Intelligence/Gradient wrt Hidden Layer.md",
+    "title": "Backpropagation Gradients",
+    "domain": "deep-learning",
+    "tags": [
+      "neural-networks",
+      "backpropagation",
+      "gradients",
+      "chain-rule",
+      "machine-learning"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the central goal of establishing a generic formula for gradients in hidden layers in neural networks?",
+        "answer": "The central goal is to apply the same formula to any hidden layer, allowing errors to flow backward from the output layer to the input without needing a unique formula for each layer."
+      },
+      {
+        "type": "cloze",
+        "text": "To compute the derivative of the loss with respect to a hidden neuron, the {{multivariable chain rule}} is used: $$ \\frac{\\partial L}{\\partial h_{i,j}} = \\sum_{m=1}^{K} \\left( \\frac{\\partial L}{\\partial a_{i+1, m}} \\cdot \\frac{\\partial a_{i+1, m}}{\\partial h_{i,j}} \\right) $$."
+      },
+      {
+        "type": "mcq",
+        "question": "What ensures backward error flow in a neural network starting from the output layer back to the input?",
+        "options": {
+          "A": "Forward Pass",
+          "B": "Cross Entropy Loss",
+          "C": "Backpropagation Algorithm",
+          "D": "Data Augmentation"
+        },
+        "answer": "C",
+        "explanation": "The Backpropagation algorithm is designed to propagate errors from the output layer back through the network to the input layer."
+      },
+      {
+        "type": "basic",
+        "question": "How is the gradient with respect to a hidden layer's output computed?",
+        "answer": "The gradient with respect to a hidden layer's output is computed by multiplying the transpose of the weight matrix of the next layer with the gradient from the next layer's pre-activations."
+      },
+      {
+        "type": "cloze",
+        "text": "The gradient with respect to the pre-activations $a_i$ is calculated using the gradient from $h_i$ and the derivative of the {{activation function}} $G'(a_i)$. This results in the formula: $$ \\nabla_{a_i} L = \\nabla_{h_i} L \\odot G'(a_i) $$."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the function of the Hadamard product in backpropagation?",
+        "options": {
+          "A": "To sum vector elements",
+          "B": "To divide matrices",
+          "C": "To perform element-wise multiplication",
+          "D": "To concatenate vectors"
+        },
+        "answer": "C",
+        "explanation": "The Hadamard product performs element-wise multiplication, which is essential for calculating gradients with vectors in backpropagation."
+      },
+      {
+        "type": "basic",
+        "question": "Why is the derivative of the activation function important in backpropagation?",
+        "answer": "The derivative of the activation function is used to adjust gradients appropriately at each layer, as it describes how the output of the activation function changes with its input, necessary for computing gradients with respect to pre-activations."
+      }
+    ]
+  },
+  {
+    "note_id": "talking-to-the-output-layer",
+    "source_note": "Main/Artificial Intelligence/Gradient wrt Output Layer.md",
+    "title": "Talking to the Output Layer",
+    "domain": "deep-learning",
+    "tags": [
+      "gradient",
+      "loss-function",
+      "cross-entropy",
+      "softmax",
+      "deep-learning"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the gradient of the loss with respect to the pre-activation vector $a_L$ in a Softmax output layer?",
+        "answer": "The gradient is the difference between the predicted probability vector ($\\hat{y}$) and the true one-hot vector ($e_l$)."
+      },
+      {
+        "type": "cloze",
+        "text": "The gradient vector is a collection of {{partial derivatives}} corresponding to every neuron in the output layer.",
+        "hint": "It describes changes in the loss function."
+      },
+      {
+        "type": "basic",
+        "question": "How does the chain rule apply in computing the gradient of the loss with respect to the pre-activations in the output layer?",
+        "answer": "The chain rule is applied as $\\frac{\\partial L}{\\partial a_L} = \\frac{\\partial L}{\\partial \\hat{y}} \\cdot \\frac{\\partial \\hat{y}}{\\partial a_L}$, relating the loss, predicted outputs, and pre-activations."
+      },
+      {
+        "type": "mcq",
+        "question": "Why does changing any pre-activation $a_i$ in a Softmax layer affect the entire output prediction?",
+        "options": {
+          "A": "Each pre-activation is independent.",
+          "B": "The Softmax output depends on all exponentiated pre-activations.",
+          "C": "Softmax only considers the largest pre-activation.",
+          "D": "Pre-activations are irrelevant after the Softmax layer."
+        },
+        "answer": "B",
+        "explanation": "The Softmax function connects every input to every output by using all exponentiated pre-activations in the denominator."
+      },
+      {
+        "type": "cloze",
+        "text": "The loss formula using Cross Entropy is defined as $-\\log(\\hat{y}_l)$, where $l$ represents the index of the {{true class label}}.",
+        "hint": "Focuses on the true class probability."
+      },
+      {
+        "type": "mcq",
+        "question": "What role does the one-hot vector $e_l$ play in the gradient computation?",
+        "options": {
+          "A": "It represents all predicted classes.",
+          "B": "It identifies the predicted class.",
+          "C": "It represents the true class position as 1 and others as 0.",
+          "D": "It scales the learning rate."
+        },
+        "answer": "C",
+        "explanation": "The one-hot vector $e_l$ has 1 at the position of the true class, providing a sparse representation used in gradient calculations."
+      }
+    ]
+  },
+  {
+    "note_id": "computing-gradients-with-respect-to-parameters",
+    "source_note": "Main/Artificial Intelligence/Gradient wrt Parameters.md",
+    "title": "Computing Gradients with Respect to Parameters",
+    "domain": "deep-learning",
+    "tags": [
+      "backpropagation",
+      "gradients",
+      "deep-learning",
+      "neural-networks"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the purpose of the chain rule in computing the gradient of the loss with respect to a specific weight in a neural network layer?",
+        "answer": "The chain rule is used to decompose the derivative of the loss with respect to a specific weight into products of more easily computed derivatives, such as the derivative of the loss with respect to the pre-activation and the pre-activation with respect to the weight."
+      },
+      {
+        "type": "cloze",
+        "text": "The gradient matrix for weights can be computed using the {{outer product}} of the error term and the previous layers' activations.",
+        "hint": "It's a linear algebra operation."
+      },
+      {
+        "type": "mcq",
+        "question": "How is the gradient of the loss with respect to biases computed in neural networks?",
+        "options": {
+          "A": "Using the product of input signals and weight derivatives.",
+          "B": "Equating with gradients of pre-activation gradients.",
+          "C": "Using second derivatives of activations.",
+          "D": "Summing the gradients of all neuron outputs."
+        },
+        "answer": "B",
+        "explanation": "The gradient of the loss with respect to the bias is the same as the gradient with respect to the pre-activations because the derivative of the pre-activation with respect to the bias is 1."
+      },
+      {
+        "type": "basic",
+        "question": "What efficiency improvement does the outer product offer in the computation of gradients for weights?",
+        "answer": "The outer product allows the computation of the entire weight matrix gradients in one linear algebra operation, reducing the necessity of element-by-element computation."
+      },
+      {
+        "type": "cloze",
+        "text": "During backpropagation, the gradients \u00003\u000041 are propagated backward using the {{pre-activation gradient}}.",
+        "hint": "It's derived during the backward pass."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the role of stored activations during backpropagation?",
+        "options": {
+          "A": "They are used to compute the gradient of biases.",
+          "B": "They help in visualizing network changes.",
+          "C": "They are inputs for the outer product to compute weight gradients.",
+          "D": "They enable pruning of unnecessary layers."
+        },
+        "answer": "C",
+        "explanation": "Stored activations from the forward pass are used in the backward pass as inputs for computing the outer product that forms the gradient matrix for weights."
+      }
+    ]
+  },
+  {
+    "note_id": "linear-aggregation-trap",
+    "source_note": "Main/Artificial Intelligence/How Activation Functions Came into being ?.md",
+    "title": "Linear Aggregation Trap",
+    "domain": "deep-learning",
+    "tags": [
+      "linear-aggregation",
+      "neural-networks",
+      "activation-functions",
+      "ai-history",
+      "xor-problem",
+      "non-linearity"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "Why is linear aggregation alone insufficient for creating deep learning models?",
+        "answer": "Linear aggregation alone results in a model that functions as a single-layer linear transformation, unable to solve complex problems requiring non-linear decision boundaries."
+      },
+      {
+        "type": "cloze",
+        "text": "A linear model can only draw a {{straight line}} to separate data, which is insufficient for solving the XOR problem.",
+        "hint": "Geometric shape"
+      },
+      {
+        "type": "mcq",
+        "question": "Which problem highlighted the limitations of linear models in neural networks?",
+        "options": {
+          "A": "AND problem",
+          "B": "XOR problem",
+          "C": "OR problem",
+          "D": "NOR problem"
+        },
+        "answer": "B",
+        "explanation": "The XOR problem demonstrated the inability of linear models to separate certain data configurations with a single straight line."
+      },
+      {
+        "type": "basic",
+        "question": "What was the impact of Minsky and Papert's proof regarding perceptrons on the field of AI?",
+        "answer": "Their proof that single-layer perceptrons could not solve the XOR problem led to the first 'AI Winter' as it diminished optimism about neural networks."
+      },
+      {
+        "type": "cloze",
+        "text": "Sigmoid activation functions are preferred because they are {{differentiable}} and allow the use of calculus to adjust weights.",
+        "hint": "Key mathematical property"
+      },
+      {
+        "type": "mcq",
+        "question": "Why did neural networks eventually move from Sigmoid to ReLU activation functions?",
+        "options": {
+          "A": "ReLU is non-differentiable",
+          "B": "ReLU avoids the vanishing gradient problem",
+          "C": "Sigmoids cannot model XOR",
+          "D": "ReLU has a better threshold function"
+        },
+        "answer": "B",
+        "explanation": "ReLU avoids the vanishing gradient problem faced by Sigmoids, allowing deeper networks with sustained gradient flow."
+      },
+      {
+        "type": "basic",
+        "question": "How do activation functions contribute to the complexity of neural networks?",
+        "answer": "Activation functions introduce non-linearity, enabling neural networks to model complex mathematical functions and solve sophisticated problems."
+      }
+    ]
+  },
+  {
+    "note_id": "how-lstms-avoid-the-vanishing-gradient-problem",
+    "source_note": "Main/Artificial Intelligence/How LSTMs avoid the problem of vanishing gradient.md",
+    "title": "How LSTMs Avoid the Vanishing Gradient Problem",
+    "domain": "deep-learning",
+    "tags": [
+      "lstm",
+      "vanishing-gradient",
+      "recurrent-neural-networks",
+      "backpropagation",
+      "neural-networks"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "How do LSTMs prevent the vanishing gradient problem?",
+        "answer": "LSTMs prevent the vanishing gradient problem by using parameterized gates which regulate information flow and ensure that gradients only vanish when the network chooses to forget information."
+      },
+      {
+        "type": "cloze",
+        "text": "In LSTMs, the {{forget gate}} controls what fraction of the previous cell state is passed to the current cell state.",
+        "hint": "A type of gate in LSTMs"
+      },
+      {
+        "type": "mcq",
+        "question": "What ensures gradient preservation in LSTMs?",
+        "options": {
+          "A": "Random initialization of weights",
+          "B": "Use of parameterized gates for regulation",
+          "C": "Repeating weight matrices",
+          "D": "Increased learning rate"
+        },
+        "answer": "B",
+        "explanation": "LSTMs use parameterized gates such as the forget gate to regulate and preserve gradient flow, even over long sequences."
+      },
+      {
+        "type": "basic",
+        "question": "Why does backpropagation through time lead to vanishing gradients in standard RNNs?",
+        "answer": "In standard RNNs, vanishing gradients occur because the same recurrent weight matrix is multiplied repeatedly across time steps, causing the gradient to shrink exponentially especially if the matrix values are small."
+      },
+      {
+        "type": "mcq",
+        "question": "What happens when the forget gates in LSTMs are close to zero?",
+        "options": {
+          "A": "The gradient flow increases",
+          "B": "The network retains information",
+          "C": "The network explicitly forgets information",
+          "D": "The network resets its weights"
+        },
+        "answer": "C",
+        "explanation": "When forget gates are close to zero, the network has actively chosen to discard that information, leading to controlled vanishing of gradients."
+      },
+      {
+        "type": "cloze",
+        "text": "LSTMs multiply the {{forget gates}}' outputs during backpropagation to compute gradients across time steps.",
+        "hint": "A gate responsible for controlling memory retention"
+      },
+      {
+        "type": "basic",
+        "question": "What is the role of the forget gate in LSTMs during the forward pass?",
+        "answer": "During the forward pass, the forget gate decides what fraction of the previous cell state should be carried forward to the current cell state."
+      }
+    ]
+  },
+  {
+    "note_id": "weight-initialization-methods",
+    "source_note": "Main/Artificial Intelligence/Initialization Problem.md",
+    "title": "Weight Initialization Methods",
+    "domain": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "weight-initialization",
+      "gradient-descent",
+      "machine-learning"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "Why can naive weight initialization methods, like using all zeros or small random values, cause problems in deep networks?",
+        "answer": "Naive weight initialization can lead to gradient instability. Large initial weights can cause exploding inputs and output saturation, leading to vanishing gradients. Small weights can result in shrinking outputs, diminishing gradients and halting learning."
+      },
+      {
+        "type": "cloze",
+        "text": "The purpose of weight initialization is to ensure that the variance of the signal and the variance of the gradient remain {{constant}} across all layers.",
+        "hint": "Goal of weight initialization"
+      },
+      {
+        "type": "mcq",
+        "question": "Which weight initialization method is best suited for symmetric activations like Sigmoid and Tanh?",
+        "options": {
+          "A": "He Initialization",
+          "B": "Xavier/Glorot Initialization",
+          "C": "Random Initialization",
+          "D": "Orthogonal Initialization"
+        },
+        "answer": "B",
+        "explanation": "Xavier/Glorot Initialization assumes symmetric activations and uses both fan_in and fan_out to keep signal variance balanced."
+      },
+      {
+        "type": "basic",
+        "question": "How does He Initialization differ from Xavier Initialization, and when is it used?",
+        "answer": "He Initialization differs by focusing on non-symmetric activations like ReLU. It uses a variance of 2/fan_in to compensate for ReLU's tendency to zero out negative signals, maintaining signal variance."
+      },
+      {
+        "type": "cloze",
+        "text": "He Initialization is particularly beneficial for activations like {{ReLU}} because it compensates for the signal variance halving.",
+        "hint": "Activation type"
+      },
+      {
+        "type": "mcq",
+        "question": "What is the goal variance formula used in Xavier Initialization?",
+        "options": {
+          "A": "1/fan_in",
+          "B": "2/fan_out",
+          "C": "2/(fan_in + fan_out)",
+          "D": "1/(fan_in * fan_out)"
+        },
+        "answer": "C",
+        "explanation": "Xavier Initialization uses the variance formula 2/(fan_in + fan_out) to ensure balanced signal propagation in layers."
+      }
+    ]
+  },
+  {
+    "note_id": "injecting-noise-at-outputs",
+    "source_note": "Main/Artificial Intelligence/Injecting Noise at Outputs.md",
+    "title": "Injecting Noise at Outputs",
+    "domain": "deep-learning",
+    "tags": [
+      "regularization",
+      "overfitting",
+      "label-smoothing"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the regularization technique called that involves modifying target labels from hard to soft targets?",
+        "answer": "Injecting noise at outputs through label smoothing."
+      },
+      {
+        "type": "cloze",
+        "text": "Soft targets prevent the network from being absolutely {{certain}} on the correct label, reducing overfitting.",
+        "hint": "Level of certainty"
+      },
+      {
+        "type": "mcq",
+        "question": "What does 'injecting noise at outputs' aim to achieve in deep learning models?",
+        "options": {
+          "A": "Increase complexity of the model",
+          "B": "Prevent overfitting by modifying target labels",
+          "C": "Speed up the training process",
+          "D": "Increase the dataset size artificially"
+        },
+        "answer": "B",
+        "explanation": "Injecting noise at outputs, or label smoothing, reduces overfitting by using soft targets instead of hard ones."
+      },
+      {
+        "type": "basic",
+        "question": "How does label smoothing affect the cross-entropy loss function?",
+        "answer": "It adjusts the loss function by introducing non-zero probabilities for all outputs, altering the loss computation and preventing absolute certainty on the correct label."
+      },
+      {
+        "type": "cloze",
+        "text": "The modified loss function is mathematically interpreted as {{regularization}}.",
+        "hint": "It helps prevent overfitting."
+      },
+      {
+        "type": "mcq",
+        "question": "How is the probability mass redistributed in label smoothing?",
+        "options": {
+          "A": "Equally among all labels",
+          "B": "Inversely proportional to label frequency",
+          "C": "Concentrated on incorrect labels",
+          "D": "Equally among incorrect labels"
+        },
+        "answer": "D",
+        "explanation": "A small probability mass is removed from the correct label and evenly distributed among all other incorrect labels."
+      }
+    ]
+  },
+  {
+    "note_id": "injecting-noise-at-inputs",
+    "source_note": "Main/Artificial Intelligence/Injecting Noise at the Inputs.md",
+    "title": "Injecting Noise at Inputs",
+    "domain": "deep-learning",
+    "tags": [
+      "regularization",
+      "noise-injection",
+      "l2-regularization",
+      "weight-decay"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "How does injecting noise into input data improve a model's performance?",
+        "answer": "Injecting noise at the inputs during training acts as a form of regularization, which helps improve the model's robustness and prevents it from overfitting the clean training examples by forcing it to handle variability in data."
+      },
+      {
+        "type": "cloze",
+        "text": "Injecting noise into input data acts as a form of regularization equivalent to {{L2 regularization}} in certain models."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the effect of adding Gaussian noise to inputs in a simplified linear network setup?",
+        "options": {
+          "A": "Makes the network learn faster",
+          "B": "Equivalent to applying L2 regularization",
+          "C": "Improves the accuracy without any downsides",
+          "D": "Causes the weights to increase exponentially"
+        },
+        "answer": "B",
+        "explanation": "Inserting Gaussian noise into inputs can be mathematically equated to applying L2 regularization (weight decay) in a simplified linear network."
+      },
+      {
+        "type": "basic",
+        "question": "In the context of noise injection, what does it mean when the network must map the corrupted input to the original output?",
+        "answer": "It means the network can't rely on memorizing the inputs but must learn to generalize from corrupted data to recognize underlying patterns, thus enhancing its ability to handle diverse data."
+      },
+      {
+        "type": "mcq",
+        "question": "Which of the following scenarios describes a noise process for binary inputs?",
+        "options": {
+          "A": "The input value is always flipped",
+          "B": "20% probability the input is unchanged",
+          "C": "With an 80% probability, the input remains unchanged",
+          "D": "All values are normalized"
+        },
+        "answer": "C",
+        "explanation": "In the described binary input noise process, there's an 80% chance the input remains unchanged, and a 20% chance it is flipped."
+      },
+      {
+        "type": "basic",
+        "question": "Why does the expectation of the cross-product terms in the noise error calculation equal zero?",
+        "answer": "The expectation of the cross-product terms is zero because the added noise to each input is independent, leading to the expectation that their product is zero."
+      }
+    ]
+  },
+  {
+    "note_id": "bias-variance-trade-off-in-regularization",
+    "source_note": "Main/Artificial Intelligence/Introduction to Bias & Variance.md",
+    "title": "Bias-Variance Trade-off in Regularization",
+    "domain": "deep-learning",
+    "tags": [
+      "regularization",
+      "overfitting",
+      "model-capacity",
+      "bias-variance"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the bias-variance trade-off in the context of deep learning models?",
+        "answer": "The bias-variance trade-off is the balancing act between low bias and low variance to achieve effective generalization. Low bias ensures the model's predictions are close to the true function, while low variance ensures that predictions are consistent across different datasets."
+      },
+      {
+        "type": "cloze",
+        "text": "An over-parameterized model with high capacity is prone to {{overfitting}}.",
+        "hint": "A model that has too many parameters relative to the amount of training data."
+      },
+      {
+        "type": "mcq",
+        "question": "Why are complex models prone to high variance?",
+        "options": {
+          "A": "They have fewer parameters.",
+          "B": "They fit closely to the specific training sample, including noise.",
+          "C": "They always underfit the training data.",
+          "D": "They ensure low bias by being consistently wrong."
+        },
+        "answer": "B",
+        "explanation": "Complex models, due to their high capacity, adapt closely to the specific training sample, including the noise, leading to high variance."
+      },
+      {
+        "type": "basic",
+        "question": "How does regularization help in managing overfitting in deep learning models?",
+        "answer": "Regularization introduces additional constraints or penalties to the model, which effectively limit its capacity, helping to prevent overfitting by discouraging overly complex hypotheses that fit the noise in the training data."
+      },
+      {
+        "type": "cloze",
+        "text": "The difference between the average model prediction and the true function represents {{bias}}.",
+        "hint": "A term used to measure how well a model's predictions match the true value."
+      },
+      {
+        "type": "mcq",
+        "question": "What happens when a model has high bias?",
+        "options": {
+          "A": "It fits perfectly to the training data.",
+          "B": "It has solutions that are very different from each other.",
+          "C": "It consistently makes predictions far from the true function.",
+          "D": "It is very sensitive to training data variations."
+        },
+        "answer": "C",
+        "explanation": "High bias means that the model consistently underestimates or overestimates, leading to predictions far from the true function."
+      }
+    ]
+  },
+  {
+    "note_id": "encoder-decoder-architectures",
+    "source_note": "Main/Artificial Intelligence/Introduction to Encoder Decoder Model.md",
+    "title": "Encoder-Decoder Architectures",
+    "domain": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "language-modeling",
+      "image-captioning",
+      "rnn",
+      "cnn"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary function of an Encoder-Decoder architecture in deep learning?",
+        "answer": "The primary function is to map an input of one modality or structure into an output of another by encoding the input into an abstract representation and decoding that representation to generate the desired output."
+      },
+      {
+        "type": "cloze",
+        "text": "In Image Captioning, a {{Convolutional Neural Network (CNN)}} is used as the encoder to represent the image mathematically.",
+        "hint": "image processing technique"
+      },
+      {
+        "type": "mcq",
+        "question": "What task does the baseline language modeling focus on in Encoder-Decoder architectures?",
+        "options": {
+          "A": "Image classification",
+          "B": "Predicting the next word in a sequence",
+          "C": "Sentiment analysis",
+          "D": "Speech recognition"
+        },
+        "answer": "B",
+        "explanation": "Language modeling focuses on predicting the next word in a sequence given the previous words, which is fundamental for sequence generation tasks."
+      },
+      {
+        "type": "cloze",
+        "text": "In the decoder part of an Encoder-Decoder architecture, an RNN generates the output sequence using the {{hidden state}} to summarize previous words.",
+        "hint": "a key component in RNNs"
+      },
+      {
+        "type": "basic",
+        "question": "How is dimensionality matching handled when the CNN's output doesn't match the RNN's required hidden state dimensions?",
+        "answer": "Dimensionality matching is handled by applying a projection weight matrix to match the dimensions between the CNN's output vector and the RNN's required hidden state dimensions."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the main advantage of end-to-end trainability in Encoder-Decoder architectures?",
+        "options": {
+          "A": "Increased inference speed",
+          "B": "Simultaneous updates to parameters across all network components",
+          "C": "Higher memory consumption",
+          "D": "Simplified network design"
+        },
+        "answer": "B",
+        "explanation": "End-to-end trainability allows simultaneous updates and optimization of parameters across the CNN, RNN, and other network components by expressing the output as a single continuous function of the input."
+      },
+      {
+        "type": "basic",
+        "question": "What role does the Backpropagation Through Time (BPTT) algorithm play in the training of Encoder-Decoder architectures?",
+        "answer": "BPTT is used to send error gradients from the generated words back through the RNN and into the CNN encoder, updating all network parameters jointly."
+      }
+    ]
+  },
+  {
+    "note_id": "motivation-overcoming-rnn-bottlenecks",
+    "source_note": "Main/Artificial Intelligence/Introduction to Transformer Architecture.md",
+    "title": "The Motivation: Overcoming RNN Bottlenecks",
+    "domain": "deep-learning",
+    "tags": [
+      "rnn",
+      "transformer",
+      "self-attention",
+      "parallelization",
+      "neural-networks"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "Why do traditional RNNs have limitations in computational efficiency?",
+        "answer": "Traditional RNNs process sequences sequentially, computing each hidden state ($H_t$) only after computing the previous state ($H_{t-1}$), which prevents parallel processing."
+      },
+      {
+        "type": "basic",
+        "question": "How does the Transformer architecture overcome the sequential processing bottleneck of RNNs?",
+        "answer": "The Transformer architecture uses self-attention to compute contextual representations and allows for parallel processing, removing the need for sequential dependencies."
+      },
+      {
+        "type": "cloze",
+        "text": "Transformers eliminate the need for recurrent connections by relying on {{self-attention}}.",
+        "hint": "mechanism for contextual representation without recurrence"
+      },
+      {
+        "type": "mcq",
+        "question": "What is the primary role of the 'Query' vector in the self-attention mechanism?",
+        "options": {
+          "A": "To aggregate final contextual output",
+          "B": "To focus on the current target word",
+          "C": "To evaluate other words in the sequence",
+          "D": "To create a valid probability distribution"
+        },
+        "answer": "B",
+        "explanation": "The Query vector is used to focus on the current target word for which a new representation is computed."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the function of the Softmax in the Scaled Dot-Product Attention?",
+        "options": {
+          "A": "To scale the scores by vector dimensions",
+          "B": "To transform output into hidden states",
+          "C": "To create a probability distribution of attention weights",
+          "D": "To compute value aggregation"
+        },
+        "answer": "C",
+        "explanation": "The Softmax function creates a valid probability distribution of attention weights from the raw score outputs."
+      },
+      {
+        "type": "cloze",
+        "text": "In the Transformer architecture, attention weights are computed in parallel using {{matrix multiplication}}.",
+        "hint": "method involving stacked Query, Key, and Value vectors"
+      },
+      {
+        "type": "basic",
+        "question": "What are the three vectors used in the Transformer's self-attention mechanism?",
+        "answer": "The three vectors are Query (Q), Key (K), and Value (V), used for computing contextual representations."
+      }
+    ]
+  },
+  {
+    "note_id": "l1-vs-l2-regularization",
+    "source_note": "Main/Artificial Intelligence/L1 vs L2 Regularization.md",
+    "title": "L1 vs L2 Regularization",
+    "domain": "deep-learning",
+    "tags": [
+      "regularization",
+      "feature-selection",
+      "underfitting",
+      "deep-learning",
+      "weight-decay"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the main distinction between L1 and L2 regularization in terms of their impact on weights?",
+        "answer": "L1 regularization induces sparsity by pushing many weights to exactly zero, useful for feature selection. L2 regularization results in smaller weights, enhancing generalization by maintaining small but non-zero weights."
+      },
+      {
+        "type": "cloze",
+        "text": "L1 regularization results in sparseness, leading to feature {{selection}} as it pushes many weights to exactly zero.",
+        "hint": "A benefit helpful for deciding which features are important."
+      },
+      {
+        "type": "cloze",
+        "text": "L2 regularization is also known as {{weight decay}} in deep learning contexts.",
+        "hint": "A term often used interchangeably with L2 regularization."
+      },
+      {
+        "type": "basic",
+        "question": "Why might L1 regularization lead to underfitting in models?",
+        "answer": "L1 regularization aggressively sets many weights to zero, which might remove features that were somewhat useful, simplifying the model too much and increasing training error."
+      },
+      {
+        "type": "mcq",
+        "question": "How does L2 regularization affect model weights?",
+        "options": {
+          "A": "It sets most weights to zero.",
+          "B": "It maintains many small, non-zero weights.",
+          "C": "It turns off unnecessary features.",
+          "D": "It is ineffective in deep learning."
+        },
+        "answer": "B",
+        "explanation": "L2 regularization maintains many small, non-zero weights, improving generalization by making the model less sensitive to input fluctuations."
+      },
+      {
+        "type": "mcq",
+        "question": "In what scenario is L1 regularization particularly beneficial?",
+        "options": {
+          "A": "When maximizing weights is crucial.",
+          "B": "When features are equally important.",
+          "C": "When feature selection is necessary.",
+          "D": "When weights must remain non-zero."
+        },
+        "answer": "C",
+        "explanation": "L1 regularization is beneficial for feature selection because it induces sparsity by setting many weights exactly to zero."
+      }
+    ]
+  },
+  {
+    "note_id": "lstms-and-grus",
+    "source_note": "Main/Artificial Intelligence/LSTM and GRU.md",
+    "title": "LSTMs and GRUs",
+    "domain": "deep-learning",
+    "tags": [
+      "neural-networks",
+      "lstm",
+      "gru",
+      "deep-learning",
+      "recurrent-networks"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What are the main advantages of using LSTM networks over standard RNNs?",
+        "answer": "LSTM networks manage information flow over time with specialized gates, mitigating the vanishing gradient problem that standard RNNs suffer from."
+      },
+      {
+        "type": "cloze",
+        "text": "In a GRU, the cell state and hidden state are combined into a single {{state variable}}.",
+        "hint": "Think about what reduces complexity in GRUs compared to LSTMs."
+      },
+      {
+        "type": "mcq",
+        "question": "How do LSTMs manage long-term dependencies?",
+        "options": {
+          "A": "By using a single global state for all time steps",
+          "B": "By using a set of gates to control information flow",
+          "C": "By shortening the recurrent sequence",
+          "D": "By initializing weights to large values"
+        },
+        "answer": "B",
+        "explanation": "LSTMs manage long-term dependencies with three gates that control how information is stored, forgotten, and utilized over time, alleviating issues like vanishing gradients."
+      },
+      {
+        "type": "basic",
+        "question": "What is the function of the forget gate in an LSTM?",
+        "answer": "The forget gate determines what fraction of the previous cell state should be erased and is no longer relevant."
+      },
+      {
+        "type": "cloze",
+        "text": "{{Gated Recurrent Units}} (GRUs) simplify LSTMs by using only two gates.",
+        "hint": "A popular recurrent neural network architecture designed with simpler gate structures."
+      },
+      {
+        "type": "mcq",
+        "question": "What adaptive mechanism allows LSTMs to solve the vanishing gradient problem effectively?",
+        "options": {
+          "A": "Regular activation functions",
+          "B": "Fixed gradients",
+          "C": "Gated structure for controlled gradient flow",
+          "D": "Randomized weight initialization"
+        },
+        "answer": "C",
+        "explanation": "The gated structure of LSTMs regulates gradient flow during backpropagation, enabling efficient learning of long-term dependencies."
+      }
+    ]
+  },
+  {
+    "note_id": "learning-rate-schedule",
+    "source_note": "Main/Artificial Intelligence/Learning Rate Scheduling.md",
+    "title": "Learning Rate Schedule",
+    "domain": "deep-learning",
+    "tags": [
+      "machine-learning",
+      "optimization",
+      "gradient-descent",
+      "learning-rate",
+      "annealing"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the purpose of a learning rate schedule in gradient descent?",
+        "answer": "A learning rate schedule helps adjust the step size of gradient descent to improve model convergence and avoid overshooting."
+      },
+      {
+        "type": "cloze",
+        "text": "In gradient descent, annealing reduces the step size as you approach a {{minimum}} to avoid overshooting.",
+        "hint": "It's a low point on the loss landscape."
+      },
+      {
+        "type": "mcq",
+        "question": "What does a cyclical learning rate schedule help prevent in gradient descent?",
+        "options": {
+          "A": "Gradient explosion",
+          "B": "Vanishing gradients",
+          "C": "Saddle points",
+          "D": "Feature overfitting"
+        },
+        "answer": "C",
+        "explanation": "Cyclical learning rates can help the optimizer escape saddle points and local minima by increasing the learning rate periodically, which provides the kinetic energy needed to overcome these obstacles."
+      },
+      {
+        "type": "basic",
+        "question": "How does a warm-up phase in a learning rate schedule benefit the model during training?",
+        "answer": "A warm-up phase prevents the model from making 'wild' guesses when weights are random and gradients are noisy, stabilizing the training process."
+      },
+      {
+        "type": "cloze",
+        "text": "Cyclical learning rate schedules provide a 'boost' by periodically increasing the {{rate}} to escape local minima.",
+        "hint": "This term is commonly referred to in the context of the speed of learning."
+      },
+      {
+        "type": "mcq",
+        "question": "Which of the following is NOT a benefit of using a learning rate schedule?",
+        "options": {
+          "A": "Avoiding overshooting",
+          "B": "Improving convergence",
+          "C": "Increasing data overfitting",
+          "D": "Stabilizing gradient updates"
+        },
+        "answer": "C",
+        "explanation": "Learning rate schedules are generally used to improve training stability and model convergence, not to increase overfitting."
+      }
+    ]
+  },
+  {
+    "note_id": "learning-rate-schemes-and-saddle-points",
+    "source_note": "Main/Artificial Intelligence/Learning Rates Schemes.md",
+    "title": "Learning Rate Schemes and Saddle Points",
+    "domain": "deep-learning",
+    "tags": [
+      "learning-rate",
+      "deep-learning",
+      "optimization",
+      "saddle-points",
+      "machine-learning"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the main problem that cyclical learning rates aim to solve in deep learning optimization?",
+        "answer": "Cyclical learning rates aim to solve the problem of getting stuck in saddle points during optimization, as these points can appear as minima and trap the model in local optima."
+      },
+      {
+        "type": "cloze",
+        "text": "A {{saddle point}} is a region where the loss surface appears to be a minimum from one direction but not from others.",
+        "hint": "Key optimization challenge in non-convex functions."
+      },
+      {
+        "type": "mcq",
+        "question": "Which learning rate scheme involves cycling between high and low learning rates to escape saddle points?",
+        "options": {
+          "A": "Exponential Decay",
+          "B": "Cyclical Learning Rates",
+          "C": "Line Search",
+          "D": "Adam Optimization"
+        },
+        "answer": "B",
+        "explanation": "Cyclical Learning Rates alternate the learning rate values cyclically to maintain momentum, which helps in overcoming saddle points."
+      },
+      {
+        "type": "basic",
+        "question": "How does cosine annealing combined with warm restarts help in optimization?",
+        "answer": "Cosine annealing smoothly decays the learning rate along a cosine curve, and warm restarts reset the learning rate to maximum after intervals, helping explore different regions of the loss landscape."
+      },
+      {
+        "type": "cloze",
+        "text": "{{Warm Start}} begins with a low learning rate that gradually increases, preventing large destabilizing updates early on.",
+        "hint": "Used in Transformer-based architectures."
+      },
+      {
+        "type": "mcq",
+        "question": "What characterizes the Triangular Schedule in cyclical learning rates?",
+        "options": {
+          "A": "Continuous linear increase",
+          "B": "Alternates between small to high values in a triangular pattern",
+          "C": "Decreases using a cosine function",
+          "D": "Based on past gradient magnitudes"
+        },
+        "answer": "B",
+        "explanation": "The Triangular Schedule in cyclical learning rates alternates the learning rates between minimum and maximum values in a triangular fashion, unlike constant or cosine-based adjustments."
+      }
+    ]
+  },
+  {
+    "note_id": "extending-gradient-descent-to-ffnns",
+    "source_note": "Main/Artificial Intelligence/Learning parameters Intuition.md",
+    "title": "Extending Gradient Descent to FFNNs",
+    "domain": "deep-learning",
+    "tags": [
+      "gradient-descent",
+      "neural-networks",
+      "backpropagation",
+      "machine-learning"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary goal when extending Gradient Descent from a simple neuron model to a Feed Forward Neural Network (FFNN)?",
+        "answer": "The primary goal is to find an algorithm for learning the numerous parameters of an FFNN by applying the Gradient Descent algorithm, which was initially used for simpler networks with only two parameters."
+      },
+      {
+        "type": "cloze",
+        "text": "In a Feed Forward Neural Network, the parameter vector is known as {{theta}}, and it includes all the network's weights and biases.",
+        "hint": "It's a single large vector combining all parameters."
+      },
+      {
+        "type": "mcq",
+        "question": "What does the parameter vector \u03b8 in a Feed Forward Neural Network contain?",
+        "options": {
+          "A": "Only input and output weights",
+          "B": "All weights and biases of the network",
+          "C": "Just the biases of each layer",
+          "D": "Activation functions"
+        },
+        "answer": "B",
+        "explanation": "The parameter vector \u03b8 contains all the weights and biases within the neural network."
+      },
+      {
+        "type": "basic",
+        "question": "Why is deriving the gradient vector for an FFNN computationally challenging?",
+        "answer": "The gradient vector is computationally challenging because it involves calculating partial derivatives of the loss function with respect to every single parameter, which can be enormous and highly complex."
+      },
+      {
+        "type": "cloze",
+        "text": "The Gradient Descent update rule for an FFNN can be expressed as: {{theta}}_{t+1} = theta_t - eta * Gradient.",
+        "hint": "This represents an update using vector notation."
+      },
+      {
+        "type": "mcq",
+        "question": "What is a key challenge when applying Gradient Descent to FFNNs?",
+        "options": {
+          "A": "Managing large input sizes",
+          "B": "Adjusting activation functions",
+          "C": "Computing the large gradient vector efficiently",
+          "D": "Implementing dropout layers"
+        },
+        "answer": "C",
+        "explanation": "The key challenge is computing the large gradient vector efficiently due to the vast number of parameters in an FFNN."
+      }
+    ]
+  },
+  {
+    "note_id": "loss-function-in-machine-learning",
+    "source_note": "Main/Artificial Intelligence/Loss Function.md",
+    "title": "Loss Function in Machine Learning",
+    "domain": "deep-learning",
+    "tags": [
+      "machine-learning",
+      "optimization",
+      "loss-function"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary objective of using a loss function in machine learning?",
+        "answer": "The primary objective of using a loss function in machine learning is error minimization, by quantifying the discrepancy between predicted and true values to guide the optimization process."
+      },
+      {
+        "type": "cloze",
+        "text": "The loss function measures the discrepancy between the model's prediction (\u001f4A5) and the true value (\u001f4AE)."
+      },
+      {
+        "type": "mcq",
+        "question": "Which loss function forms the foundation of Gradient Descent?",
+        "options": {
+          "A": "Absolute Error Loss",
+          "B": "Cross-Entropy Loss",
+          "C": "Square Error Loss",
+          "D": "Hinge Loss"
+        },
+        "answer": "C",
+        "explanation": "The Square Error Loss is fundamental to Gradient Descent, forming the basis for optimization by measuring the quadratic error."
+      },
+      {
+        "type": "basic",
+        "question": "What role does the parameter set \\(\\theta\\) play in the optimization process of loss functions?",
+        "answer": "The parameter set \\(\\theta\\) represents the values that need to be optimized to minimize the average loss across all training points, guiding the learning process in machine learning."
+      },
+      {
+        "type": "cloze",
+        "text": "The optimization problem in machine learning involves minimizing the average loss across all {{training points}}."
+      }
+    ]
+  },
+  {
+    "note_id": "momentum-based-gradient-descent",
+    "source_note": "Main/Artificial Intelligence/Momentum Based Gradient.md",
+    "title": "Momentum-based Gradient Descent",
+    "domain": "deep-learning",
+    "tags": [
+      "gradient-descent",
+      "optimization",
+      "machine-learning",
+      "convergence",
+      "momentum"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary analogy used to explain Momentum-based Gradient Descent?",
+        "answer": "The primary analogies are the Navigation Analogy, which compares receiving consistent directions to gaining confidence and speed, and the Physics Analogy, where a rolling ball continues because of accumulated momentum."
+      },
+      {
+        "type": "cloze",
+        "text": "Standard gradient descent suffers from a \"memory\" problem, leading to inefficient movement on {{flat regions}}.",
+        "hint": "Think about regions with gentle slopes."
+      },
+      {
+        "type": "basic",
+        "question": "Why is a decay factor ($\\beta$) typically set to 0.9 in Momentum-based Gradient Descent?",
+        "options": {
+          "A": "It keeps track of previous weight updates.",
+          "B": "It tracks an accumulated sum of past gradients to guide future updates.",
+          "C": "It averages the weights over time.",
+          "D": "It adjusts the learning rate dynamically.",
+          "answer": "B",
+          "explanation": "The history vector (u_t) accumulates past gradient information to help the algorithm maintain momentum in consistent directions, even when gradients are small."
+        },
+        "answer": "The decay factor $\beta$, set to 0.9, creates an exponentially weighted average of past gradients, giving more weight to recent gradients while retaining some influence from previous ones."
+      },
+      {
+        "type": "cloze",
+        "text": "The **History Update** equation in momentum-based gradient descent includes the term $\\beta \\cdot u_{t-1}$, where $\\beta$ acts as a {{decay factor}}.",
+        "hint": "It's typically 0.9."
+      },
+      {
+        "type": "basic",
+        "question": "What is a behavioral side effect of using Momentum in gradient descent, and why does it occur?",
+        "answer": "A side effect is oscillations, which occur because the algorithm builds momentum and may overshoot targets, leading it to decelerate, make U-turns, and oscillate around the solution."
+      },
+      {
+        "type": "mcq",
+        "question": "How does Momentum-based Gradient Descent perform compared to standard gradient descent after 50 iterations?",
+        "options": {
+          "A": "Momentum-based GD converges slower but more accurately.",
+          "B": "Standard GD converges faster but less accurately.",
+          "C": "Momentum-based GD converges faster but may overshoot.",
+          "D": "Standard GD and Momentum-based GD perform identically.",
+          "answer": "C",
+          "explanation": "Momentum-based Gradient Descent reaches the minimum faster, although it may overshoot and oscillate due to high momentum."
+        }
+      }
+    ]
+  },
+  {
+    "note_id": "inspiration-for-artificial-neural-networks",
+    "source_note": "Main/Artificial Intelligence/Motivation from Biological Neurons.md",
+    "title": "Inspiration for Artificial Neural Networks",
+    "domain": "deep-learning",
+    "tags": [
+      "neuroscience",
+      "neural-networks",
+      "biology",
+      "information-processing"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What are the four primary components of a biological neuron and their functions?",
+        "answer": "Dendrites receive incoming signals, the synapse is the connection point between neurons, the soma processes the information, and the axon transmits outputs to other neurons."
+      },
+      {
+        "type": "cloze",
+        "text": "Artificial neural networks are inspired by the structure and function of {{biological neurons}}.",
+        "hint": "basic units of the brain"
+      },
+      {
+        "type": "mcq",
+        "question": "What aspect of human neuron networks is mirrored in artificial neural networks?",
+        "options": {
+          "A": "Serial processing",
+          "B": "Linear computation",
+          "C": "Massive parallel interconnected network",
+          "D": "Non-sensory processing"
+        },
+        "answer": "C",
+        "explanation": "Artificial neural networks imitate the brain's massively parallel interconnected network to enhance information processing."
+      },
+      {
+        "type": "basic",
+        "question": "Why is hierarchical abstraction important in neural networks, particularly in the visual cortex example?",
+        "answer": "Hierarchical abstraction allows each layer of neurons to perform increasingly complex processing, leading from simple feature detection to identifying complete, complex objects like faces."
+      },
+      {
+        "type": "cloze",
+        "text": "The brain's neurons operate as a {{massively parallel interconnected network}}, which influences artificial neural network design.",
+        "hint": "non-serial processing"
+      },
+      {
+        "type": "mcq",
+        "question": "In the context of neuron specialization in the brain, what might different neurons specialize in when watching a comedy show?",
+        "options": {
+          "A": "Specialize in all aspects of the show",
+          "B": "Specialize only in video analysis",
+          "C": "Specialize only in audio decoding",
+          "D": "Specialize in funny visuals, audio, or text"
+        },
+        "answer": "D",
+        "explanation": "Neurons may specialize in distinct tasks, like responding to funny visuals, audio, or text, contributing to the brain's method of processing complex stimuli."
+      }
+    ]
+  },
+  {
+    "note_id": "nadam-nesterov-accelerated-adaptive-moment-estimation",
+    "source_note": "Main/Artificial Intelligence/NADAM.md",
+    "title": "NAdam (Nesterov Accelerated Adaptive Moment Estimation)",
+    "domain": "deep-learning",
+    "tags": [
+      "optimization-algorithms",
+      "adam",
+      "nesterov",
+      "gradient-descent",
+      "machine-learning"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the key improvement that NAdam offers over the Adam optimizer?",
+        "answer": "NAdam incorporates the Nesterov look-ahead mechanism into the Adam optimizer to reduce oscillations and improve stability."
+      },
+      {
+        "type": "cloze",
+        "text": "NAdam incorporates {{Nesterov's look-ahead mechanism}} into the Adam optimizer to reduce oscillations.",
+        "hint": "optimizes gradient descent"
+      },
+      {
+        "type": "mcq",
+        "question": "What challenge does NAdam address when integrating Nesterov's look-ahead into Adam?",
+        "options": {
+          "A": "Increasing the learning rate adaptability",
+          "B": "Reducing redundant calculations in gradient updates",
+          "C": "Handling larger batch sizes",
+          "D": "Incorporating dropout regularization"
+        },
+        "answer": "B",
+        "explanation": "NAdam addresses the issue of redundant calculations present in the standard NAG approach by simplifying the update rule."
+      },
+      {
+        "type": "basic",
+        "question": "How does NAdam simplify the integration of Nesterov's look-ahead into the Adam update rule?",
+        "answer": "NAdam rewrites the NAG equations to eliminate reliance on the $T-1$ time step, performing the look-ahead before the next iteration."
+      },
+      {
+        "type": "cloze",
+        "text": "NAdam exhibits smaller oscillations compared to standard Adam, which confirms the effectiveness of the {{Nesterov look-ahead effect}}.",
+        "hint": "mechanism that stabilizes the learning path"
+      },
+      {
+        "type": "mcq",
+        "question": "What is the main goal of rewriting the NAG equations for integration into Adam?",
+        "options": {
+          "A": "To use more time steps",
+          "B": "To simplify calculations by using $T$ and $T+1$",
+          "C": "To increase computational demands",
+          "D": "To make updates more frequent"
+        },
+        "answer": "B",
+        "explanation": "The goal is to simplify the integration by writing all computations in terms of $T$ and $T+1$, 'pushing the look ahead' to occur in advance."
+      }
+    ]
+  },
+  {
+    "note_id": "nesterov-accelerated-gradient",
+    "source_note": "Main/Artificial Intelligence/Nesterov Gradient Descent.md",
+    "title": "Nesterov Accelerated Gradient",
+    "domain": "deep-learning",
+    "tags": [
+      "nesterov",
+      "optimization",
+      "machine-learning",
+      "gradient-descent",
+      "neural-networks"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What primary problem does Nesterov Accelerated Gradient (NAG) address in momentum-based optimization?",
+        "answer": "NAG addresses the problem of overshooting and oscillations in momentum-based optimization by anticipating the terrain ahead."
+      },
+      {
+        "type": "cloze",
+        "text": "Nesterov Accelerated Gradient uses the principle of {{'look before you leap'}} to anticipate future positions and make corrections.",
+        "hint": "A common saying about foresight."
+      },
+      {
+        "type": "mcq",
+        "question": "How does Nesterov Accelerated Gradient differ in its update approach compared to standard Momentum?",
+        "options": {
+          "A": "NAG updates parameters without using history.",
+          "B": "NAG calculates the gradient at a looked-ahead position.",
+          "C": "NAG uses less momentum overall.",
+          "D": "NAG focuses only on the current gradient."
+        },
+        "answer": "B",
+        "explanation": "Nesterov Accelerated Gradient calculates the gradient at a 'looked-ahead' position, allowing it to anticipate and correct overshooting."
+      },
+      {
+        "type": "basic",
+        "question": "Describe the three-step update process of Nesterov Accelerated Gradient.",
+        "answer": "1. Look Ahead: Move weights using only the history (momentum). 2. Correction: Calculate the gradient at this looked-ahead position. 3. Final Update: Combine original momentum with the new gradient."
+      },
+      {
+        "type": "cloze",
+        "text": "In NAG, the velocity update step is expressed as: $$v_{t+1} = \beta v_t + \nabla L(\theta_t - \beta v_t)$$, which includes the gradient calculation at {{an anticipated point}}.",
+        "hint": "Where the gradient is evaluated in NAG."
+      },
+      {
+        "type": "mcq",
+        "question": "What visual improvement does Nesterov Accelerated Gradient provide compared to standard Momentum?",
+        "options": {
+          "A": "Larger oscillations.",
+          "B": "Delayed convergence.",
+          "C": "Faster and smaller corrections leading to stable convergence.",
+          "D": "No oscillations."
+        },
+        "answer": "C",
+        "explanation": "NAG provides faster, smaller corrections due to immediate detection of overshooting, resulting in stable convergence."
+      }
+    ]
+  },
+  {
+    "note_id": "one-hot-representation",
+    "source_note": "Main/Artificial Intelligence/One Hot Representation of words.md",
+    "title": "One-Hot Representation",
+    "domain": "deep-learning",
+    "tags": [
+      "machine-learning",
+      "encoding",
+      "word-representation",
+      "text-processing",
+      "vectors"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary function of one-hot representation in machine learning models?",
+        "answer": "One-hot representation converts words into binary vectors to allow machine learning models to process them as numeric inputs."
+      },
+      {
+        "type": "cloze",
+        "text": "One significant drawback of one-hot encoding is its {{massive dimensionality}} due to the size of the vocabulary.",
+        "hint": "relates to the size of the vectors"
+      },
+      {
+        "type": "mcq",
+        "question": "Why do one-hot vectors fail to capture semantic relationships between words?",
+        "options": {
+          "A": "They are based on frequency counts.",
+          "B": "They are orthogonal and lack contextual information.",
+          "C": "They depend on manual encoding.",
+          "D": "They use continuous values instead of discrete ones."
+        },
+        "answer": "B",
+        "explanation": "One-hot vectors are orthogonal, meaning they have no inherent similarity or relationship, failing to capture semantic similarities."
+      },
+      {
+        "type": "basic",
+        "question": "How is a word represented in one-hot encoding?",
+        "answer": "In one-hot encoding, a word is represented by a vector with the length equal to the vocabulary size, with one element set to 1 at the word's specific index and all other elements set to 0."
+      },
+      {
+        "type": "cloze",
+        "text": "A key limitation of one-hot representations is their failure to convey {{semantic similarity}} between words like 'cat' and 'dog'.",
+        "hint": "importance in language understanding"
+      },
+      {
+        "type": "mcq",
+        "question": "What is a more effective alternative to one-hot encoding for capturing word semantics?",
+        "options": {
+          "A": "JPEG compression",
+          "B": "Word2Vec",
+          "C": "Run-length encoding",
+          "D": "Binarization"
+        },
+        "answer": "B",
+        "explanation": "Word2Vec is a distributed representation method that captures semantic similarities and relationships between words, unlike one-hot encoding."
+      }
+    ]
+  },
+  {
+    "note_id": "optimization-and-adaptive-methods",
+    "source_note": "Main/Artificial Intelligence/Optmization Algorithm.md",
+    "title": "Optimization and Adaptive Methods",
+    "domain": "deep-learning",
+    "tags": [
+      "optimization",
+      "adaptive-methods",
+      "learning-rate",
+      "gradient-descent",
+      "machine-learning"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the main advantage of using Mini-Batch Gradient Descent?",
+        "answer": "Mini-Batch Gradient Descent balances computational efficiency and gradient accuracy by using a batch of data points to update model parameters."
+      },
+      {
+        "type": "cloze",
+        "text": "{{Stochastic Gradient Descent (SGD)}} uses a single data point to estimate the gradient, leading to fast but noisy updates.",
+        "hint": "Optimization method with oscillating updates"
+      },
+      {
+        "type": "mcq",
+        "question": "Which optimization algorithm adjusts learning rates based on the accumulation of squared gradients, making it suitable for sparse data?",
+        "options": {
+          "A": "Adam",
+          "B": "RMSProp",
+          "C": "AdaGrad",
+          "D": "Momentum-Based Gradient Descent"
+        },
+        "answer": "C",
+        "explanation": "AdaGrad accumulates the squares of past gradients to adjust learning rates, which benefits sparse data."
+      },
+      {
+        "type": "basic",
+        "question": "How does Nesterov Accelerated Gradient (NAG) differ from traditional momentum methods?",
+        "answer": "NAG evaluates the gradient at a 'lookahead' position rather than the current point, reducing overshooting and controlling oscillations."
+      },
+      {
+        "type": "cloze",
+        "text": "Adam combines {{momentum}} and RMSProp principles with bias correction to handle initial learning rate inflation.",
+        "hint": "A technique to accelerate gradient descent"
+      },
+      {
+        "type": "mcq",
+        "question": "What is the purpose of using a warm-up period in learning rate schedules?",
+        "options": {
+          "A": "To immediately initialize high learning rates",
+          "B": "To stabilize training before decaying learning rates",
+          "C": "To permanently set the initial learning rate",
+          "D": "To increase the learning rate after convergence"
+        },
+        "answer": "B",
+        "explanation": "Warm-up gradually increases learning rates during initialization to stabilize training before decaying."
+      },
+      {
+        "type": "basic",
+        "question": "What does the term 'lookahead' refer to in the context of the Nesterov Accelerated Gradient method?",
+        "answer": "'Lookahead' in NAG refers to evaluating the gradient at a position slightly ahead in the direction of the velocity, providing foresight to reduce overshooting."
+      }
+    ]
+  },
+  {
+    "note_id": "convolutional-neural-networks-and-pooling-layers",
+    "source_note": "Main/Artificial Intelligence/Pooling.md",
+    "title": "Convolutional Neural Networks and Pooling Layers",
+    "domain": "deep-learning",
+    "tags": [
+      "cnn",
+      "pooling",
+      "downsampling",
+      "translation-invariance"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "Why are pooling layers used in Convolutional Neural Networks?",
+        "answer": "Pooling layers are used to simplify information, reduce computational complexity, and prevent overfitting by downsampling the spatial dimensions of data."
+      },
+      {
+        "type": "cloze",
+        "text": "Pooling layers perform {{downsampling}} by reducing the spatial dimensions of the data representation."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the primary advantage of using pooling layers in CNNs?",
+        "options": {
+          "A": "Increasing feature map dimensions",
+          "B": "Translation Invariance",
+          "C": "Enhancing overfitting",
+          "D": "Adding more layers"
+        },
+        "answer": "B",
+        "explanation": "Pooling layers help achieve translation invariance by reducing the spatial dimensions and focusing on important features."
+      },
+      {
+        "type": "cloze",
+        "text": "Maintaining every pixel's information throughout a CNN would increase the risk of {{overfitting}}."
+      },
+      {
+        "type": "basic",
+        "question": "How do pooling layers help in achieving computational efficiency in CNNs?",
+        "answer": "By downsampling the data, pooling layers reduce the number of parameters and computations required, improving computational efficiency."
+      }
+    ]
+  },
+  {
+    "note_id": "rmsprop",
+    "source_note": "Main/Artificial Intelligence/RMSProp.md",
+    "title": "RMSProp",
+    "domain": "deep-learning",
+    "tags": [
+      "optimization-algorithm",
+      "machine-learning",
+      "gradient-descent",
+      "learning-rates"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What problem does RMSProp address in optimization algorithms?",
+        "answer": "RMSProp addresses the 'freezing' problem by using an exponential moving average to ensure the history term $v_t$ reflects the recent scale of gradients rather than the complete gradient history, preventing the learning rate from diminishing too rapidly."
+      },
+      {
+        "type": "cloze",
+        "text": "RMSProp uses an {{Exponentially Weighted Moving Average (EWMA)}} to improve on AdaGrad.",
+        "hint": "This prevents excessive growth of the denominator in the update rule."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the typical value for the decay rate (\u03b2) in RMSProp?",
+        "options": {
+          "A": "0.1",
+          "B": "0.5",
+          "C": "0.9",
+          "D": "0.99"
+        },
+        "answer": "C",
+        "explanation": "The decay rate (\u03b2) in RMSProp is commonly set to 0.9 to balance recent and past gradients effectively."
+      },
+      {
+        "type": "basic",
+        "question": "How does RMSProp modify the parameter update rule compared to AdaGrad?",
+        "answer": "RMSProp modifies the parameter update rule by incorporating an exponentially weighted moving average ($v_t$) of squared gradients, which replaces the simple accumulation used in AdaGrad."
+      },
+      {
+        "type": "cloze",
+        "text": "In RMSProp, the parameter update is given by: $$\\theta_{t+1} = \\theta_t - \\frac{\\eta}{\\sqrt{v_t + \\epsilon}} \\cdot g_t$$ where {{v_t}} is the moving average of squared gradients.",
+        "hint": "This term prevents excessive learning rate reduction."
+      },
+      {
+        "type": "mcq",
+        "question": "Why does AdaGrad suffer from the 'freezing' problem?",
+        "options": {
+          "A": "It doesn't scale gradients.",
+          "B": "It uses a static learning rate.",
+          "C": "Its history term $G_t$ can only increase, causing the denominator to grow excessively.",
+          "D": "It accumulates gradients without decay."
+        },
+        "answer": "C",
+        "explanation": "AdaGrad accumulates squared gradients, causing the denominator in the update rule to grow excessively large and effectively stopping learning."
+      }
+    ]
+  },
+  {
+    "note_id": "relu-and-leaky-relu",
+    "source_note": "Main/Artificial Intelligence/ReLU vs Leaky ReLU.md",
+    "title": "ReLU and Leaky ReLU",
+    "domain": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "activation-functions",
+      "relu",
+      "leaky-relu",
+      "neural-networks"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary disadvantage of the ReLU activation function?",
+        "answer": "The primary disadvantage of the ReLU activation function is the 'Dying ReLU' problem, where neurons can output zero for all inputs if they receive a large negative update during training."
+      },
+      {
+        "type": "cloze",
+        "text": "ReLU requires only a simple {{comparison}} ($x > 0$) to function, making it computationally efficient.",
+        "hint": "What operation makes ReLU fast?"
+      },
+      {
+        "type": "mcq",
+        "question": "What does the Leaky ReLU function do differently compared to the standard ReLU?",
+        "options": {
+          "A": "It flips negative values to positive.",
+          "B": "It lets a small, non-zero gradient through for negative inputs.",
+          "C": "It increases the slope for positive values.",
+          "D": "It completely eliminates negative values."
+        },
+        "answer": "B",
+        "explanation": "Leaky ReLU allows a small gradient (e.g., 0.01x) for negative values, preventing neurons from dying."
+      },
+      {
+        "type": "basic",
+        "question": "Why might Leaky ReLU be a better choice for certain models compared to standard ReLU?",
+        "answer": "Leaky ReLU can be a better choice because it prevents neurons from dying by allowing a small gradient for negative activations, assisting in learning even when negative values are present."
+      },
+      {
+        "type": "cloze",
+        "text": "The Dying ReLU problem occurs when a neuron outputs {{zero}} for all inputs due to large negative updates, rendering it inactive.",
+        "hint": "What value is problematic for neurons in this state?"
+      },
+      {
+        "type": "mcq",
+        "question": "In which scenario is ReLU typically preferred over Leaky ReLU?",
+        "options": {
+          "A": "When the model consists of very shallow networks.",
+          "B": "If computation speed is critical and dying neurons are not a concern.",
+          "C": "In scenarios with prevalent negative inputs.",
+          "D": "When the model requires consistent negative gradient flow."
+        },
+        "answer": "B",
+        "explanation": "ReLU is preferred when computational speed is critical, and there are no issues with dying neurons."
+      }
+    ]
+  },
+  {
+    "note_id": "recurrent-neural-networks-rnns",
+    "source_note": "Main/Artificial Intelligence/Recurrent Learning Networks.md",
+    "title": "Recurrent Neural Networks (RNNs)",
+    "domain": "deep-learning",
+    "tags": [
+      "neural-networks",
+      "sequence-learning",
+      "rnn",
+      "lstm",
+      "gru"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary innovation of Recurrent Neural Networks (RNNs) that allows them to handle sequence learning?",
+        "answer": "The primary innovation of RNNs is the recurrent connection, where the hidden state at a given time step is influenced by the input at that step as well as the hidden state from the previous time step, creating a form of memory."
+      },
+      {
+        "type": "cloze",
+        "text": "RNNs suffer from the {{vanishing gradients}} problem, which makes it difficult to learn long-term dependencies.",
+        "hint": "A problem during the backpropagation process"
+      },
+      {
+        "type": "mcq",
+        "question": "What training method is used to compute gradients in RNNs?",
+        "options": {
+          "A": "Reinforcement Learning",
+          "B": "Backpropagation Through Time (BPTT)",
+          "C": "Gradient Descent",
+          "D": "Q-Learning"
+        },
+        "answer": "B",
+        "explanation": "Backpropagation Through Time (BPTT) is the training method used to compute gradients in RNNs by unrolling the recurrent network through time and applying standard backpropagation."
+      },
+      {
+        "type": "basic",
+        "question": "Why are standard RNNs rarely used in practice today?",
+        "answer": "Standard RNNs are rarely used because they suffer from vanishing and exploding gradient problems, which prevent them from effectively learning long-term dependencies."
+      },
+      {
+        "type": "cloze",
+        "text": "The hidden state in an RNN is computed using the formula $s_i = U \u0000cdot x_i + W \u0000cdot s_{i-1} + b$, where $s_{i-1}$ is the {{previous hidden state}}.",
+        "hint": "It serves as a memory of past inputs"
+      },
+      {
+        "type": "mcq",
+        "question": "What are LSTM and GRU designed to address in the context of RNNs?",
+        "options": {
+          "A": "Limited data availability",
+          "B": "Increasing the speed of feedforward networks",
+          "C": "Vanishing and exploding gradient problems",
+          "D": "Improving convolutional operations"
+        },
+        "answer": "C",
+        "explanation": "LSTM and GRU are advanced RNN architectures that use gating mechanisms to manage the flow of information and mitigate vanishing and exploding gradient issues."
+      },
+      {
+        "type": "basic",
+        "question": "How does an RNN produce the output at a time step?",
+        "answer": "An RNN produces the output at a time step by passing the current hidden state through an output function, such as Softmax, to generate a prediction like a classification."
+      }
+    ]
+  },
+  {
+    "note_id": "recurrent-neural-networks",
+    "source_note": "Main/Artificial Intelligence/Recurrent Neural Networks.md",
+    "title": "Recurrent Neural Networks",
+    "domain": "deep-learning",
+    "tags": [
+      "neural-networks",
+      "deep-learning",
+      "sequential-data",
+      "training-methods",
+      "architecture"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "Why are Recurrent Neural Networks (RNNs) better suited for sequence learning problems compared to standard feedforward neural networks?",
+        "answer": "RNNs are better suited for sequence learning problems because they have a 'memory' feature, allowing them to handle variable input lengths and sequential interdependence. They maintain history through recurrent connections, which enables processing of inputs based on historical context."
+      },
+      {
+        "type": "cloze",
+        "text": "In RNNs, the shared parameters are the input weights ($U$), recurrent weights ($W$), and {{output weights}} ($V$).",
+        "hint": "These parameters are reused at every time step."
+      },
+      {
+        "type": "mcq",
+        "question": "What is one major drawback of using RNNs with long sequences during training?",
+        "options": {
+          "A": "RNNs require unique weights for each time step.",
+          "B": "RNNs have difficulty sharing weights across time steps.",
+          "C": "RNNs suffer from exploding and vanishing gradients.",
+          "D": "RNNs cannot handle variable input lengths."
+        },
+        "answer": "C",
+        "explanation": "RNNs suffer from exploding and vanishing gradients due to repeated weight matrix multiplications over long sequences, leading to mathematical instability."
+      },
+      {
+        "type": "basic",
+        "question": "What is Backpropagation Through Time (BPTT) in the context of RNNs?",
+        "answer": "BPTT is an algorithm used to train RNNs by computing the gradient of the total loss through many time steps. It considers both explicit and implicit derivatives related to the recurrent weights, allowing for optimization of the network across sequential data."
+      },
+      {
+        "type": "mcq",
+        "question": "How do LSTMs and GRUs address the problem of vanishing gradients in RNNs?",
+        "options": {
+          "A": "By increasing the learning rate",
+          "B": "Through gradient clipping",
+          "C": "Using parameterized gates to regulate memory",
+          "D": "By reducing the network depth"
+        },
+        "answer": "C",
+        "explanation": "LSTMs and GRUs use parameterized gates like forget gates to control which information should be retained or discarded, thus addressing the problem of vanishing gradients in a structured way."
+      },
+      {
+        "type": "cloze",
+        "text": "Truncated Backpropagation Through Time limits the backward pass to a fixed window of {{recent time steps}}.",
+        "hint": "This approach helps to manage gradient stability issues."
+      },
+      {
+        "type": "basic",
+        "question": "What is the purpose of gradient clipping when training RNNs?",
+        "answer": "Gradient clipping is used to prevent exploding gradients by normalizing large gradients that exceed a threshold, allowing for controlled and stable weight updates."
+      }
+    ]
+  },
+  {
+    "note_id": "singular-value-decomposition-and-word2vec",
+    "source_note": "Main/Artificial Intelligence/Relationship between SvD and Word2Vec.md",
+    "title": "Singular Value Decomposition and Word2Vec",
+    "domain": "deep-learning",
+    "tags": [
+      "nlp",
+      "machine-learning",
+      "word-representations",
+      "svd",
+      "word2vec"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the main methodological difference between Singular Value Decomposition (SVD) and Word2Vec in learning word representations?",
+        "answer": "SVD uses a count-based method based on matrix factorization, while Word2Vec employs a prediction-based method using neural networks."
+      },
+      {
+        "type": "cloze",
+        "text": "Word2Vec implicitly performs matrix factorization similar to {{Singular Value Decomposition}}.",
+        "hint": "It relates to the breakdown of matrices."
+      },
+      {
+        "type": "mcq",
+        "question": "Why is Word2Vec generally preferred over SVD in practice?",
+        "options": {
+          "A": "It results in more accurate word embeddings.",
+          "B": "It is more computationally and memory efficient.",
+          "C": "It uses more complex mathematical models.",
+          "D": "It requires no negative sampling."
+        },
+        "answer": "B",
+        "explanation": "Word2Vec uses gradient descent and negative sampling, allowing for iterative updates and lower memory usage."
+      },
+      {
+        "type": "basic",
+        "question": "How does Word2Vec determine word representations in relation to the PMI matrix?",
+        "answer": "Word2Vec effectively approximates the factorization of a modified PMI matrix, specifically the matrix minus log(k), where k is the number of negative samples."
+      },
+      {
+        "type": "cloze",
+        "text": "Solving SVD involves computing eigenvectors across the entire vocabulary matrix, which is a {{computationally expensive}} process.",
+        "hint": "Refers to the demand for resources and time."
+      },
+      {
+        "type": "basic",
+        "question": "What are the two parameter matrices learned by Word2Vec during its training?",
+        "answer": "The two parameter matrices are $W_{context}$ and $W_{word}$."
+      }
+    ]
+  },
+  {
+    "note_id": "resnet-residual-network",
+    "source_note": "Main/Artificial Intelligence/ResNet.md",
+    "title": "ResNet Residual Network",
+    "domain": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "resnet",
+      "residual-blocks",
+      "skip-connections",
+      "backpropagation"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What problem does ResNet address in deep learning?",
+        "answer": "ResNet addresses the degradation problem, where adding more layers to a neural network increases training error due to difficulties in gradient propagation."
+      },
+      {
+        "type": "cloze",
+        "text": "In ResNet, each layer learns a {{residual}} mapping instead of a direct mapping.",
+        "hint": "Focus on the type of mapping."
+      },
+      {
+        "type": "mcq",
+        "question": "Why do ResNet models include skip connections?",
+        "options": {
+          "A": "To reduce the computational cost of training.",
+          "B": "To allow deep networks to maintain healthy gradient flows.",
+          "C": "To prevent overfitting by reducing parameters.",
+          "D": "To handle variable-sized input data."
+        },
+        "answer": "B",
+        "explanation": "Skip connections in ResNet allow gradients to flow more easily back through the network, solving the problem of vanishing gradients in deep networks."
+      },
+      {
+        "type": "basic",
+        "question": "How do identity mappings in ResNet support model training?",
+        "answer": "Identity mappings allow the network to skip over layers that don't add value, making it easier for gradients to flow and the model to learn useful transformations."
+      },
+      {
+        "type": "cloze",
+        "text": "ResNet uses two main types of layers: Identity Block and {{Convolutional Block}}.",
+        "hint": "Involves resizing inputs during dimension mismatch."
+      },
+      {
+        "type": "mcq",
+        "question": "What is a primary benefit of using identity mappings in ResNet architectures?",
+        "options": {
+          "A": "They enable model parallelism.",
+          "B": "They facilitate easier learning of complex transformations.",
+          "C": "They allow layers to be effectively skipped if not adding value.",
+          "D": "They reduce the overall model size."
+        },
+        "answer": "C",
+        "explanation": "Identity mappings allow ResNet to bypass layers when they are unnecessary, maintaining the flow of gradients and reducing training complexity."
+      },
+      {
+        "type": "basic",
+        "question": "What is the difference between an Identity Block and a Convolutional Block in ResNet?",
+        "answer": "An Identity Block is used when the input and output dimensions are the same, while a Convolutional Block is used when the dimensions differ, employing a 1x1 convolution to align them."
+      }
+    ]
+  },
+  {
+    "note_id": "tuning-hyperparameters-for-optimization-algorithms",
+    "source_note": "Main/Artificial Intelligence/Scheduled Learning Rate.md",
+    "title": "Tuning Hyperparameters for Optimization Algorithms",
+    "domain": "deep-learning",
+    "tags": [
+      "hyperparameters",
+      "learning-rate",
+      "annealing",
+      "momentum",
+      "line-search"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the main limitation of using a high fixed learning rate in optimization algorithms?",
+        "answer": "A high fixed learning rate can cause oscillations in steep valleys since the steps remain too large for sharp slopes, even though it's beneficial for fast movement on flat surfaces."
+      },
+      {
+        "type": "cloze",
+        "text": "One recommended strategy for dynamically adjusting learning rates is {{validation-based decay}}, where the learning rate is reduced if the validation loss increases.",
+        "hint": "A data-driven approach for tuning learning rates."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the main advantage of using line search over a fixed learning rate?",
+        "options": {
+          "A": "It requires less computational power.",
+          "B": "It provides adaptive step sizes based on loss function analysis.",
+          "C": "It simplifies the parameter tuning process.",
+          "D": "It completely eliminates the need for hyperparameters."
+        },
+        "answer": "B",
+        "explanation": "Line search adaptively selects step sizes by evaluating multiple learning rates and choosing the one that minimizes the loss most effectively."
+      },
+      {
+        "type": "basic",
+        "question": "How should the momentum parameter (beta) be adjusted during training, and why?",
+        "answer": "The momentum parameter should increase over time because initially the gradient history is unreliable, but becomes more stable and reliable as training progresses."
+      },
+      {
+        "type": "cloze",
+        "text": "{{Log-scale search}} is recommended for finding an initial learning rate by testing rates like 0.1, 0.01, and 0.001 over a few epochs.",
+        "hint": "A technique for identifying a starting learning rate."
+      },
+      {
+        "type": "mcq",
+        "question": "Why might exponential decay of the learning rate be considered less favorable than other methods?",
+        "options": {
+          "A": "It requires constant human intervention.",
+          "B": "It is not compatible with momentum-based methods.",
+          "C": "It introduces a complex hyperparameter that is hard to tune.",
+          "D": "It slows down the training process significantly."
+        },
+        "answer": "C",
+        "explanation": "Exponential decay introduces a new hyperparameter governing the speed of decay, adding complexity to the tuning process."
+      },
+      {
+        "type": "basic",
+        "question": "What is the main trade-off involved in setting a fixed learning rate?",
+        "answer": "The trade-off is between fast movement on flat surfaces and preventing oscillations in steep valleys, where an adaptive approach would be ideal."
+      }
+    ]
+  },
+  {
+    "note_id": "selective-read-write-forget-rnns",
+    "source_note": "Main/Artificial Intelligence/Selective Read, Selective Write and Selective Forget.md",
+    "title": "Selective Read, Write, and Forget in RNNs",
+    "domain": "deep-learning",
+    "tags": [
+      "rnn",
+      "exploding-gradient",
+      "vanishing-gradient",
+      "lstm",
+      "gru"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What problem do selective read, write, and forget operations address in RNNs?",
+        "answer": "Selective read, write, and forget operations address the problem of exploding and vanishing gradients in RNNs by managing information storage and transformation over time."
+      },
+      {
+        "type": "cloze",
+        "text": "In RNNs, the {{forget gate}} determines what fraction of the previous state should be forgotten.",
+        "hint": "It's a component in LSTM used to manage memory."
+      },
+      {
+        "type": "mcq",
+        "question": "How do architectures like LSTMs implement selective read, write, and forget operations?",
+        "options": {
+          "A": "Through additional layers",
+          "B": "Using gates that are parameterized functions",
+          "C": "By increasing model size",
+          "D": "Using external memory databases"
+        },
+        "answer": "B",
+        "explanation": "LSTMs use gates, which are parameterized functions, typically employing a sigmoid function to control selective operations."
+      },
+      {
+        "type": "basic",
+        "question": "How does a neural network learn what to read, write, or forget?",
+        "answer": "The neural network learns the parameters of the gates during training through backpropagation, adjusting them to minimize the loss function."
+      },
+      {
+        "type": "cloze",
+        "text": "The {{output gate}} in an LSTM determines what fraction of the previous state should be written to the intermediate state.",
+        "hint": "This gate controls information flow to the output."
+      },
+      {
+        "type": "mcq",
+        "question": "What role does the input gate play in LSTM-based RNNs?",
+        "options": {
+          "A": "It initializes the hidden state",
+          "B": "It determines the starting learning rate",
+          "C": "It controls the fraction of new information read into the temporary state",
+          "D": "It keeps the state unchanged"
+        },
+        "answer": "C",
+        "explanation": "The input gate determines what fraction of new input and intermediate state should be read into a temporary state."
+      },
+      {
+        "type": "cloze",
+        "text": "Neural networks use {{backpropagation}} to adjust the parameters of gates for selective operations.",
+        "hint": "This is the process used for training neural networks."
+      }
+    ]
+  },
+  {
+    "note_id": "sequence-learning-problems",
+    "source_note": "Main/Artificial Intelligence/Sequence Learning Problems.md",
+    "title": "Sequence Learning Problems",
+    "domain": "deep-learning",
+    "tags": [
+      "machine-learning",
+      "sequence-data",
+      "rnns"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What are the two critical characteristics of sequence learning problems?",
+        "answer": "Sequence learning problems are defined by variable input length and sequential interdependence, where inputs are dependent on the historical context."
+      },
+      {
+        "type": "cloze",
+        "text": "In sequence learning, tasks like sentiment analysis generate outputs at the {{final time step}}.",
+        "hint": "The prediction occurs after processing the entire input."
+      },
+      {
+        "type": "mcq",
+        "question": "What kind of tasks require output generation at every time step?",
+        "options": {
+          "A": "Sentiment analysis",
+          "B": "POS tagging",
+          "C": "Image classification",
+          "D": "Video summarization"
+        },
+        "answer": "B",
+        "explanation": "In tasks like POS tagging, each input word needs to be tagged with its grammatical category, requiring output at every time step."
+      },
+      {
+        "type": "basic",
+        "question": "Why can't standard neural networks efficiently solve sequence learning problems?",
+        "answer": "Standard neural networks cannot handle variable-length data or temporal dependencies as they assume fixed-size, independent inputs, which is unsuitable for sequence data."
+      },
+      {
+        "type": "mcq",
+        "question": "What architecture is specifically used to address the challenges in sequence learning problems?",
+        "options": {
+          "A": "Feedforward Neural Networks",
+          "B": "Convolutional Neural Networks",
+          "C": "Recurrent Neural Networks",
+          "D": "Support Vector Machines"
+        },
+        "answer": "C",
+        "explanation": "Recurrent Neural Networks (RNNs) are designed to handle temporal dependencies and variable input lengths by using recurrent connections to maintain a memory state."
+      },
+      {
+        "type": "cloze",
+        "text": "An example of non-text sequence learning is {{video analysis}}, where frames are analyzed as a sequence.",
+        "hint": "It involves processing frames over time."
+      },
+      {
+        "type": "basic",
+        "question": "In sequence learning, what does processing data over discrete time steps entail?",
+        "answer": "It involves executing the same mathematical function at every time step to process the entire sequence, allowing the model to handle inputs of varying lengths."
+      }
+    ]
+  },
+  {
+    "note_id": "batch-vs-stochastic-vs-mini-batch-gradient-descent",
+    "source_note": "Main/Artificial Intelligence/Stochastic vs Batch Gradient.md",
+    "title": "Batch vs. Stochastic vs. Mini-batch Gradient Descent",
+    "domain": "deep-learning",
+    "tags": [
+      "gradient-descent",
+      "optimization",
+      "machine-learning",
+      "algorithms",
+      "data-handling"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary advantage of Batch Gradient Descent?",
+        "answer": "The primary advantage of Batch Gradient Descent is its ability to calculate the \"true gradient\" by using the entire dataset, which provides smooth convergence and mathematically guaranteed decrease in loss."
+      },
+      {
+        "type": "basic",
+        "question": "How does Stochastic Gradient Descent differ from Batch Gradient Descent?",
+        "answer": "Stochastic Gradient Descent differs from Batch Gradient Descent in that it updates the weights immediately after processing each individual data point, rather than waiting to process the entire dataset, resulting in faster but more oscillatory progress."
+      },
+      {
+        "type": "cloze",
+        "text": "Mini-batch Gradient Descent uses batches of data points to minimize {{oscillations}} while maintaining faster updates.",
+        "hint": "fluctuations"
+      },
+      {
+        "type": "cloze",
+        "text": "In Stochastic Gradient Descent, the gradient calculated from a single data point is treated as an approximation of the {{average}} gradient.",
+        "hint": "typical"
+      },
+      {
+        "type": "mcq",
+        "question": "What is the main trade-off of using Stochastic Gradient Descent?",
+        "options": {
+          "A": "Exactness of gradient calculation",
+          "B": "Reduced computational cost",
+          "C": "Higher memory usage",
+          "D": "Increased gradient noise and oscillations"
+        },
+        "answer": "D",
+        "explanation": "SGD can produce noisy updates and exhibit higher oscillations due to evaluating gradients on individual samples, which makes the path to the minimum less smooth."
+      },
+      {
+        "type": "mcq",
+        "question": "How does Mini-batch Gradient Descent balance the features of Batch and Stochastic Gradient Descent?",
+        "options": {
+          "A": "Processes the entire dataset at once",
+          "B": "Uses a single data point per update",
+          "C": "Uses smaller batches to update weights, balancing speed and accuracy",
+          "D": "Takes fewer epochs to converge"
+        },
+        "answer": "C",
+        "explanation": "Mini-batch Gradient Descent uses smaller subsets of the data, allowing it to have the speed advantage of SGD and reduced oscillation similar to Batch GD."
+      },
+      {
+        "type": "basic",
+        "question": "How does mini-batch size affect the number of updates per epoch in Mini-batch Gradient Descent?",
+        "answer": "In Mini-batch Gradient Descent, the number of updates per epoch is determined by dividing the total number of data points by the mini-batch size."
+      }
+    ]
+  },
+  {
+    "note_id": "birth-of-the-artificial-neuron",
+    "source_note": "Main/Artificial Intelligence/Story of Neural Networks.md",
+    "title": "Birth of the Artificial Neuron",
+    "domain": "deep-learning",
+    "tags": [
+      "neurobiology",
+      "mathematical-logic",
+      "perceptron",
+      "mcculloch-pitts",
+      "activation-functions"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What inspired Warren McCulloch and Walter Pitts to develop a model for artificial neurons?",
+        "answer": "Warren McCulloch and Walter Pitts were inspired by the desire to create a mathematical model of a biological neuron to demonstrate that the human brain operates as a biological machine following mathematical rules."
+      },
+      {
+        "type": "cloze",
+        "text": "Rosenblatt introduced the concept of {{weights}} to allow the perceptron to adjust its 'opinion' of inputs based on learning.",
+        "hint": "A key factor in learning how to prioritize inputs."
+      },
+      {
+        "type": "mcq",
+        "question": "Why did researchers move from using the Heaviside Step Function to a Sigmoid function in the 1980s?",
+        "options": {
+          "A": "The Step Function was too complex to compute.",
+          "B": "The Step Function is not differentiable across its domain.",
+          "C": "The Sigmoid function was discovered to be faster.",
+          "D": "Step Function couldn't handle big inputs."
+        },
+        "answer": "B",
+        "explanation": "The Step Function is flat almost everywhere except at its threshold, making it unsuitable for gradient-based optimization methods."
+      },
+      {
+        "type": "basic",
+        "question": "What major problem did the sigmoid function pose when building deep networks?",
+        "answer": "The sigmoid function caused the vanishing gradient problem, where gradients become too small to be effective when propagated back through many layers."
+      },
+      {
+        "type": "cloze",
+        "text": "The introduction of {{ReLU}} helped maintain strong gradients in deep networks while being computationally inexpensive.",
+        "hint": "A commonly used activation function in modern neural networks."
+      },
+      {
+        "type": "mcq",
+        "question": "Which problem is associated with the sigmoid function in deep neural networks?",
+        "options": {
+          "A": "Overfitting",
+          "B": "Vanishing gradients",
+          "C": "Excessive computational power",
+          "D": "Non-linearity"
+        },
+        "answer": "B",
+        "explanation": "Sigmoid's tendency to squash inputs to 0 or 1 leads to diminishing gradients, hindering the learning process in deep networks."
+      },
+      {
+        "type": "basic",
+        "question": "How does ReLU differ from the Sigmoid function in terms of gradient behavior?",
+        "answer": "ReLU maintains a constant gradient of 1 for positive inputs, preventing vanishing gradients, unlike the Sigmoid function which flattens out at 0 or 1."
+      }
+    ]
+  },
+  {
+    "note_id": "enhancing-strategies-in-deep-learning",
+    "source_note": "Main/Artificial Intelligence/Strategies Connection to the graph.md",
+    "title": "Enhancing Strategies in Deep Learning",
+    "domain": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "strategies",
+      "optimization"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the saddle point trap in deep learning, and how does it relate to cyclical learning rates?",
+        "answer": "The saddle point trap occurs in high-dimensional spaces where 'flat' regions appear as false minima. Cyclical learning rates introduce 'noise' or momentum that helps the model escape these regions by finding downward paths, rather than remaining stationary."
+      },
+      {
+        "type": "cloze",
+        "text": "In Transformers, a {{warm-up}} phase stabilizes gradients during the volatile initial training stages.",
+        "hint": "Used to counteract high initial learning rates."
+      },
+      {
+        "type": "mcq",
+        "question": "Why do Transformers use a warm-up phase?",
+        "options": {
+          "A": "To immediately maximize learning rates.",
+          "B": "To stabilize gradients during early training.",
+          "C": "To eliminate the need for batch normalization.",
+          "D": "To increase parameter count efficiency."
+        },
+        "answer": "B",
+        "explanation": "A warm-up phase is used to stabilize gradients during the early volatile stages of training, preventing issues like exploding or vanishing gradients."
+      },
+      {
+        "type": "basic",
+        "question": "Why might starting with a high learning rate be problematic in training Transformers?",
+        "answer": "A high initial learning rate might 'break' the internal statistics of the model due to destabilized gradients, complicating the learning process before it can effectively start."
+      },
+      {
+        "type": "cloze",
+        "text": "Saddle points are false minima where the slope is zero in some directions but descends in others, a challenge in {{high-dimensional spaces}}.",
+        "hint": "Common in deep neural networks."
+      }
+    ]
+  },
+  {
+    "note_id": "supervised-machine-learning-setup",
+    "source_note": "Main/Artificial Intelligence/Supervised Machine Learning.md",
+    "title": "Supervised Machine Learning Setup",
+    "domain": "deep-learning",
+    "tags": [
+      "supervised-learning",
+      "data-analysis",
+      "models",
+      "approximation",
+      "prediction"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the fundamental purpose of a supervised machine learning setup?",
+        "answer": "The fundamental purpose is to use a dataset to uncover the relationship between input variables ($\\mathbf{X}$) and output variables ($\\mathbf{Y}$), allowing the model to make predictions on new inputs."
+      },
+      {
+        "type": "cloze",
+        "text": "In supervised learning, a model is used to approximate the unknown function from a set of paired examples as {{Y \\approx \\hat{f}(\\mathbf{X})}}.",
+        "hint": "Equation for the model's prediction."
+      },
+      {
+        "type": "mcq",
+        "question": "What does $\\hat{f}$ represent in supervised machine learning?",
+        "options": {
+          "A": "The dataset",
+          "B": "The unknown function being modeled",
+          "C": "The approximation or model",
+          "D": "The input variables"
+        },
+        "answer": "C",
+        "explanation": "$\\hat{f}$ represents the model that approximates the unknown function $f$ from the dataset."
+      },
+      {
+        "type": "basic",
+        "question": "How are new input predictions made in supervised machine learning?",
+        "answer": "After training, the model $\\hat{f}$ is used to make predictions by applying it to new, unseen input data."
+      },
+      {
+        "type": "cloze",
+        "text": "In supervised learning, the goal is to approximate the true function $f$ using the model {{\\hat{f}}}.",
+        "hint": "Model's representation of the true function."
+      }
+    ]
+  },
+  {
+    "note_id": "problem-of-exploding-vanishing-gradients",
+    "source_note": "Main/Artificial Intelligence/The Problem of Exploding & Vanishing Gradient.md",
+    "title": "Problem of Exploding and Vanishing Gradients",
+    "domain": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "recurrent-neural-networks",
+      "vanishing-gradient",
+      "exploding-gradient",
+      "lstm"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the impact of vanishing gradients when training RNNs?",
+        "answer": "When vanishing gradients occur, the network's parameters stop updating, and it fails to learn any connection between current outputs and historical inputs."
+      },
+      {
+        "type": "basic",
+        "question": "Describe how exploding gradients affect the training process in RNNs.",
+        "answer": "Exploding gradients cause large, erratic updates during training, leading the model's weights to quickly diverge into high-loss areas, disrupting learning."
+      },
+      {
+        "type": "cloze",
+        "text": "To address exploding gradients, one approach is {{gradient clipping}}, which scales down the gradient vector if it exceeds a certain threshold."
+      },
+      {
+        "type": "mcq",
+        "question": "What technique is used to prevent gradients in RNNs from becoming too large?",
+        "options": {
+          "A": "Learning Rate Decay",
+          "B": "Gradient Clipping",
+          "C": "Dropout",
+          "D": "Batch Normalization"
+        },
+        "answer": "B",
+        "explanation": "Gradient clipping checks the magnitude of the gradient and scales it back to a manageable size if it exceeds a set threshold, preventing overly large updates."
+      },
+      {
+        "type": "mcq",
+        "question": "Which advanced architecture helps mitigate the vanishing gradient problem in RNNs?",
+        "options": {
+          "A": "Convolutional Neural Networks",
+          "B": "LSTM and GRU",
+          "C": "Autoencoders",
+          "D": "Support Vector Machines"
+        },
+        "answer": "B",
+        "explanation": "LSTM and GRU architectures use a gating mechanism that helps maintain gradient flow and prevent uncontrolled decay, addressing the vanishing gradient problem."
+      },
+      {
+        "type": "cloze",
+        "text": "In BPTT, calculating the derivative between historical state and final state in an RNN involves a series of matrix multiplications due to the {{chain rule}}."
+      },
+      {
+        "type": "basic",
+        "question": "How do RNNs traditionally suffer from the problem of vanishing gradients?",
+        "answer": "Vanishing gradients in RNNs occur because repeated multiplications of small derivatives in the backpropagation process cause the gradient to exponentially shrink, preventing effectively learning long-term dependencies."
+      }
+    ]
+  },
+  {
+    "note_id": "transition-to-mcculloch-pitts-neuron-rosenblatt-perceptron",
+    "source_note": "Main/Artificial Intelligence/Transition to MP Neuron -> Rosenblatt Perceptron.md",
+    "title": "Transition to McCulloch-Pitts Neuron -> Rosenblatt Perceptron",
+    "domain": "deep-learning",
+    "tags": [
+      "neural-networks",
+      "perceptrons",
+      "rosenblatt",
+      "learning-rules"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What was the main limitation of the McCulloch-Pitts neuron model?",
+        "answer": "The McCulloch-Pitts neuron model required manual configuration of weights for each specific task, with no mechanism for learning or adapting from error signals."
+      },
+      {
+        "type": "cloze",
+        "text": "Rosenblatt\u2019s Perceptron introduced the concept of a {{feedback loop}} that allowed a model to learn from mistakes.",
+        "hint": "Involves adjusting parameters based on error."
+      },
+      {
+        "type": "mcq",
+        "question": "Which function did not allow for a smooth gradient in early perceptrons?",
+        "options": {
+          "A": "Sigmoid",
+          "B": "ReLU",
+          "C": "Step Function",
+          "D": "Leaky ReLU"
+        },
+        "answer": "C",
+        "explanation": "The Step Function only had two possible outputs (0 or 1), which did not provide a gradient for fine-tuning, unlike smooth functions like Sigmoid or ReLU."
+      },
+      {
+        "type": "basic",
+        "question": "How does error correction occur in a Perceptron model?",
+        "answer": "Error correction in a Perceptron model occurs through adjusting weights based on the error signal, calculated as the difference between the predicted output and the true output."
+      },
+      {
+        "type": "cloze",
+        "text": "Modern optimizers like Adam and RMSProp are evolved versions of the {{Perceptron Learning Rule}} from 1958.",
+        "hint": "A rule introduced by Rosenblatt for adaptive learning."
+      },
+      {
+        "type": "basic",
+        "question": "Why is the concept of 'learnable weights' important in deep networks?",
+        "answer": "Learnable weights allow for the automatic adjustment of parameters based on data, facilitating complex learning through multiple layers in deep networks."
+      },
+      {
+        "type": "mcq",
+        "question": "What method allows deep networks to adjust weights across multiple layers?",
+        "options": {
+          "A": "Manual Calibration",
+          "B": "Perceptron Learning Rule",
+          "C": "Backpropagation",
+          "D": "Sigmoid Activation"
+        },
+        "answer": "C",
+        "explanation": "Backpropagation is the method used to propagate the error through multiple layers, adjusting weights across these layers based on the loss."
+      }
+    ]
+  },
+  {
+    "note_id": "constructing-the-tower-bump-function",
+    "source_note": "Main/Artificial Intelligence/construct tower functions.md",
+    "title": "Constructing the Tower (Bump) Function",
+    "domain": "deep-learning",
+    "tags": [
+      "neural-networks",
+      "tower-function",
+      "non-linearity",
+      "sigmoid-function"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "Why are linear functions insufficient in forming localized 'bump' shapes for approximating complex curves?",
+        "answer": "Linear functions lead to a single straight line and cannot create the localized non-linear 'bump' shapes needed for approximating complex curves."
+      },
+      {
+        "type": "cloze",
+        "text": "The {{sigmoid function}} introduces necessary non-linearity for creating intricate shapes in neural networks.",
+        "hint": "It's a common activation function."
+      },
+      {
+        "type": "mcq",
+        "question": "How is the 'tower function' constructed to form a localized bump?",
+        "options": {
+          "A": "By using a single linear neuron.",
+          "B": "By combining outputs of two sigmoid neurons.",
+          "C": "By layering multiple ReLU functions.",
+          "D": "By applying a single sigmoid neuron."
+        },
+        "answer": "B",
+        "explanation": "The tower function is formed by using two sigmoid neurons to generate a bump shape, one activating at the beginning and one subtracting the effect at the end."
+      },
+      {
+        "type": "basic",
+        "question": "What role does tuning the weight and bias play in forming a tower function?",
+        "answer": "Tuning the weight and bias of neurons allows manipulation of the height, width, and position of the localized bump in the tower function."
+      },
+      {
+        "type": "cloze",
+        "text": "Neuron 1 in a tower function is responsible for 'turning on' steeply at the beginning of the desired input range, transitioning from 0 towards {{1}}.",
+        "hint": "Think of its activation range."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the effect of negating the output of Neuron 2 in the tower function?",
+        "options": {
+          "A": "It amplifies the output of Neuron 1.",
+          "B": "It shortens the bump.",
+          "C": "It subtracts its effect after a delay, helping form the bump's end.",
+          "D": "It creates another bump."
+        },
+        "answer": "C",
+        "explanation": "Negating the output of Neuron 2 helps in subtracting its effect after a delay, contributing to the drop-off portion of the bump."
+      }
+    ]
+  },
+  {
+    "note_id": "max-pooling-vs-average-pooling",
+    "source_note": "Main/Max Pooling vs Average Pooling.md",
+    "title": "Max Pooling vs Average Pooling",
+    "domain": "deep-learning",
+    "tags": [
+      "cnn",
+      "pooling",
+      "image-processing"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary difference between max pooling and average pooling in CNNs?",
+        "answer": "Max pooling selects the single largest value from the pooling window to emphasize strong features, while average pooling calculates the average of all values to provide a generalized summary."
+      },
+      {
+        "type": "cloze",
+        "text": "Max pooling retains the {{single largest value}} from the pooling window.",
+        "hint": "type of value retained"
+      },
+      {
+        "type": "mcq",
+        "question": "In what scenario might max pooling be more beneficial than average pooling?",
+        "options": {
+          "A": "When capturing the general style of an image.",
+          "B": "When emphasizing strong features like edges.",
+          "C": "When needing a smooth overall image representation.",
+          "D": "For reducing computational costs over the entire image."
+        },
+        "answer": "B",
+        "explanation": "Max pooling is beneficial for emphasizing strong features like edges by retaining the most prominent values."
+      },
+      {
+        "type": "basic",
+        "question": "How does average pooling process pixel values in the pooling window?",
+        "answer": "Average pooling calculates the average of all values in the pooling window, providing a smoother and more generalized view of the area."
+      },
+      {
+        "type": "cloze",
+        "text": "In max pooling, high values indicate strong features such as an {{edge}} or shape.",
+        "hint": "part of an image"
+      },
+      {
+        "type": "mcq",
+        "question": "Which pooling method provides a more generalized summary of an area?",
+        "options": {
+          "A": "Max pooling",
+          "B": "Average pooling",
+          "C": "Both max and average pooling",
+          "D": "Neither method provides a summarization"
+        },
+        "answer": "B",
+        "explanation": "Average pooling provides a more generalized summary by calculating the average of the values in the area."
+      }
+    ]
+  },
+  {
+    "note_id": "pooling-layer-parameters",
+    "source_note": "Main/Mechanics of Pooling.md",
+    "title": "Pooling Layer Parameters",
+    "domain": "deep-learning",
+    "tags": [
+      "machine-learning",
+      "neural-networks",
+      "convolution",
+      "pooling"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What are the three parameters that define how a pooling layer operates?",
+        "answer": "The three parameters are Filter Size (Kernel Size), Stride, and Padding."
+      },
+      {
+        "type": "cloze",
+        "text": "A common choice for filter size in pooling is a {{2x2}} window.",
+        "hint": "It's a small window looking at 4 pixels at a time."
+      },
+      {
+        "type": "mcq",
+        "question": "What does a stride of 2 indicate in a pooling layer?",
+        "options": {
+          "A": "The window moves 2 rows after each operation.",
+          "B": "The window moves 2 pixels after each operation.",
+          "C": "The window processes 2 columns only.",
+          "D": "The window skips 2 complete lines."
+        },
+        "answer": "B",
+        "explanation": "A stride of 2 means the window moves 2 pixels in both directions after each pooling operation."
+      },
+      {
+        "type": "basic",
+        "question": "Why is padding usually set to 0 in pooling layers?",
+        "answer": "Padding is usually set to 0 to ensure pooling occurs only where the filter fits perfectly, avoiding processing edge pixels."
+      },
+      {
+        "type": "cloze",
+        "text": "The formula to calculate the output size in pooling is: $$\\text{Output Size} = \\frac{(Input - Filter)}{Stride} + 1$$.",
+        "hint": "Includes input, filter size, and stride."
+      },
+      {
+        "type": "mcq",
+        "question": "If you have a 6x6 image with a 2x2 filter and a stride of 2, what will be the output image size?",
+        "options": {
+          "A": "4x4",
+          "B": "3x3",
+          "C": "2x2",
+          "D": "6x6"
+        },
+        "answer": "B",
+        "explanation": "Using the formula, the output size is 3x3: $$ (6-2)/2 + 1 = 3 $$."
+      }
+    ]
+  },
+  {
+    "note_id": "translation-invariance-in-deep-learning",
+    "source_note": "Main/Translation Invariance.md",
+    "title": "Translation Invariance in Deep Learning",
+    "domain": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "pooling",
+      "translation-invariance",
+      "neural-networks"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is translation invariance in the context of deep learning?",
+        "answer": "Translation invariance refers to the ability of a neural network to recognize objects regardless of their position in the input image."
+      },
+      {
+        "type": "cloze",
+        "text": "In neural networks, pooling helps achieve {{translation invariance}} by summarizing regions of pixels.",
+        "hint": "This term describes consistency in recognition despite object shifting."
+      },
+      {
+        "type": "basic",
+        "question": "How does pooling contribute to translation invariance in neural networks?",
+        "answer": "Pooling summarizes pixel neighborhoods into single values, making the network focus on the presence of features rather than their exact locations."
+      },
+      {
+        "type": "mcq",
+        "question": "Why is translation invariance important in deep learning models?",
+        "options": {
+          "A": "It increases model complexity.",
+          "B": "It allows recognition of objects despite their position changes.",
+          "C": "It reduces training time.",
+          "D": "It exclusively enhances color recognition capabilities."
+        },
+        "answer": "B",
+        "explanation": "Translation invariance allows a model to correctly identify objects even if they appear in different positions within the input, making the model more flexible and robust."
+      },
+      {
+        "type": "basic",
+        "question": "What are some pooling types used to achieve translation invariance?",
+        "answer": "Max pooling, which captures the strongest signals, and average pooling, which smoothes over averages, are used to achieve translation invariance."
+      },
+      {
+        "type": "cloze",
+        "text": "Pooling techniques, controlled by {{filter size}} and stride, help reduce image data size and prevent overfitting.",
+        "hint": "Adjustable parameters in pooling that affect output size."
+      }
+    ]
+  }
+]

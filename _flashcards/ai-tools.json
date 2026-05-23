@@ -1,0 +1,239 @@
+[
+  {
+    "note_id": "core-components-functional-blocks",
+    "source_note": "Main/AI Search Methods/Core components - Memory, Learning, Inference, and Pattern Recognition.md",
+    "title": "Core Components Functional Blocks",
+    "domain": "ai-tools",
+    "tags": [
+      "ai",
+      "intelligent-agents",
+      "memory",
+      "learning",
+      "pattern-recognition",
+      "inference"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the role of memory in an AI agent's intelligence?",
+        "answer": "Memory acts as the storage system, allowing the agent to retain past states, successful actions, and 'world knowledge,' thereby providing context for future actions."
+      },
+      {
+        "type": "cloze",
+        "text": "Memory enables an agent to retain past states and {{successful actions}} for future reference.",
+        "hint": "Key outcomes that inform future decisions"
+      },
+      {
+        "type": "basic",
+        "question": "How does pattern recognition contribute to an AI agent's functionality?",
+        "answer": "Pattern recognition allows an AI agent to identify regularities in data, such as discerning a 'face' or a 'red block' from complex input, which is crucial during the perception phase."
+      },
+      {
+        "type": "mcq",
+        "question": "Which functional component allows an AI agent to improve by analyzing past successes and failures?",
+        "options": {
+          "A": "Memory",
+          "B": "Pattern Recognition",
+          "C": "Learning",
+          "D": "Inference"
+        },
+        "answer": "C",
+        "explanation": "Learning enables the agent to improve over time by updating internal models based on past experiences."
+      },
+      {
+        "type": "basic",
+        "question": "What fundamental ability does inference give to an AI agent?",
+        "answer": "Inference allows an AI agent to make logical leaps, drawing new conclusions from existing knowledge and current observations."
+      },
+      {
+        "type": "mcq",
+        "question": "In the context of a robot vacuum learning to avoid a problematic rug, which component is most responsible for this improved behavior?",
+        "options": {
+          "A": "Memory",
+          "B": "Learning",
+          "C": "Pattern Recognition",
+          "D": "Inference"
+        },
+        "answer": "B",
+        "explanation": "Learning allows the vacuum to modify its behavior based on past experiences of getting stuck under the rug, improving future performance."
+      },
+      {
+        "type": "cloze",
+        "text": "{{Inference}} is the ability that empowers agents to draw new conclusions from existing knowledge and observations.",
+        "hint": "Logical reasoning process"
+      }
+    ]
+  },
+  {
+    "note_id": "syntactics-vs-semantics",
+    "source_note": "Main/AI Search Methods/Syntactics vs. Semantics.md",
+    "title": "Syntactics vs. Semantics",
+    "domain": "ai-tools",
+    "tags": [
+      "language-processing",
+      "ai",
+      "syntax",
+      "semantics"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What do syntactics and semantics represent in the context of AI language processing?",
+        "answer": "Syntactics refer to the formal rules, grammar, and structures (the 'how'), while semantics pertain to meaning, intent, or 'truth' (the 'why' and 'what')."
+      },
+      {
+        "type": "basic",
+        "question": "Why are modern AI systems challenged by semantics, despite being excellent syntacticians?",
+        "answer": "Modern AI systems excel at syntactics because they can flawlessly follow rules and grammar, but struggle with semantics as it involves understanding meaning and context beyond symbol manipulation."
+      },
+      {
+        "type": "cloze",
+        "text": "{{Semantics}} is the actual meaning, intent, or 'truth' behind the symbols in communication.",
+        "hint": "Deals with meaning, not just structure."
+      },
+      {
+        "type": "cloze",
+        "text": "The {{Frame Problem}} involves using syntax to represent common-sense changes in the real world.",
+        "hint": "A conceptual issue in AI related to representing change."
+      },
+      {
+        "type": "mcq",
+        "question": "What is an example of something that is syntactically correct but semantically nonsensical?",
+        "options": {
+          "A": "The sun sets in the west.",
+          "B": "The diameter of a circle is twice its radius.",
+          "C": "Colorless green ideas sleep furiously.",
+          "D": "Water boils at 100 degrees Celsius under standard conditions."
+        },
+        "answer": "C",
+        "explanation": "The sentence 'Colorless green ideas sleep furiously' follows grammatical rules but lacks logical meaning."
+      }
+    ]
+  },
+  {
+    "note_id": "creating-the-2d-bounded-region",
+    "source_note": "Main/Artificial Intelligence/Constructing 2 D Tower Function.md",
+    "title": "Creating the 2D Bounded Region",
+    "domain": "ai-tools",
+    "tags": [
+      "sigmoid",
+      "2d-region",
+      "hyperplane",
+      "neural-networks",
+      "and-operation"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "How is a localized 2D bounded region created using sigmoid neurons?",
+        "answer": "A localized 2D bounded region is created by using sigmoid neurons to define a hyperplane for each boundary of the region and then using an output layer neuron to perform an 'AND' operation on these boundaries."
+      },
+      {
+        "type": "cloze",
+        "text": "A single multi-input [[Sigmoid Neuron]] defines a {{hyperplane}} that separates the high-output region from the low-output region.",
+        "hint": "A line in 2D space"
+      },
+      {
+        "type": "mcq",
+        "question": "What operation is used to combine the outputs of the boundary neurons when creating a 2D bounded region?",
+        "options": {
+          "A": "OR operation",
+          "B": "AND operation",
+          "C": "NOT operation",
+          "D": "XOR operation"
+        },
+        "answer": "B",
+        "explanation": "The 'AND' operation ensures the output neuron fires high only when the input point is on the correct side of all four boundaries simultaneously."
+      },
+      {
+        "type": "basic",
+        "question": "What is the purpose of using four separate hidden neurons when forming a 2D bounded region?",
+        "answer": "Four separate hidden neurons are used to define the four boundaries of a rectangular box to enclose a high-output region in 2D space."
+      },
+      {
+        "type": "cloze",
+        "text": "To enclose a box in 2D space, {{four separate hidden neurons}} are needed to define its boundaries.",
+        "hint": "One for each boundary"
+      },
+      {
+        "type": "mcq",
+        "question": "What is achieved by summing many 2D tower functions, each with its own position and height?",
+        "options": {
+          "A": "Creating a 3D hyperplane",
+          "B": "Defining a single 2D bounded region",
+          "C": "Constructing a complex 3D surface that approximates any continuous 2D function",
+          "D": "Performing a XOR operation"
+        },
+        "answer": "C",
+        "explanation": "Summing many of these 2D tower functions allows the network to approximate any continuous 2D function effectively."
+      }
+    ]
+  },
+  {
+    "note_id": "how-to-read-the-architecture",
+    "source_note": "Main/Ongoing Projects/Stitch.md",
+    "title": "How To Read The Architecture",
+    "domain": "ai-tools",
+    "tags": [
+      "data-ingestion",
+      "content-processing",
+      "personalization",
+      "content-delivery"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary role of the Ingestion layer in the system architecture?",
+        "answer": "The Ingestion layer involves collecting data through specialized niche feeds and broad-ranging newspaper feeds, conducting freshness and liveness audits, and pulling data hourly via cron jobs."
+      },
+      {
+        "type": "cloze",
+        "text": "In the Processing layer, articles are converted into structured data by removing duplicates and non-relevant content, and generating {{text-embedding-3-small}} vectors.",
+        "hint": "type of embedding used"
+      },
+      {
+        "type": "mcq",
+        "question": "How does the Personalization layer expand user preferences?",
+        "options": {
+          "A": "Using a decision tree algorithm",
+          "B": "By gathering information during onboarding, then using an LLM to create a detailed user description",
+          "C": "Through random sampling of articles",
+          "D": "By manual user input every session"
+        },
+        "answer": "B",
+        "explanation": "The Personalization layer gathers professional and interest information from users during onboarding, then utilizes a Large Language Model (LLM) to expand this into an embedded user description."
+      },
+      {
+        "type": "basic",
+        "question": "How does the Deduplication process work in the Processing layer?",
+        "answer": "Deduplication removes duplicate articles through URL normalization, title similarity using Jaccard index, and cosine embedding similarity."
+      },
+      {
+        "type": "cloze",
+        "text": "The Delivery layer records user interactions for feedback events, which influence {{personalization}} by updating the user vector.",
+        "hint": "layer influenced by feedback"
+      },
+      {
+        "type": "mcq",
+        "question": "What function does the theme classification in the Processing layer serve?",
+        "options": {
+          "A": "It filters out sponsored content and non-English articles",
+          "B": "It assigns structured data into one of 17 themes based on embedding similarity to theme centroids",
+          "C": "It normalizes URLs to prevent duplicates",
+          "D": "It boosts article recency during personalization"
+        },
+        "answer": "B",
+        "explanation": "Theme classification in the Processing layer categorizes articles into 17 themes using embedding similarity to predefined theme centroids."
+      },
+      {
+        "type": "basic",
+        "question": "How does feedback flow in the described system architecture?",
+        "answer": "Feedback flows upward from the Delivery layer to the Personalization layer, allowing user interactions to inform and refine user preferences."
+      }
+    ]
+  }
+]

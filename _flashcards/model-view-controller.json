@@ -1,0 +1,65 @@
+[
+  {
+    "note_id": "what-is-a-controller",
+    "source_note": "Main/Web Dev/Group Actions by Controller.md",
+    "title": "What Is A Controller",
+    "domain": "model-view-controller",
+    "tags": [
+      "mvc",
+      "controller",
+      "software-architecture"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary responsibility of a controller in MVC architecture?",
+        "answer": "A controller interprets user actions, decides model interactions, and determines which views to render."
+      },
+      {
+        "type": "cloze",
+        "text": "Actions impacting the same model are usually grouped within a single {{controller}}.",
+        "hint": "Organizational practice in MVC"
+      },
+      {
+        "type": "mcq",
+        "question": "Which of the following is NOT a typical responsibility of a controller?",
+        "options": {
+          "A": "Rendering data for the user",
+          "B": "Sending emails",
+          "C": "Enforcing access control rules",
+          "D": "Interpreting user input"
+        },
+        "answer": "A",
+        "explanation": "Rendering data for the user is the responsibility of the View in MVC architecture, not the Controller."
+      },
+      {
+        "type": "basic",
+        "question": "How do controllers help maintain modular, clean, and reusable logic?",
+        "answer": "Controllers group actions that impact the same model within a single unit, ensuring that the logic is organized and reusable."
+      },
+      {
+        "type": "cloze",
+        "text": "In MVC, the {{model}} role is responsible for managing data and business logic.",
+        "hint": "Role responsible for data handling"
+      },
+      {
+        "type": "mcq",
+        "question": "What practice should be avoided in controllers to adhere to best practices?",
+        "options": {
+          "A": "Handling data logic directly",
+          "B": "Updating a model",
+          "C": "Rendering a view",
+          "D": "Interpreting user input"
+        },
+        "answer": "A",
+        "explanation": "Handling data logic directly should be avoided in controllers; this is a task for models."
+      },
+      {
+        "type": "basic",
+        "question": "Why might a controller in an application trigger services like Telegram or WhatsApp?",
+        "answer": "A controller might trigger such services to send alerts or notifications as part of its versatile roles beyond CRUD operations."
+      }
+    ]
+  }
+]

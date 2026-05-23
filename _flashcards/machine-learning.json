@@ -1,0 +1,49 @@
+[
+  {
+    "note_id": "radial-basis-function-and-kernel-trick",
+    "source_note": "Main/Ongoing Projects/Stitch.md",
+    "title": "Radial Basis Function and Kernel Trick",
+    "domain": "machine-learning",
+    "tags": [
+      "kernel-methods",
+      "support-vector-machines",
+      "machine-learning",
+      "statistical-learning"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What advantage does the Radial Basis Function (RBF) kernel provide in Support Vector Machines?",
+        "answer": "The RBF kernel allows for non-linear decision boundaries by mapping input space into a higher-dimensional space where linear separation is feasible."
+      },
+      {
+        "type": "cloze",
+        "text": "The RBF kernel is known for its ability to handle {{non-linear decision boundaries}}.",
+        "hint": "characteristic of RBF kernel in separating data"
+      },
+      {
+        "type": "mcq",
+        "question": "Why is the RBF kernel considered computationally intensive?",
+        "options": {
+          "A": "It requires additional data collection.",
+          "B": "It demands extra memory for data storage.",
+          "C": "It involves operations in higher-dimensional space.",
+          "D": "It needs more complex algorithms to process data."
+        },
+        "answer": "C",
+        "explanation": "The RBF kernel involves high-dimensional space computations, making it computationally intensive."
+      },
+      {
+        "type": "basic",
+        "question": "What role does the Kernel Trick play in using the RBF kernel with Support Vector Machines?",
+        "answer": "The Kernel Trick allows computations of the RBF kernel to be performed implicitly, making them more computationally feasible."
+      },
+      {
+        "type": "cloze",
+        "text": "The {{Kernel Trick}} allows implicit computation of high-dimensional space operations in the RBF kernel.",
+        "hint": "technique used to improve RBF kernel efficiency"
+      }
+    ]
+  }
+]

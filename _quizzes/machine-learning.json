@@ -1,0 +1,96 @@
+{
+  "domain": "machine-learning",
+  "generated": "2026-05-23",
+  "note_count": 1,
+  "question_count": 10,
+  "questions": [
+    {
+      "type": "mcq",
+      "topic": "radial basis function",
+      "question": "Which of the following best describes the primary benefit of using the Radial Basis Function (RBF) kernel in machine learning?",
+      "options": {
+        "A": "It reduces the dimensionality of the data.",
+        "B": "It simplifies the algorithms used for linear models.",
+        "C": "It allows for non-linear decision boundaries.",
+        "D": "It enhances data visualization capabilities."
+      },
+      "answer": "C",
+      "explanation": "The RBF kernel enables support for non-linear decision boundaries by mapping data into a higher-dimensional space where linear separations are feasible."
+    },
+    {
+      "type": "short_answer",
+      "topic": "kernel trick",
+      "question": "Explain how the Kernel Trick can make using the RBF kernel more computationally feasible.",
+      "answer": "The Kernel Trick allows the RBF kernel to perform operations in high-dimensional spaces implicitly, without explicitly computing the coordinates in that space, thus reducing computational load."
+    },
+    {
+      "type": "scenario",
+      "topic": "high-dimensional computation",
+      "prompt": "Given a dataset with complex non-linear patterns, you are tasked with selecting a kernel for your Support Vector Machine model. Justify the use of the RBF kernel and mention any computational considerations.",
+      "answer": "The RBF kernel is suitable because it can model non-linear patterns by mapping data into higher-dimensional spaces where these patterns become separable. However, the computational cost can be high due to operations in these higher dimensions. The Kernel Trick is essential to make these computations manageable by avoiding explicit calculations in that space."
+    },
+    {
+      "type": "mcq",
+      "topic": "support vector machines",
+      "question": "What is the primary trade-off to consider when using the RBF kernel with Support Vector Machines?",
+      "options": {
+        "A": "Reduced model interpretability vs. increased accuracy",
+        "B": "Increased training time vs. reduced test time",
+        "C": "Simple parameter tuning vs. complex model deployment",
+        "D": "Decreased overfitting vs. increased underfitting"
+      },
+      "answer": "A",
+      "explanation": "While the RBF kernel often increases model accuracy by capturing complex patterns, it typically reduces interpretability due to the non-linear transformations it applies."
+    },
+    {
+      "type": "short_answer",
+      "topic": "model complexity",
+      "question": "Discuss the impact of using the RBF kernel on model complexity and training time.",
+      "answer": "Using the RBF kernel increases model complexity because it maps data to a high-dimensional space, which can lead to longer training times due to the increased computational demands."
+    },
+    {
+      "type": "scenario",
+      "topic": "kernel selection",
+      "prompt": "A dataset does not exhibit clear linear separation. Describe the process and considerations you would take in choosing between different kernel functions for an SVM.",
+      "answer": "Consider the dataset characteristics and computational resources. The RBF kernel is commonly used for its ability to handle non-linear data, but consider linear, polynomial, or sigmoid kernels if computational efficiency or model interpretability is more critical. Evaluate through cross-validation to select the optimal kernel based on performance metrics such as accuracy and computation time."
+    },
+    {
+      "type": "mcq",
+      "topic": "computational intensity",
+      "question": "Why is the RBF kernel often considered computationally intensive?",
+      "options": {
+        "A": "It requires large datasets.",
+        "B": "It necessitates frequent algorithm updates.",
+        "C": "It involves operations in higher-dimensional space.",
+        "D": "It needs pre-processing of data before training."
+      },
+      "answer": "C",
+      "explanation": "The RBF kernel maps input data into high-dimensional space to enable non-linear separation, which requires intensive computations."
+    },
+    {
+      "type": "short_answer",
+      "topic": "non-linear decision boundaries",
+      "question": "What makes the RBF kernel particularly effective in the context of non-linear decision boundaries?",
+      "answer": "The RBF kernel maps data into a higher-dimensional space where complex non-linear relationships can be linearly separable."
+    },
+    {
+      "type": "scenario",
+      "topic": "kernel trick application",
+      "prompt": "Imagine you are working with a high-dimensional dataset on a system with limited computational power. Explain how you could effectively apply the RBF kernel using the Kernel Trick and what trade-offs might be involved.",
+      "answer": "Using the Kernel Trick, the RBF kernel computations can be handled implicitly, which avoids direct calculations in high-dimensional space, thus conserving computational resources. The trade-off includes potentially increased complexity in model tuning and understanding due to the non-linear transformations involved."
+    },
+    {
+      "type": "mcq",
+      "topic": "kernel efficiency",
+      "question": "Which kernel trick advantage is most beneficial when using high-dimensional kernels like RBF?",
+      "options": {
+        "A": "Reduced data pre-processing",
+        "B": "Implicit high-dimensional computations",
+        "C": "Simplified model hyperparameters",
+        "D": "Expanded dataset applicability"
+      },
+      "answer": "B",
+      "explanation": "The Kernel Trick allows implicit computations in high-dimensional spaces, making high-dimensional kernels like RBF more computationally feasible."
+    }
+  ]
+}

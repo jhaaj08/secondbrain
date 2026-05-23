@@ -1,0 +1,71 @@
+{
+  "domain": "model-view-controller",
+  "generated": "2026-05-23",
+  "note_count": 1,
+  "question_count": 7,
+  "questions": [
+    {
+      "type": "mcq",
+      "topic": "controller responsibilities",
+      "question": "Which of the following responsibilities is not typically associated with a controller in MVC architecture?",
+      "options": {
+        "A": "Interpreting user input",
+        "B": "Enforcing access control rules",
+        "C": "Triggering external services like email or notifications",
+        "D": "Rendering data for the user"
+      },
+      "answer": "D",
+      "explanation": "Rendering data for the user is the responsibility of the View, not the Controller."
+    },
+    {
+      "type": "short_answer",
+      "topic": "controller design",
+      "question": "How do controllers contribute to maintaining modular and reusable code in an application?",
+      "answer": "Controllers organize logic by grouping actions that impact the same model, which helps keep the code modular and reusable."
+    },
+    {
+      "type": "scenario",
+      "topic": "controller best practices",
+      "prompt": "You're adding a new feature to an application and considering placing data logic in the controller for convenience. Explain why this may not be a best practice.",
+      "answer": "Including data logic in the controller can reduce modularity and reusability by conflating responsibilities. Best practices suggest placing data logic within models, preserving the controller's role of handling input response and delegating specific tasks to other components."
+    },
+    {
+      "type": "mcq",
+      "topic": "model role in MVC",
+      "question": "In MVC architecture, which component is primarily responsible for managing data and business logic?",
+      "options": {
+        "A": "Controller",
+        "B": "View",
+        "C": "Model",
+        "D": "Database"
+      },
+      "answer": "C",
+      "explanation": "The Model is the component tasked with data management and business logic."
+    },
+    {
+      "type": "short_answer",
+      "topic": "controllers and external services",
+      "question": "Give an example of when a controller might communicate with an external service like Telegram or WhatsApp.",
+      "answer": "A controller might trigger external services for sending alerts or notifications as part of handling user requests that require such actions."
+    },
+    {
+      "type": "scenario",
+      "topic": "controller interaction",
+      "prompt": "A user wants to perform a complex query and see the results visualized in real-time. Explain the roles of the model, view, and controller in handling this request.",
+      "answer": "The controller will interpret the user's query request and instruct the model to perform the complex data retrieval. The model processes the query to fetch and organize the data. The controller then selects which view should be rendered with this data, ensuring it is displayed in real-time to the user."
+    },
+    {
+      "type": "mcq",
+      "topic": "actions in controllers",
+      "question": "When designing controllers, why is it recommended to group related actions?",
+      "options": {
+        "A": "To reduce code compilation time",
+        "B": "To follow DRY (Don't Repeat Yourself) principles",
+        "C": "To handle exceptions more effectively",
+        "D": "Grouping related actions enhances the readability and manageability of code, as it keeps related logic together within single units."
+      },
+      "answer": "D",
+      "explanation": "Grouping related actions enhances the readability and manageability of code, as it keeps related logic together within single units."
+    }
+  ]
+}

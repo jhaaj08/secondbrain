@@ -1,0 +1,69 @@
+[
+  {
+    "note_id": "kinases-and-cancer",
+    "source_note": "Main/Biology/Kinases.md",
+    "title": "Kinases and Cancer",
+    "domain": "cancer",
+    "tags": [
+      "cancer",
+      "kinases",
+      "cell-signaling",
+      "phosphorylation",
+      "biochemistry",
+      "oncology",
+      "cell-biology"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What role do kinases play in cancer cell division and proliferation?",
+        "answer": "Kinases like EGFR, HER2, and the RAS\u2013RAF\u2013MEK\u2013ERK cascade drive nonstop cell division, sustaining proliferative signaling in cancer."
+      },
+      {
+        "type": "cloze",
+        "text": "Orphan kinases are kinases with no known substrates or clear {{biological functions}}.",
+        "hint": "This makes them challenging to study."
+      },
+      {
+        "type": "mcq",
+        "question": "Which pathway do kinases use to promote angiogenesis in cancer?",
+        "options": {
+          "A": "PI3K\u2013AKT\u2013mTOR pathway",
+          "B": "VEGFR pathway",
+          "C": "JAK\u2013STAT pathway",
+          "D": "RAS\u2013RAF\u2013MEK\u2013ERK cascade"
+        },
+        "answer": "B",
+        "explanation": "VEGFR (vascular endothelial growth factor receptor) is a kinase that promotes blood vessel growth, aiding angiogenesis in cancer."
+      },
+      {
+        "type": "basic",
+        "question": "How do kinases contribute to resisting cell death in cancer cells?",
+        "answer": "Kinases such as AKT and mTOR block pro-apoptotic proteins, helping cancer cells resist cell death."
+      },
+      {
+        "type": "cloze",
+        "text": "The human genome encodes over 500 kinases, collectively known as the {{kinome}}.",
+        "hint": "This term refers to the full set of kinases."
+      },
+      {
+        "type": "mcq",
+        "question": "Which kinase-related pathway enhances cell metabolic shift towards glycolysis in cancer?",
+        "options": {
+          "A": "SRC\u2013FAK pathway",
+          "B": "CDK4/6 pathway",
+          "C": "PI3K\u2013AKT\u2013mTOR pathway",
+          "D": "ATM\u2013ATR\u2013CHK1 pathway"
+        },
+        "answer": "C",
+        "explanation": "The PI3K\u2013AKT\u2013mTOR pathway shifts metabolism towards glycolysis, supporting the Warburg effect in cancer cells."
+      },
+      {
+        "type": "basic",
+        "question": "What is the function of DNA damage response kinases like ATM, ATR, and CHK1 in the context of cancer?",
+        "answer": "These kinases are involved in maintaining genome stability, but their malfunction can lead to increased genomic instability in cancer."
+      }
+    ]
+  }
+]

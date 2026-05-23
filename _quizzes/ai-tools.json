@@ -1,0 +1,96 @@
+{
+  "domain": "ai-tools",
+  "generated": "2026-05-23",
+  "note_count": 4,
+  "question_count": 10,
+  "questions": [
+    {
+      "type": "mcq",
+      "topic": "memory and learning",
+      "question": "Which component is crucial for an AI agent to retain past states and actions for improving its decision-making?",
+      "options": {
+        "A": "Memory",
+        "B": "Pattern Recognition",
+        "C": "Learning",
+        "D": "Inference"
+      },
+      "answer": "A",
+      "explanation": "Memory allows AI agents to store and recall past states and successful actions, which is essential for contextualizing future actions."
+    },
+    {
+      "type": "short_answer",
+      "topic": "pattern recognition",
+      "question": "How does pattern recognition contribute to the perception phase of an AI agent?",
+      "answer": "Pattern recognition helps identify regularities or patterns in input data, enabling the agent to detect objects and make sense of complex environments."
+    },
+    {
+      "type": "scenario",
+      "topic": "inference and decision making",
+      "prompt": "Describe a situation where inference allows an AI agent to make a decision based on partial information, and explain the role of inference in this process.",
+      "answer": "In a navigation task, an AI could use inference to determine the best route when some roads are unexpectedly blocked. Inference allows it to utilize prior knowledge and current observations to draw logical conclusions on an alternative path."
+    },
+    {
+      "type": "mcq",
+      "topic": "syntactics vs semantics",
+      "question": "Why do AI systems excel in syntactics but struggle with semantics?",
+      "options": {
+        "A": "AI systems cannot process grammar rules.",
+        "B": "AI systems lack the ability to manipulate symbols.",
+        "C": "AI systems easily follow rules and grammar but fail to understand deeper meanings.",
+        "D": "AI systems can comprehend intention and truth without syntactic rules."
+      },
+      "answer": "C",
+      "explanation": "While AI systems are adept at following structural rules, understanding context and meaning (semantics) requires more than syntax processing."
+    },
+    {
+      "type": "short_answer",
+      "topic": "2D bounded regions",
+      "question": "Explain how sigmoid neurons are used to create a localized 2D bounded region.",
+      "answer": "Sigmoid neurons establish a hyperplane for each boundary of the region, and their outputs are combined using an 'AND' operation to enclose a distinct high-output zone."
+    },
+    {
+      "type": "scenario",
+      "topic": "theme classification",
+      "prompt": "An article about climate change is not recognized correctly by the theme classification system. Discuss what might have gone wrong and the steps to improve theme classification accuracy.",
+      "answer": "The theme centroid for environmental issues might not be accurate or comprehensive enough. Enhancing the embedding similarity models and adjusting centroids can improve classification."
+    },
+    {
+      "type": "mcq",
+      "topic": "system architecture layers",
+      "question": "What is the primary function of the Ingestion layer in content system architecture?",
+      "options": {
+        "A": "To filter duplicates from incoming data",
+        "B": "To gather and audit data from various feeds and sources",
+        "C": "To classify data into themes for further processing",
+        "D": "To personalize content based on user feedback"
+      },
+      "answer": "B",
+      "explanation": "The Ingestion layer is responsible for collecting data through different feeds and ensuring data is fresh and relevant."
+    },
+    {
+      "type": "short_answer",
+      "topic": "deduplication process",
+      "question": "What techniques are employed in the Processing layer to remove duplicate articles?",
+      "answer": "The process involves URL normalization, title similarity checks using the Jaccard index, and cosine embedding similarity evaluation."
+    },
+    {
+      "type": "scenario",
+      "topic": "feedback integration",
+      "prompt": "If user preferences are not updating as expected after receiving feedback, what might be the issue and how would you address it?",
+      "answer": "There could be a problem in the feedback loop or the updating algorithm for user profiles. Ensuring accurate logging of interactions and refining the user vector update process could solve the issue."
+    },
+    {
+      "type": "mcq",
+      "topic": "personalization layer",
+      "question": "How does the system's Personalization layer enhance user experience?",
+      "options": {
+        "A": "By filtering non-relevant content manually",
+        "B": "By analyzing user preferences during onboarding and using LLM for detailed profiles",
+        "C": "By encouraging users to input their preferences every session",
+        "D": "By using default profiles for quick content delivery"
+      },
+      "answer": "B",
+      "explanation": "The Personalization layer leverages detailed user input to tailor content recommendations, enhancing relevance and user satisfaction."
+    }
+  ]
+}

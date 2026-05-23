@@ -1,0 +1,1613 @@
+[
+  {
+    "note_id": "word-representation-summary",
+    "source_note": "Main/Artificial Intelligence/Word Representations.md",
+    "title": "Word Representation Summary",
+    "domain": "computational-biology",
+    "tags": [
+      "word-representation",
+      "svd",
+      "word2vec",
+      "natural-language-processing"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What does the One Hot Representation of words fail to capture?",
+        "answer": "The One Hot Representation fails to capture semantic similarity between words."
+      },
+      {
+        "type": "cloze",
+        "text": "The {{Continuous Bag of Words Model}} predicts the current word based on surrounding context words using neural networks.",
+        "hint": "A model focusing on current word prediction using context."
+      },
+      {
+        "type": "mcq",
+        "question": "How does the Skip Gram Model differ from the Continuous Bag of Words Model?",
+        "options": {
+          "A": "It uses matrix factorization.",
+          "B": "It predicts surrounding context words for a given target word.",
+          "C": "It represents words as binary vectors.",
+          "D": "It captures global statistics of a corpus."
+        },
+        "answer": "B",
+        "explanation": "The Skip Gram Model predicts surrounding context words for a given target word, opposite to the CBOW model, which predicts the current word."
+      },
+      {
+        "type": "cloze",
+        "text": "The Hierarchical Softmax is especially useful for models with {{large vocabularies}}.",
+        "hint": "Useful when vocabularies get extensive."
+      },
+      {
+        "type": "basic",
+        "question": "What is the primary goal of Singular Value Decomposition in learning word representations?",
+        "answer": "Its primary goal is to capture deeper relationships in word co-occurrence matrices through matrix factorization."
+      },
+      {
+        "type": "mcq",
+        "question": "What is a key characteristic of Glove Representations?",
+        "options": {
+          "A": "Captures local contexts similar to Word2Vec.",
+          "B": "Uses a contrastive estimation method.",
+          "C": "Captures global statistics of a corpus in word vectors.",
+          "D": "Uses a binary vector for each word."
+        },
+        "answer": "C",
+        "explanation": "Glove Representations capture global statistics of a corpus, contrasting with techniques focusing on local contexts."
+      }
+    ]
+  },
+  {
+    "note_id": "alpha-carbon",
+    "source_note": "Main/Biology/Alpha Carbon.md",
+    "title": "Alpha Carbon",
+    "domain": "computational-biology",
+    "tags": [
+      "amino-acids",
+      "protein-structure",
+      "structural-biology",
+      "pdb-files",
+      "residue-contacts"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the significance of the alpha carbon (C\u03b1) in amino acids regarding protein structure?",
+        "answer": "The alpha carbon is the central atom in every amino acid, forming the backbone trace of proteins. It is used to measure residue\u2013residue distances, define secondary structures, and construct residue contact graphs."
+      },
+      {
+        "type": "cloze",
+        "text": "In amino acids, the alpha carbon is bonded to an amino group, carboxyl group, a hydrogen atom, and a {{side chain}}.",
+        "hint": "This makes each amino acid unique."
+      },
+      {
+        "type": "mcq",
+        "question": "Which statement about the alpha carbon in amino acids is true?",
+        "options": {
+          "A": "It is not involved in protein structure modeling.",
+          "B": "It forms the backbone trace of proteins.",
+          "C": "It is only found in certain amino acids.",
+          "D": "It is responsible for the amino group's properties."
+        },
+        "answer": "B",
+        "explanation": "The alpha carbon forms the backbone trace of proteins, an essential part of protein structure modeling."
+      },
+      {
+        "type": "basic",
+        "question": "How is the alpha carbon useful when defining secondary structures in proteins?",
+        "answer": "The alpha carbon is used to define secondary structures because its positions help in mapping out helices and sheets within the protein."
+      },
+      {
+        "type": "cloze",
+        "text": "The {{alpha carbon}} is a reliable anchor point for modeling because each residue contains exactly one.",
+        "hint": "Think central atom."
+      },
+      {
+        "type": "mcq",
+        "question": "What information does the C\u03b1 atom provide in a .pdb file example?",
+        "options": {
+          "A": "Only the side chain structure.",
+          "B": "The side chain's unique properties.",
+          "C": "The coordinates of the residue's central atom.",
+          "D": "The entire atomic structure of the protein."
+        },
+        "answer": "C",
+        "explanation": "In a .pdb file, the C\u03b1 atom provides the 3D coordinates of the residue's central atom."
+      }
+    ]
+  },
+  {
+    "note_id": "how-we-collected-mutations",
+    "source_note": "Main/Biology/COSMIC (Catalogue of Somatic Mutations in Cancer).md",
+    "title": "How We Collected Mutations",
+    "domain": "computational-biology",
+    "tags": [
+      "mutation-collection",
+      "cosmic",
+      "recurrent-mutations",
+      "tkks",
+      "melks"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What database was used to collect mutation data for TTK and MELK?",
+        "answer": "The COSMIC (Catalogue of Somatic Mutations in Cancer) database was used."
+      },
+      {
+        "type": "basic",
+        "question": "Why were only substitutions labeled 'Substitution - Missense' kept during the filtering process?",
+        "answer": "Only 'Substitution - Missense' mutations were kept because these point mutations result in amino acid changes, which can be significant."
+      },
+      {
+        "type": "cloze",
+        "text": "The mutation collection focused on {{recurrent mutations}} with a count greater than 2.",
+        "hint": "These mutations were observed multiple times."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the requirement for a mutation to be considered recurrent in this study?",
+        "options": {
+          "A": "Count = 1",
+          "B": "Count > 2",
+          "C": "Count < 2",
+          "D": "Any observed count"
+        },
+        "answer": "B",
+        "explanation": "A mutation is considered recurrent if it is observed in more than two tumor samples."
+      },
+      {
+        "type": "basic",
+        "question": "Which genes were the focus of the mutation collection process?",
+        "answer": "The genes TTK and MELK were the focus."
+      }
+    ]
+  },
+  {
+    "note_id": "mutation-impact-analysis",
+    "source_note": "Main/Biology/COSMIC database mutation table.md",
+    "title": "Mutation Impact Analysis",
+    "domain": "computational-biology",
+    "tags": [
+      "genomics",
+      "mutations",
+      "data-analysis",
+      "protein-structure",
+      "bioinformatics"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "Why is the 'Count' column important in Mutation Impact Analysis?",
+        "answer": "The 'Count' column indicates the number of tumor samples with the mutation, serving as a proxy for how common or recurrent the mutation is, suggesting its potential functional significance."
+      },
+      {
+        "type": "basic",
+        "question": "How does the 'Type' column assist in focusing on certain mutations?",
+        "answer": "The 'Type' column helps filter for missense mutations, which are most likely to alter amino acids and affect protein structure without deleting it."
+      },
+      {
+        "type": "cloze",
+        "text": "The **AA Mutation** indicates the amino acid substitution caused by the mutation, such as {{p.R90H}}.",
+        "hint": "p. prefix with amino acid change"
+      },
+      {
+        "type": "mcq",
+        "question": "What does the 'CDS Mutation' column represent in the context of Mutation Impact Analysis?",
+        "options": {
+          "A": "The position on the genome where the mutation occurs",
+          "B": "The mutation at the level of the coding DNA sequence",
+          "C": "The number of samples with the mutation",
+          "D": "The type of mutation such as substitution or deletion"
+        },
+        "answer": "B",
+        "explanation": "The 'CDS Mutation' column indicates the base change in the coding region at the DNA sequence level."
+      },
+      {
+        "type": "basic",
+        "question": "What is the purpose of including the 'Position' column in Mutation Impact Analysis?",
+        "answer": "The 'Position' column specifies the genomic position of the mutation on the reference genome, crucial for mapping the mutation to specific DNA regions like exons."
+      },
+      {
+        "type": "mcq",
+        "question": "What is a 'Legacy Mutation ID', and how is it used?",
+        "options": {
+          "A": "A genomic coordinate for mapping mutations",
+          "B": "A historical identifier for the proteins affected",
+          "C": "A COSMIC internal mutation ID for tracking",
+          "D": "A count of observed mutations across samples"
+        },
+        "answer": "C",
+        "explanation": "The 'Legacy Mutation ID' is a historical internal COSMIC ID primarily used for tracking mutations within the COSMIC database."
+      }
+    ]
+  },
+  {
+    "note_id": "compare-delta-saliency-patterns",
+    "source_note": "Main/Biology/Compartive analysis with known Kinase Mutants.md",
+    "title": "Compare \u0394-Saliency Patterns",
+    "domain": "computational-biology",
+    "tags": [
+      "saliency-patterns",
+      "kinase-mutations",
+      "comparative-analysis"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the purpose of comparing \u0394-saliency patterns in kinase mutations?",
+        "answer": "The purpose is to analyze functional similarities between obscure kinase mutations and known oncogenic mutations, assessing if an obscure mutation behaves like a known cancer driver."
+      },
+      {
+        "type": "cloze",
+        "text": "Projecting \u0394-saliency vectors into {{2D space}} can help identify clustering of orphan mutants near known driver mutations.",
+        "hint": "dimensional reduction technique"
+      },
+      {
+        "type": "mcq",
+        "question": "Which of the following methods is used to project \u0394-saliency vectors into 2D space?",
+        "options": {
+          "A": "Linear Regression",
+          "B": "PCA (Principal Component Analysis)",
+          "C": "Random Forest",
+          "D": "K-Means Clustering"
+        },
+        "answer": "B",
+        "explanation": "PCA is used to reduce dimensions and project \u0394-saliency vectors into 2D space for analysis."
+      },
+      {
+        "type": "basic",
+        "question": "How do you quantify similarity between mutant \u0394-saliency vectors?",
+        "answer": "The similarity is quantified using cosine distance, where a lower cosine distance indicates more similarity."
+      },
+      {
+        "type": "cloze",
+        "text": "Functional site overlap analysis involves checking if high-saliency-shift residues in TTK mutants overlap with known {{functional residues}} in other kinases.",
+        "hint": "important regions in proteins"
+      },
+      {
+        "type": "mcq",
+        "question": "Why is it significant if TTK_R90H has a \u0394-saliency profile similar to BRAF_V600E?",
+        "options": {
+          "A": "It matches the genetic code of TTK.",
+          "B": "It indicates that TTK_R90H might function like a known oncogenic driver mutation.",
+          "C": "It proves that TTK_R90H is less active.",
+          "D": "It suggests no significant findings."
+        },
+        "answer": "B",
+        "explanation": "A similar \u0394-saliency profile suggests that the obscure mutation behaves like a known cancer driver, which could be clinically important."
+      }
+    ]
+  },
+  {
+    "note_id": "residue-level-graph-construction",
+    "source_note": "Main/Biology/Construct Residue Contact Graphs.md",
+    "title": "Residue-Level Graph Construction",
+    "domain": "computational-biology",
+    "tags": [
+      "protein-structure",
+      "graph-theory",
+      "gcn"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What are nodes and edges in a residue-level graph constructed from a 3D protein structure?",
+        "answer": "Nodes are amino acid residues and edges represent contacts based on 3D proximity, specifically the distance between C-alpha atoms."
+      },
+      {
+        "type": "cloze",
+        "text": "In a residue-level graph, an edge is created if the distance between two C-alpha atoms is less than {{8 \u00c5}}."
+      },
+      {
+        "type": "mcq",
+        "question": "Which tool can be used to extract C-alpha atom coordinates from a PDB file for constructing a residue-level graph?",
+        "options": {
+          "A": "TensorFlow",
+          "B": "Biopython",
+          "C": "matplotlib",
+          "D": "PyTorch"
+        },
+        "answer": "B",
+        "explanation": "Biopython provides tools like PDBParser that are specifically designed for parsing protein structures and extracting residue coordinates."
+      },
+      {
+        "type": "basic",
+        "question": "What is the purpose of saving the adjacency matrix and residue embeddings in the graph construction process?",
+        "answer": "The adjacency matrix and residue embeddings are saved for input into a Graph Convolutional Network (GCN), which will compute saliency based on the graph structure and features."
+      },
+      {
+        "type": "cloze",
+        "text": "Residue-level graphs are constructed as input to a {{Graph Convolutional Network}} for analyzing 3D protein structures."
+      },
+      {
+        "type": "mcq",
+        "question": "When is an edge added between two nodes in the adjacency matrix during residue-level graph construction?",
+        "options": {
+          "A": "If the distance is more than 8 \u00c5",
+          "B": "If the distance is exactly 8 \u00c5",
+          "C": "If the distance is less than 8 \u00c5",
+          "D": "If the distance is 10 \u00c5"
+        },
+        "answer": "C",
+        "explanation": "An edge is added between two nodes if the distance between their C-alpha atoms is less than 8 \u00c5, signifying a contact."
+      }
+    ]
+  },
+  {
+    "note_id": "cosmic-derived-mutations-in-ttk-melk",
+    "source_note": "Main/Biology/Cross-referencing mutations with ClinVar.md",
+    "title": "Cosmic Derived Mutations in TTK and MELK",
+    "domain": "computational-biology",
+    "tags": [
+      "genetic-variants",
+      "kinases",
+      "clinical-genetics",
+      "mutation-analysis"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What was the main goal of the study on COSMIC-derived mutations in TTK and MELK?",
+        "answer": "The study aimed to verify whether any of the COSMIC-derived mutations in TTK or MELK are annotated in ClinVar as pathogenic, likely pathogenic, benign, or of uncertain significance."
+      },
+      {
+        "type": "cloze",
+        "text": "The study found that none of the filtered COSMIC mutations for TTK or MELK were currently labeled in {{ClinVar}}.",
+        "hint": "clinical genetics database"
+      },
+      {
+        "type": "mcq",
+        "question": "What is the significance of finding no matches between COSMIC-derived mutations in TTK/MELK and ClinVar?",
+        "options": {
+          "A": "The mutations were found to be benign.",
+          "B": "The mutations are unannotated in clinical databases.",
+          "C": "The research was unsuccessful.",
+          "D": "ClinVar does not include mutations from COSMIC."
+        },
+        "answer": "B",
+        "explanation": "No matches indicate that the COSMIC-derived mutations are unannotated in ClinVar and need further functional characterization."
+      },
+      {
+        "type": "basic",
+        "question": "Why is it important to compare COSMIC-derived mutations with ClinVar annotations?",
+        "answer": "Comparing these mutations helps determine if they are recognized as having known clinical significance, which can guide further research and potential clinical applications."
+      },
+      {
+        "type": "cloze",
+        "text": "The mutations in TTK and MELK analyzed from COSMIC are considered as {{unannotated}} in clinical genetics databases.",
+        "hint": "lacking labels in ClinVar"
+      },
+      {
+        "type": "mcq",
+        "question": "Which database provides a public archive of human genetic variants and their potential relation to disease?",
+        "options": {
+          "A": "COSMIC",
+          "B": "GenBank",
+          "C": "ClinVar",
+          "D": "PDB"
+        },
+        "answer": "C",
+        "explanation": "ClinVar is the database that archives human genetic variants and their associations with disease."
+      }
+    ]
+  },
+  {
+    "note_id": "study-of-kinases-in-cancer",
+    "source_note": "Main/Biology/Functional Rewiring of Orphan Kinases by Cancer Mutations.md",
+    "title": "Study of Kinases in Cancer",
+    "domain": "computational-biology",
+    "tags": [
+      "biology",
+      "cancer-research",
+      "kinases",
+      "bioinformatics",
+      "data-analysis"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "Why are kinases important in cancer research?",
+        "answer": "Kinases are pivotal in cellular processes and their involvement in pathways such as the MAPK pathway and processes like phosphorylation make them significant in cancer research."
+      },
+      {
+        "type": "cloze",
+        "text": "The study involves downloading data from the {{COSMIC}} database to investigate mutations related to cancer.",
+        "hint": "A key database for somatic mutations in cancer"
+      },
+      {
+        "type": "basic",
+        "question": "What role do TTK and MELK play in the study of cancer within this research?",
+        "answer": "TTK and MELK are orphan kinases chosen for their potential significance in cancer, making them beneficial targets for studying tumor development and progression."
+      },
+      {
+        "type": "mcq",
+        "question": "Which method is used for structure prediction in this kinase study?",
+        "options": {
+          "A": "AlphaFold",
+          "B": "OmegaFold",
+          "C": "RosettaFold",
+          "D": "DeepMindFold"
+        },
+        "answer": "B",
+        "explanation": "OmegaFold is the tool used for structure prediction in this study."
+      },
+      {
+        "type": "cloze",
+        "text": "The analytical process concludes with a {{reproducible Snakemake file}} for the workflow.",
+        "hint": "A tool used for workflow management"
+      },
+      {
+        "type": "mcq",
+        "question": "What is the purpose of using GCN (Graph Convolution Network) in this study?",
+        "options": {
+          "A": "To construct protein models",
+          "B": "To sequence DNA",
+          "C": "To calculate saliency scores",
+          "D": "To perform gene expression analysis"
+        },
+        "answer": "C",
+        "explanation": "GCN is used for calculating saliency scores, which helps in understanding functional shifts in kinases."
+      }
+    ]
+  },
+  {
+    "note_id": "output-of-the-gcn",
+    "source_note": "Main/Biology/GCN works.md",
+    "title": "Output of the GCN",
+    "domain": "computational-biology",
+    "tags": [
+      "gcn",
+      "saliency-analysis",
+      "feature-transformation",
+      "embedding",
+      "gradient"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "How is the Graph Convolutional Network (GCN) used in this context?",
+        "answer": "The GCN is used as a feature transformation and saliency analysis tool, not for classification tasks."
+      },
+      {
+        "type": "cloze",
+        "text": "Summing all output features per residue in the GCN provides a vector of length N, serving as a proxy for {{importance}}."
+      },
+      {
+        "type": "basic",
+        "question": "What does a high gradient indicate in the saliency logic of the GCN?",
+        "answer": "A high gradient indicates that the residue has a strong influence on the model\u2019s learned representation."
+      },
+      {
+        "type": "mcq",
+        "question": "What shape is the output matrix from the forward pass of the GCN?",
+        "options": {
+          "A": "(N, 1)",
+          "B": "(D, N)",
+          "C": "(N, D)",
+          "D": "(1, D)"
+        },
+        "answer": "C",
+        "explanation": "The output matrix has a shape of (N, D), where N is the number of residues, and D is the output feature size."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the L2 norm of the gradient used for in GCN saliency analysis?",
+        "options": {
+          "A": "To calculate the classification accuracy",
+          "B": "To measure the variance of output features",
+          "C": "To determine the training loss",
+          "D": "To compute the saliency score for each residue"
+        },
+        "answer": "D",
+        "explanation": "The L2 norm of the gradient is used to compute the saliency score for each residue\u2019s input embedding."
+      }
+    ]
+  },
+  {
+    "note_id": "generate-esm-embeddings",
+    "source_note": "Main/Biology/Generate Residue Embeddings.md",
+    "title": "Generate ESM Embeddings",
+    "domain": "computational-biology",
+    "tags": [
+      "protein-embeddings",
+      "neural-networks",
+      "graph-convolutional-network",
+      "machine-learning",
+      "esm-model"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the purpose of using the ESM-1b protein language model?",
+        "answer": "The purpose is to generate context-aware per-residue embeddings for amino acid sequences, which encode structural, evolutionary, and biochemical features."
+      },
+      {
+        "type": "cloze",
+        "text": "The ESM-1b model generates embeddings with a shape of (sequence_length, {{1280}}).",
+        "hint": "Embeddings dimensionality"
+      },
+      {
+        "type": "mcq",
+        "question": "What type of file does the ESM-1b model output when generating embeddings?",
+        "options": {
+          "A": ".csv",
+          "B": ".npy",
+          "C": ".txt",
+          "D": ".json"
+        },
+        "answer": "B",
+        "explanation": "The embeddings are saved as a .npy file, which is a binary file format for storing NumPy arrays."
+      },
+      {
+        "type": "basic",
+        "question": "How does the ESM-1b model treat each residue in the protein sequence?",
+        "answer": "The model generates context-aware vector embeddings for each residue, similar to BERT for proteins."
+      },
+      {
+        "type": "cloze",
+        "text": "The input to the ESM-1b model is a {{FASTA}} file containing a protein sequence.",
+        "hint": "Type of file format"
+      },
+      {
+        "type": "mcq",
+        "question": "Which organization developed the ESM-1b model?",
+        "options": {
+          "A": "Google",
+          "B": "Microsoft",
+          "C": "Meta AI",
+          "D": "IBM"
+        },
+        "answer": "C",
+        "explanation": "The ESM-1b model was developed by Meta AI (formerly Facebook)."
+      },
+      {
+        "type": "basic",
+        "question": "Why are ESM embeddings considered more powerful compared to one-hot or BLOSUM features?",
+        "answer": "Because they encode richer structural, evolutionary, and biochemical information, making them more effective as input for models like Graph Convolutional Networks."
+      }
+    ]
+  },
+  {
+    "note_id": "genotype",
+    "source_note": "Main/Biology/Genotype.md",
+    "title": "Genotype",
+    "domain": "computational-biology",
+    "tags": [
+      "genetics",
+      "inheritance",
+      "biology",
+      "alleles",
+      "phenotype"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is a genotype?",
+        "answer": "A genotype is the unique combination of alleles in an individual that determines specific traits."
+      },
+      {
+        "type": "cloze",
+        "text": "A genotype refers to the unique combination of {{alleles}} in an individual's genetic makeup.",
+        "hint": "different versions of a gene"
+      },
+      {
+        "type": "mcq",
+        "question": "What is the relationship between genotype and phenotype?",
+        "options": {
+          "A": "Genotype is the observable characteristics, phenotype is the genetic code.",
+          "B": "Phenotype can alter genotype through environmental factors.",
+          "C": "Genotype is the genetic code, phenotype is the observable characteristics.",
+          "D": "Phenotype and genotype are the same and interchangeable terms."
+        },
+        "answer": "C",
+        "explanation": "Genotype refers to the genetic makeup, while phenotype refers to the observable traits that result from the genotype."
+      },
+      {
+        "type": "basic",
+        "question": "What is the difference between homozygous and heterozygous genotypes?",
+        "answer": "A homozygous genotype has identical alleles for a gene, while a heterozygous genotype has different alleles for a gene."
+      },
+      {
+        "type": "cloze",
+        "text": "In a {{homozygous}} genotype, the individual inherits two identical versions of a gene.",
+        "hint": "same alleles"
+      },
+      {
+        "type": "basic",
+        "question": "Why might the same genotype result in different phenotypes?",
+        "answer": "Environmental factors can influence how a phenotype is expressed, even if the genotype remains the same."
+      },
+      {
+        "type": "mcq",
+        "question": "What tool can be used to predict the genotypes of offspring?",
+        "options": {
+          "A": "Mendelian Diagram",
+          "B": "Evolutionary Tree",
+          "C": "Punnett Square",
+          "D": "Heredity Chart"
+        },
+        "answer": "C",
+        "explanation": "The Punnett Square is a visual tool used to predict the potential genotypic combinations for offspring from parental alleles."
+      }
+    ]
+  },
+  {
+    "note_id": "mapk-pathway",
+    "source_note": "Main/Biology/MAPK pathway.md",
+    "title": "MAPK Pathway",
+    "domain": "computational-biology",
+    "tags": [
+      "cell-signaling",
+      "biology",
+      "cancer",
+      "protein-pathway",
+      "phosphorylation"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary function of the MAPK pathway in cellular processes?",
+        "answer": "The MAPK pathway regulates cell growth, division, differentiation, stress response, and apoptosis by transmitting signals from receptors to DNA."
+      },
+      {
+        "type": "cloze",
+        "text": "In the MAPK pathway, {{ERK}} is phosphorylated by MEK before entering the nucleus.",
+        "hint": "final kinase in the classic MAPK cascade"
+      },
+      {
+        "type": "mcq",
+        "question": "What happens when there are mutations in RAS, RAF, or MEK within the MAPK pathway?",
+        "options": {
+          "A": "The pathway becomes inactive, preventing cell division.",
+          "B": "The pathway remains always on, leading to uncontrolled cell growth.",
+          "C": "The pathway no longer responds to growth signals.",
+          "D": "The pathway only responds to stress signals."
+        },
+        "answer": "B",
+        "explanation": "Mutations in components like RAS, RAF, or MEK can lead to constitutive activation of the MAPK pathway, which results in uncontrolled cell growth, a hallmark of cancer."
+      },
+      {
+        "type": "basic",
+        "question": "What is the role of phosphorylation in the MAPK pathway?",
+        "answer": "Phosphorylation acts as a signal relay activating successive proteins in the pathway until reaching the nucleus to influence gene expression."
+      },
+      {
+        "type": "cloze",
+        "text": "{{RAF}} phosphorylates MEK in the MAPK signaling cascade.",
+        "hint": "MAP kinase kinase kinase"
+      },
+      {
+        "type": "mcq",
+        "question": "Which of the following accurately describes the order of activation in the MAPK/ERK pathway?",
+        "options": {
+          "A": "EGFR, ERK, RAS, MEK",
+          "B": "EGFR, RAS, RAF, MEK, ERK",
+          "C": "RAS, RAF, ERK, MEK, EGFR",
+          "D": "RAF, RAS, MEK, ERK, EGFR"
+        },
+        "answer": "B",
+        "explanation": "The correct sequence is EGFR activation by a growth factor, followed by RAS, RAF, MEK, and finally ERK, leading to gene expression changes."
+      }
+    ]
+  },
+  {
+    "note_id": "orphan-kinase",
+    "source_note": "Main/Biology/Orphan Kinases.md",
+    "title": "Orphan Kinase",
+    "domain": "computational-biology",
+    "tags": [
+      "biology",
+      "kinases",
+      "protein-structure"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What defines an orphan kinase?",
+        "answer": "An orphan kinase is defined by having no well-established substrates and limited or no known physiological roles."
+      },
+      {
+        "type": "cloze",
+        "text": "Orphan kinases lack well-established {{substrates}} and have limited known physiological roles.",
+        "hint": "targets it acts on"
+      },
+      {
+        "type": "mcq",
+        "question": "What has been a common misconception about some orphan kinases until recently?",
+        "options": {
+          "A": "They have well-defined substrates.",
+          "B": "They are highly active.",
+          "C": "They are inactive.",
+          "D": "They have significant physiological roles."
+        },
+        "answer": "C",
+        "explanation": "Some orphan kinases have been misclassified or assumed inactive until recently."
+      },
+      {
+        "type": "cloze",
+        "text": "An orphan kinase has {{poor characterization}} of 3D structure, mutational effects, and regulatory networks.",
+        "hint": "incomplete understanding"
+      },
+      {
+        "type": "basic",
+        "question": "Why might an orphan kinase have been misclassified?",
+        "answer": "Orphan kinases may have been misclassified due to lack of well-established substrates and limited knowledge about their physiological roles, which can lead to assumptions about inactivity."
+      }
+    ]
+  },
+  {
+    "note_id": "phosphorylation",
+    "source_note": "Main/Biology/Phosphorylation.md",
+    "title": "Phosphorylation",
+    "domain": "computational-biology",
+    "tags": [
+      "biochemistry",
+      "cell-signaling",
+      "enzymes",
+      "protein-regulation",
+      "biological-processes"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is phosphorylation and why is it important in cell signaling?",
+        "answer": "Phosphorylation is the addition of a phosphate group to a molecule, often a protein, which can regulate protein function and signaling pathways by activating, deactivating, or modifying the protein."
+      },
+      {
+        "type": "cloze",
+        "text": "The enzyme that transfers a phosphate group from ATP to a protein is called a {{kinase}}.",
+        "hint": "Involved in adding a phosphate."
+      },
+      {
+        "type": "mcq",
+        "question": "Which amino acids are typically phosphorylated due to their -OH groups?",
+        "options": {
+          "A": "Leucine, Isoleucine, Valine",
+          "B": "Serine, Threonine, Tyrosine",
+          "C": "Glycine, Alanine, Proline",
+          "D": "Aspartic acid, Glutamic acid, Lysine"
+        },
+        "answer": "B",
+        "explanation": "Serine, threonine, and tyrosine have -OH groups that are common sites for phosphorylation."
+      },
+      {
+        "type": "basic",
+        "question": "How can phosphorylation affect a protein's function?",
+        "answer": "Phosphorylation can activate or inhibit a protein's function, change its shape, create docking sites for other proteins, and signal downstream effects in a pathway."
+      },
+      {
+        "type": "cloze",
+        "text": "Phosphorylation often acts like an ON/OFF switch for proteins because it is a {{reversible}} process.",
+        "hint": "Can be undone by phosphatases."
+      },
+      {
+        "type": "mcq",
+        "question": "What can cause the overactivity of the MAPK pathway leading to cancer?",
+        "options": {
+          "A": "Excessive cell apoptosis",
+          "B": "Lack of kinase activity",
+          "C": "Mutations causing overactive phosphorylation",
+          "D": "Inhibition of phosphatases"
+        },
+        "answer": "C",
+        "explanation": "Mutations that lead to overactive phosphorylation in the MAPK pathway can result in excessive cell division, contributing to cancer."
+      }
+    ]
+  },
+  {
+    "note_id": "the-four-levels-of-protein-structure",
+    "source_note": "Main/Biology/Protein Structure.md",
+    "title": "The Four Levels of Protein Structure",
+    "domain": "computational-biology",
+    "tags": [
+      "protein-structure",
+      "omega-fold",
+      "amino-acids",
+      "tertiary-structure"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary structure of a protein and how is it encoded?",
+        "answer": "The primary structure is the linear sequence of amino acids, encoded by a gene through the central dogma (DNA \u2192 mRNA \u2192 protein)."
+      },
+      {
+        "type": "cloze",
+        "text": "The secondary structure of a protein is characterized by local folding patterns stabilized by {{hydrogen bonds}}.",
+        "hint": "It involves \u03b1-helices, \u03b2-sheets, and loops."
+      },
+      {
+        "type": "mcq",
+        "question": "Which of the following interactions stabilize the tertiary structure of a protein?",
+        "options": {
+          "A": "Peptide bonds",
+          "B": "Hydrogen bonds, ionic interactions, hydrophobic packing, disulfide bridges",
+          "C": "Covalent bonding",
+          "D": "None of the above"
+        },
+        "answer": "B",
+        "explanation": "The tertiary structure is stabilized by hydrogen bonds, ionic interactions, hydrophobic packing, and disulfide bridges, giving the protein its full 3D shape."
+      },
+      {
+        "type": "basic",
+        "question": "What is the quaternary structure of a protein, and when is it applicable?",
+        "answer": "The quaternary structure involves the assembly of multiple protein chains into a functional complex, applicable when proteins function as multi-subunit complexes, like hemoglobin."
+      },
+      {
+        "type": "cloze",
+        "text": "OmegaFold uses a {{FASTA file}} as input to model the primary sequence of proteins.",
+        "hint": "The input format for computational modeling."
+      },
+      {
+        "type": "mcq",
+        "question": "Why is secondary structure important for protein function?",
+        "options": {
+          "A": "It determines the entire protein shape.",
+          "B": "It defines local geometry and flexibility, often involved in function or recognition.",
+          "C": "It encodes the protein's gene sequence.",
+          "D": "It holds peptide bonds together."
+        },
+        "answer": "B",
+        "explanation": "Secondary structure involves elements like \u03b1-helices and \u03b2-sheets, which are crucial for local geometry and flexibility, impacting function and molecular recognition."
+      }
+    ]
+  },
+  {
+    "note_id": "why-offer-a-pipeline",
+    "source_note": "Main/Biology/Reproducible Snakemake file.md",
+    "title": "Why Offer a Pipeline",
+    "domain": "computational-biology",
+    "tags": [
+      "bioinformatics",
+      "workflows",
+      "publication",
+      "reproducibility"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "Why is it beneficial to offer a computational pipeline in bioinformatics?",
+        "answer": "Offering a pipeline makes your results reproducible, extensible, and transparent, which enhances publication potential and boosts citation and reuse."
+      },
+      {
+        "type": "cloze",
+        "text": "Offering a pipeline supports reproducibility and {{extensibility}} by allowing others to plug in new mutations or different kinases."
+      },
+      {
+        "type": "mcq",
+        "question": "Which publication requirements can a Snakemake pipeline fulfill?",
+        "options": {
+          "A": "Simplifies user interface design",
+          "B": "Enhances reproducibility and transparency",
+          "C": "Releases software as proprietary",
+          "D": "Decouples hardware dependencies"
+        },
+        "answer": "B",
+        "explanation": "A Snakemake pipeline enhances reproducibility and transparency by organizing workflows and enabling easy adaptation to new data."
+      },
+      {
+        "type": "basic",
+        "question": "What are the typical files included in a Snakemake pipeline for a bioinformatics paper?",
+        "answer": "A Snakemake pipeline typically includes a Snakefile, a config.yaml for parameters like kinase names, and a README.md detailing setup and usage."
+      },
+      {
+        "type": "cloze",
+        "text": "The rule `predict_structure` in a Snakemake pipeline generates a {{PDB}} file from a FASTA file.",
+        "hint": "Protein structure file format"
+      },
+      {
+        "type": "mcq",
+        "question": "What is the primary role of Snakemake in bioinformatics workflows?",
+        "options": {
+          "A": "To generate user interfaces",
+          "B": "To orchestrate file dependencies and execution flow",
+          "C": "To manage database connections",
+          "D": "To visualize data in real-time"
+        },
+        "answer": "B",
+        "explanation": "Snakemake orchestrates file dependencies and execution flow, only rerunning necessary parts and easing scaling to clusters or the cloud."
+      },
+      {
+        "type": "basic",
+        "question": "What makes a mutation analysis paper stand out when a full pipeline is provided?",
+        "answer": "It is modular, open (with links to GitHub or Zenodo), and clinically oriented, focusing on mutation interpretation in orphan kinases."
+      }
+    ]
+  },
+  {
+    "note_id": "quantifying-mutation-effects-on-protein-function",
+    "source_note": "Main/Biology/Saliency Analysis and Functional Shift Detection.md",
+    "title": "Quantifying Mutation Effects on Protein Function",
+    "domain": "computational-biology",
+    "tags": [
+      "mutation-analysis",
+      "protein-structure",
+      "saliency-map"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "How can the changes in a protein's structure due to mutations be quantified?",
+        "answer": "Changes in a protein's structure due to mutations can be quantified by comparing the mutant saliency map with the wild-type saliency map to compute \u0394-saliency per residue."
+      },
+      {
+        "type": "cloze",
+        "text": "The comparison between mutant and wild-type saliency maps highlights {{functional importance}} changes across the protein."
+      },
+      {
+        "type": "mcq",
+        "question": "What does a positive \u0394-saliency value indicate about a residue?",
+        "options": {
+          "A": "The residue has lost functional contribution.",
+          "B": "The residue has gained functional importance.",
+          "C": "The mutation has no impact on the residue.",
+          "D": "The residue position is structurally altered."
+        },
+        "answer": "B",
+        "explanation": "A positive \u0394-saliency value indicates that a residue has gained functional importance, often suggesting increased involvement in the protein's activity."
+      },
+      {
+        "type": "basic",
+        "question": "What kind of insights can be extracted from analyzing \u0394-saliency?",
+        "answer": "Insights such as which residues have gained or lost functional importance and potential rewiring occurred due to mutations can be extracted."
+      },
+      {
+        "type": "mcq",
+        "question": "Why is it important to overlay \u0394-saliency positions on the protein structure?",
+        "options": {
+          "A": "To predict the protein folding.",
+          "B": "To visualize potential changes in functional regions.",
+          "C": "To determine protein sequence mutations.",
+          "D": "To analyze gene expression levels."
+        },
+        "answer": "B",
+        "explanation": "Overlaying \u0394-saliency positions on the protein structure helps visualize potential changes in functional regions."
+      },
+      {
+        "type": "cloze",
+        "text": "One output of the mutation analysis is a .npy file containing {{\u0394-saliency}} for each mutant."
+      },
+      {
+        "type": "basic",
+        "question": "What additional files might be generated in mutation analysis besides \u0394-saliency npy files?",
+        "answer": "Additional files like top_shifted_residues.json or visual heatmaps might be generated."
+      }
+    ]
+  },
+  {
+    "note_id": "protein-structure-prediction-with-omegafold",
+    "source_note": "Main/Biology/Structure Prediction with OmegaFold.md",
+    "title": "Protein Structure Prediction with OmegaFold",
+    "domain": "computational-biology",
+    "tags": [
+      "protein-structure",
+      "deep-learning",
+      "omegafold",
+      "ttk",
+      "melk"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the purpose of using OmegaFold in protein structure prediction?",
+        "answer": "OmegaFold is used to predict 3D protein structures from sequences without requiring a multiple sequence alignment (MSA)."
+      },
+      {
+        "type": "cloze",
+        "text": "OmegaFold runs on {{Google Colab}} with a GPU runtime to predict protein structures.",
+        "hint": "Platform used for deep learning tasks"
+      },
+      {
+        "type": "mcq",
+        "question": "Which step is involved in setting up OmegaFold?",
+        "options": {
+          "A": "Creating a multiple sequence alignment",
+          "B": "Downloading model weights",
+          "C": "Running a GUI setup wizard",
+          "D": "Compiling custom C++ extensions"
+        },
+        "answer": "B",
+        "explanation": "Model weights need to be downloaded for OmegaFold to function correctly."
+      },
+      {
+        "type": "basic",
+        "question": "Why might some large variants fail during OmegaFold processing?",
+        "answer": "Large variants might fail due to CUDA out-of-memory errors."
+      },
+      {
+        "type": "cloze",
+        "text": "Output of OmegaFold predictions are saved in {{PDB format}}.",
+        "hint": "Standard format for 3D structure"
+      },
+      {
+        "type": "mcq",
+        "question": "What operating system command is used to clone the OmegaFold repository?",
+        "options": {
+          "A": "svn checkout",
+          "B": "git clone",
+          "C": "npm install",
+          "D": "hg clone"
+        },
+        "answer": "B",
+        "explanation": "Git is used for version control and cloning repositories."
+      },
+      {
+        "type": "basic",
+        "question": "Why is a GPU important when using OmegaFold on Google Colab?",
+        "answer": "A GPU is important because it accelerates deep learning computations, which are necessary for predicting protein structures efficiently."
+      }
+    ]
+  },
+  {
+    "note_id": "mapk-pathway-overview",
+    "source_note": "Main/Biology/Substrates.md",
+    "title": "MAPK Pathway Overview",
+    "domain": "computational-biology",
+    "tags": [
+      "mapk-pathway",
+      "kinase",
+      "phosphorylation"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "How does MEK function in the MAPK pathway?",
+        "answer": "MEK functions as a kinase that phosphorylates and activates ERK."
+      },
+      {
+        "type": "cloze",
+        "text": "In the MAPK pathway, MEK serves as a {{kinase}} for ERK."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the role of ERK in the MAPK pathway?",
+        "options": {
+          "A": "Inhibiting MEK",
+          "B": "Being phosphorylated by MEK",
+          "C": "Phosphorylating MEK",
+          "D": "Binding directly to DNA"
+        },
+        "answer": "B",
+        "explanation": "ERK is phosphorylated by MEK, which activates ERK in the MAPK pathway."
+      }
+    ]
+  },
+  {
+    "note_id": "cosmic-and-cancer-hotspot-mutations",
+    "source_note": "Main/Biology/TTK & MELK - Good Choices.md",
+    "title": "COSMIC and Cancer Hotspot Mutations",
+    "domain": "computational-biology",
+    "tags": [
+      "cancer",
+      "mutations",
+      "clinvar",
+      "cosmic",
+      "kinases"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the COSMIC database used for?",
+        "answer": "The COSMIC database is used to catalogue somatic mutations in cancer."
+      },
+      {
+        "type": "cloze",
+        "text": "COSMIC and ClinVar/Cancer Hotspot mutations focus on {{non-canonical kinase variants}}.",
+        "hint": "Unlike EGFR, BRAF, or ABL"
+      },
+      {
+        "type": "mcq",
+        "question": "Why is there a gap in the study of COSMIC and ClinVar/Cancer Hotspot mutations?",
+        "options": {
+          "A": "They have extensive structural mapping.",
+          "B": "Their variants are not well-mapped structurally and functionally.",
+          "C": "They focus solely on canonical kinases.",
+          "D": "They do not include any known cancer mutations."
+        },
+        "answer": "B",
+        "explanation": "Neither COSMIC nor ClinVar/Cancer Hotspot mutations have comprehensive structural and functional mapping for their variants."
+      },
+      {
+        "type": "basic",
+        "question": "In what area does modeling mutant structures and saliency shifts contribute significantly?",
+        "answer": "Modeling mutant structures and saliency shifts contributes to understanding non-canonical kinase variants relevant to cancer."
+      }
+    ]
+  },
+  {
+    "note_id": "dual-specificity-protein-kinase",
+    "source_note": "Main/Biology/TTK.md",
+    "title": "Dual-Specificity Protein Kinase",
+    "domain": "computational-biology",
+    "tags": [
+      "protein-kinase",
+      "cancer",
+      "spindle-assembly",
+      "mutation-analysis"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What role does the dual-specificity protein kinase play during mitosis?",
+        "answer": "It regulates the spindle assembly checkpoint."
+      },
+      {
+        "type": "basic",
+        "question": "In which types of cancer is the dual-specificity protein kinase recurrently mutated?",
+        "answer": "It is recurrently mutated in triple-negative breast cancer and lymphomas."
+      },
+      {
+        "type": "cloze",
+        "text": "The dual-specificity protein kinase regulates the {{spindle assembly checkpoint}} during mitosis.",
+        "hint": "key checkpoint during cell division"
+      },
+      {
+        "type": "mcq",
+        "question": "What is one of the limitations in the current studies of dual-specificity protein kinase?",
+        "options": {
+          "A": "Overabundance of structural analyses",
+          "B": "Lack of structural and mutational analyses outside inhibitor studies",
+          "C": "Excessive emphasis on mutational studies",
+          "D": "Complete absence of inhibitor studies"
+        },
+        "answer": "B",
+        "explanation": "There is a lack of structural and mutational analyses conducted outside the realm of inhibitor studies, highlighting a gap in the research."
+      }
+    ]
+  },
+  {
+    "note_id": "mcculloch-pitts-neuron",
+    "source_note": "Main/McCulloch-Pitts (MP) Neuron and Thresholding Logic.md",
+    "title": "McCulloch-Pitts Neuron",
+    "domain": "computational-biology",
+    "tags": [
+      "neural-networks",
+      "boolean-logic",
+      "thresholds",
+      "linear-separability",
+      "artificial-neuron"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the primary limitation of the McCulloch-Pitts neuron model?",
+        "answer": "The primary limitation of the McCulloch-Pitts neuron model is that it can only implement boolean functions that are linearly separable."
+      },
+      {
+        "type": "cloze",
+        "text": "A McCulloch-Pitts neuron uses a {{threshold parameter}} to decide if it should fire.",
+        "hint": "It dictates how strictly the neuron reacts to inputs."
+      },
+      {
+        "type": "mcq",
+        "question": "How does a McCulloch-Pitts neuron implement an AND function for three inputs?",
+        "options": {
+          "A": "Set the threshold to 2.",
+          "B": "Use inhibitory inputs.",
+          "C": "Set the threshold to 3.",
+          "D": "Use a linear combination of AND and NOT gates."
+        },
+        "answer": "C",
+        "explanation": "By setting the threshold to 3, the neuron fires only when all three inputs are 1, which matches the AND logic."
+      },
+      {
+        "type": "basic",
+        "question": "How does a McCulloch-Pitts neuron utilize inhibitory inputs?",
+        "answer": "Inhibitory inputs act as vetoes; if an inhibitory input is 'on', it forces the neuron's output to be 0, regardless of excitatory inputs."
+      },
+      {
+        "type": "cloze",
+        "text": "The aggregation function in a McCulloch-Pitts neuron counts the number of {{active inputs}} that are 'on'.",
+        "hint": "Inputs either contribute 0 or 1."
+      },
+      {
+        "type": "mcq",
+        "question": "In geometric interpretation, what does the threshold condition of a McCulloch-Pitts neuron represent?",
+        "options": {
+          "A": "A point in space.",
+          "B": "A polynomial curve.",
+          "C": "A line or plane dividing input space.",
+          "D": "A vector summation."
+        },
+        "answer": "C",
+        "explanation": "The threshold condition represents a decision boundary that divides input space into regions that produce different outputs."
+      },
+      {
+        "type": "basic",
+        "question": "Explain how the McCulloch-Pitts neuron model can simulate a NOT function.",
+        "answer": "To simulate a NOT function, the input is connected as an inhibitory input, and the threshold is set to 0, which inverts the output."
+      }
+    ]
+  },
+  {
+    "note_id": "allosteric-blind-spot-in-ai",
+    "source_note": "Main/Protein Latent/Allosteric Blind Spot.md",
+    "title": "Allosteric Blind Spot in AI",
+    "domain": "computational-biology",
+    "tags": [
+      "protein-structure",
+      "allosteric-sites",
+      "ai-limitations",
+      "mutation-prediction"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "Why do AI models struggle to predict the effects of mutations at allosteric sites?",
+        "answer": "AI models struggle with allosteric sites because these sites are flexible and lack conserved patterns, making them less recognizable compared to active sites."
+      },
+      {
+        "type": "cloze",
+        "text": "Allosteric sites are often located in regions of {{neutral frustration}}, which means they are adaptable rather than rigid.",
+        "hint": "This term refers to flexibility in protein structure."
+      },
+      {
+        "type": "mcq",
+        "question": "What role do allosteric sites play in proteins?",
+        "options": {
+          "A": "They act as the main functional pocket.",
+          "B": "They are 'remote control' buttons that can activate or deactivate the protein.",
+          "C": "They are structural supports providing stability.",
+          "D": "They bind to enzymes and substrates directly."
+        },
+        "answer": "B",
+        "explanation": "Allosteric sites act like 'remote control' buttons, located far from the active site, affecting the protein's activity."
+      },
+      {
+        "type": "basic",
+        "question": "What comparison is made to describe active sites and allosteric sites in proteins?",
+        "answer": "Active sites are compared to a car's 'steering wheel' due to their consistency and importance, while allosteric sites are likened to 'hidden buttons' or 'remote controls' due to their variability and subtle influence."
+      },
+      {
+        "type": "cloze",
+        "text": "AI models are trained to find {{common patterns}} across thousands of proteins, leading them to overlook less conserved allosteric sites.",
+        "hint": "These patterns are key to AI's initial training focus."
+      },
+      {
+        "type": "mcq",
+        "question": "Why might an AI model overlook allosteric sites in proteins?",
+        "options": {
+          "A": "They are always located at the protein's core.",
+          "B": "They share a highly conserved pattern across proteins.",
+          "C": "They are flexible and variable, lacking conserved patterns.",
+          "D": "They have the same function as active sites."
+        },
+        "answer": "C",
+        "explanation": "Allosteric sites are flexible and don't adhere to a conserved pattern, making them less recognizable by AI."
+      }
+    ]
+  },
+  {
+    "note_id": "displacement-vector-in-protein-mutations",
+    "source_note": "Main/Protein Latent/Displacement Vector.md",
+    "title": "Displacement Vector in Protein Mutations",
+    "domain": "computational-biology",
+    "tags": [
+      "protein-mutations",
+      "displacement-vector",
+      "structural-biology",
+      "ai-analysis",
+      "fitness-impact"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What does a displacement vector represent in the context of protein mutations?",
+        "answer": "A displacement vector represents the change in position from the wild-type protein to the mutant protein on a conceptual map, highlighting changes in the protein's identity and potential impacts on its function."
+      },
+      {
+        "type": "cloze",
+        "text": "A displacement vector with a long magnitude suggests the mutation is {{deleterious}}, meaning harmful to the protein's function.",
+        "hint": "Term often used to describe negative effects of mutations."
+      },
+      {
+        "type": "mcq",
+        "question": "What does the direction of a displacement vector indicate in protein mutations?",
+        "options": {
+          "A": "The magnitude of the mutation.",
+          "B": "The type of amino acid involved.",
+          "C": "How the protein's function is changing.",
+          "D": "The temperature at which the protein functions optimally."
+        },
+        "answer": "C",
+        "explanation": "The direction of the displacement vector indicates how the function of the protein is changing due to the mutation."
+      },
+      {
+        "type": "basic",
+        "question": "How is the concept of a 'valley' in fitness landscapes useful for understanding protein mutations?",
+        "answer": "A 'valley' represents the optimal functioning state of a protein. A mutation that results in a displacement vector pointing out of the valley often indicates a state of lower fitness."
+      },
+      {
+        "type": "cloze",
+        "text": "In the case of Src kinase, a larger displacement vector often indicated a mutation with a high likelihood of being {{deleterious}}.",
+        "hint": "Term referring to mutations that harm the protein function."
+      },
+      {
+        "type": "mcq",
+        "question": "Which of the following is NOT a potential consequence of a deleterious mutation in proteins?",
+        "options": {
+          "A": "Protein unfolding and instability.",
+          "B": "Enhanced binding to all molecules.",
+          "C": "Inability to catalyze intended reactions.",
+          "D": "Loss of necessary molecular interactions."
+        },
+        "answer": "B",
+        "explanation": "Enhanced binding to all molecules is not typically a consequence of a deleterious mutation, which usually interferes with specific interactions."
+      }
+    ]
+  },
+  {
+    "note_id": "epistasis",
+    "source_note": "Main/Protein Latent/Epistasis.md",
+    "title": "Epistasis",
+    "domain": "computational-biology",
+    "tags": [
+      "biology",
+      "genetics",
+      "protein-structure",
+      "mutations",
+      "research"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is epistasis in the context of genetics?",
+        "answer": "Epistasis refers to the non-additive interactions between mutations in genes, resulting in unexpected biological outcomes which often deviate from simple additive predictions."
+      },
+      {
+        "type": "cloze",
+        "text": "In epistatic interactions, the combined effect of mutations is often {{non-additive}}, resulting in unexpected biological outcomes.",
+        "hint": "Opposite of additive"
+      },
+      {
+        "type": "mcq",
+        "question": "How does epistasis affect the fitness landscape of proteins?",
+        "options": {
+          "A": "It makes the landscape smoother and more predictable.",
+          "B": "It introduces ruggedness with sudden cliffs and valleys.",
+          "C": "It has no effect on the landscape.",
+          "D": "It levels out all variations to a plateau."
+        },
+        "answer": "B",
+        "explanation": "Epistasis introduces ruggedness to the fitness landscape of proteins, creating sudden cliffs and hidden valleys that complicate predictions based on single mutations."
+      },
+      {
+        "type": "basic",
+        "question": "What role does LANTERN play in understanding epistasis?",
+        "answer": "LANTERN is a tool that helps understand epistasis by modeling the hidden physical 'stresses' of mutations as additive, and using a Gaussian Process to learn the non-linear points where these stresses cause functional failure."
+      },
+      {
+        "type": "cloze",
+        "text": "The mathematical signal that two mutations are interacting epistatically is a large {{epsilon}} in the displacement vector equation.",
+        "hint": "It's a Greek letter often used in equations."
+      },
+      {
+        "type": "mcq",
+        "question": "In the protein fitness analogy, what does the 'rugged' landscape represent?",
+        "options": {
+          "A": "Smooth interactions between mutations.",
+          "B": "Linear predictions of mutation effects.",
+          "C": "Non-linear and surprising interactions in gene mutations.",
+          "D": "Individual gene effects only."
+        },
+        "answer": "C",
+        "explanation": "The 'rugged' landscape represents the non-linear and surprising interactions in gene mutations that characterize epistasis."
+      },
+      {
+        "type": "basic",
+        "question": "What is intragenic complementation?",
+        "answer": "Intragenic complementation occurs when two individually harmful mutations in a gene actually restore function when present together, due to their synergistic effects."
+      }
+    ]
+  },
+  {
+    "note_id": "landscape-interpretable-nonparametric-model",
+    "source_note": "Main/Protein Latent/Lantern Hypotheis.md",
+    "title": "Landscape Interpretable Nonparametric Model",
+    "domain": "computational-biology",
+    "tags": [
+      "genotype-phenotype",
+      "machine-learning",
+      "epistasis",
+      "bayesian-models"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What problem does the LANTERN model aim to solve in computational biology?",
+        "answer": "The LANTERN model addresses the challenge of balancing predictive accuracy and biological interpretability in modeling genotype\u2013phenotype landscapes, typically characterized by vast combinatorial genetic mutations."
+      },
+      {
+        "type": "cloze",
+        "text": "LANTERN uses a {{hierarchical Bayesian model}} to map mutations into a low-dimensional latent space and capture epistatic interactions.",
+        "hint": "A probabilistic approach in the model."
+      },
+      {
+        "type": "mcq",
+        "question": "How does LANTERN achieve deep learning-level predictive power while maintaining interpretability?",
+        "options": {
+          "A": "By using a purely additive model.",
+          "B": "By applying a hierarchical Bayesian model with a nonparametric Gaussian process.",
+          "C": "By simplifying the model to linear equations.",
+          "D": "By ignoring complex interactions like epistasis."
+        },
+        "answer": "B",
+        "explanation": "LANTERN uses a hierarchical Bayesian model to combine low-dimensional latent space mapping with a nonparametric Gaussian process to capture nonlinear interactions, maintaining both predictive power and interpretability."
+      },
+      {
+        "type": "basic",
+        "question": "What are the key outputs of the LANTERN model's pipeline?",
+        "answer": "The key outputs include predicted phenotype scores, predictive uncertainty, and interpretable metrics such as gradients for robustness and Laplacians for additivity."
+      },
+      {
+        "type": "cloze",
+        "text": "In the LANTERN model, nonparametric Gaussian process models are used for {{epistatic interactions}} over the latent space.",
+        "hint": "Interactions between mutations in models."
+      },
+      {
+        "type": "mcq",
+        "question": "What kind of datasets did LANTERN outperform other models on?",
+        "options": {
+          "A": "Low-complexity theoretical datasets.",
+          "B": "Diverse high-throughput datasets like avGFP brightness and SARS-CoV-2 binding.",
+          "C": "Only small-scale, singular mutation datasets.",
+          "D": "Datasets with no real-world biological relevance."
+        },
+        "answer": "B",
+        "explanation": "LANTERN was tested on diverse high-throughput datasets, equaling or outperforming models like DNNs by retaining accuracy without overfitting, even with reduced dataset sizes."
+      },
+      {
+        "type": "basic",
+        "question": "What biological insights can LANTERN provide through its interpretability?",
+        "answer": "LANTERN can identify axes affecting phenomena like fluorescence, map latent dimensions to protein structures, and reveal mutational vectors that optimize viral binding, providing insights into robustness and additivity."
+      }
+    ]
+  },
+  {
+    "note_id": "structured-map-of-esm-2-space",
+    "source_note": "Main/Protein Latent/Prior Work.md",
+    "title": "Structured Map of ESM-2 Space",
+    "domain": "computational-biology",
+    "tags": [
+      "representation-geometry",
+      "mutation-vectors",
+      "protein-engineering",
+      "precision-oncology"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "What is the significance of treating the ESM-2 latent space as a 'structured map'?",
+        "answer": "The structured map of ESM-2's latent space allows for the representation and prediction of mutation effects across different biological contexts, providing a navigable blueprint for protein engineering and precision oncology."
+      },
+      {
+        "type": "cloze",
+        "text": "The **LANTERN** framework assumes that genetic mutations reside in a low-dimensional latent space where their effects combine {{additively}} through vector addition.",
+        "hint": "Mathematical combination of genetic mutations."
+      },
+      {
+        "type": "mcq",
+        "question": "What role does 'delta-embedding' play in models like VUS.Life and pLM-SAV?",
+        "options": {
+          "A": "It creates static mappings from protein sequences.",
+          "B": "It captures biophysical constraints and classifies variant effects.",
+          "C": "It enhances the resolution of protein imaging.",
+          "D": "It encrypts protein sequences for data security."
+        },
+        "answer": "B",
+        "explanation": "Delta-embeddings provide a means to capture and analyze biophysical constraints, enabling models to classify the effects of mutations."
+      },
+      {
+        "type": "basic",
+        "question": "How does ESM-Effect differ from zero-shot generalist models?",
+        "answer": "ESM-Effect fine-tunes ESM-2 layers with an inductive bias regression head to predict specific functional shifts, enhancing prediction accuracy for specific phenotypes like catalytic activity changes or drug binding."
+      },
+      {
+        "type": "cloze",
+        "text": "The **idpSAM** model learns a high-fidelity representation of protein geometry using a transformer-based {{autoencoder}}.",
+        "hint": "A type of neural network used for learning efficient codings."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the primary application of the ESM-2 structured map in clinical phenotypes as shown by ESM-Effect?",
+        "options": {
+          "A": "Mapping neurological disorders.",
+          "B": "Predicting clinical outcomes like resistance or gain-of-function mutations.",
+          "C": "Synthesizing new protein structures.",
+          "D": "Visualizing protein dynamics."
+        },
+        "answer": "B",
+        "explanation": "ESM-Effect uses structured maps to predict clinical outcomes related to mutations, such as drug resistance or gain-of-function mutations, by aligning predictions along meaningful functional axes."
+      }
+    ]
+  },
+  {
+    "note_id": "the-biological-language",
+    "source_note": "Main/Protein Latent/The Biological Language.md",
+    "title": "The Biological Language",
+    "domain": "computational-biology",
+    "tags": [
+      "biology",
+      "proteins",
+      "ai-models",
+      "amino-acids",
+      "latent-space",
+      "esm-2"
+    ],
+    "updated": "2026-05-23",
+    "cards": [
+      {
+        "type": "basic",
+        "question": "How do modern AI models like ESM-2 interpret protein sequences?",
+        "answer": "Modern AI models like ESM-2 interpret protein sequences by translating them into a latent space where they can reveal structural and functional similarities."
+      },
+      {
+        "type": "cloze",
+        "text": "In the latent space created by AI models, proteins that look or act similarly are clustered {{close together}}.",
+        "hint": "Spatial relationship in latent space"
+      },
+      {
+        "type": "mcq",
+        "question": "What analogy is used to describe amino acids in the protein language?",
+        "options": {
+          "A": "Numbers in a sequence",
+          "B": "Notes in a symphony",
+          "C": "Letters in an alphabet",
+          "D": "Colors in a painting"
+        },
+        "answer": "C",
+        "explanation": "Amino acids are compared to letters in an alphabet, forming sequences like words and sentences."
+      },
+      {
+        "type": "basic",
+        "question": "What does it imply if two proteins are positioned closely in the latent space?",
+        "answer": "If two proteins are close in the latent space, it implies they share a similar 3D shape and function, despite potential sequence differences."
+      },
+      {
+        "type": "mcq",
+        "question": "What does the latent space allow us to calculate in terms of protein sequences?",
+        "options": {
+          "A": "The age of the protein",
+          "B": "Genetic modification rates",
+          "C": "How a protein might change with amino acid swaps",
+          "D": "Energy levels of the protein"
+        },
+        "answer": "C",
+        "explanation": "The latent space allows calculations to predict changes in proteins if amino acids are swapped."
+      },
+      {
+        "type": "cloze",
+        "text": "{{ESM-2}} is a modern AI model used to interpret the biological language of protein sequences.",
+        "hint": "Name of the AI model"
+      }
+    ]
+  }
+]

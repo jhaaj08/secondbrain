@@ -1,0 +1,886 @@
+[
+  {
+    "proposed_title": "Feather as 100 Technique",
+    "context": "The 'feather as 100' technique is recommended for merging boundaries when using cloning to add similar features."
+  },
+  {
+    "proposed_title": "GenAI",
+    "context": "Explore why GenAI might not be effective for adding similar features compared to traditional cloning techniques."
+  },
+  {
+    "proposed_title": "Feather Tool in Photo Editing",
+    "context": "Detailed steps on the effective use of the feather tool to achieve seamless transitions in masked photography."
+  },
+  {
+    "proposed_title": "Applications of Backpropagation Through Time",
+    "context": "Exploration of BPTT in different neural network types like LSTMs and GRUs."
+  },
+  {
+    "proposed_title": "AdaGrad on Sparse Data",
+    "context": "Analysis of how AdaGrad performs with sparse datasets in comparison to other optimization algorithms."
+  },
+  {
+    "proposed_title": "Artificial Intelligence",
+    "context": "Context of the term being coined at the 1956 Dartmouth Conference."
+  },
+  {
+    "proposed_title": "The Logic Theorist",
+    "context": "A program demonstrated during the 1956 Dartmouth Conference capable of proving mathematical theorems."
+  },
+  {
+    "proposed_title": "Weak AI",
+    "context": "Definition and implications of Weak AI in the field of artificial intelligence."
+  },
+  {
+    "proposed_title": "Strong AI",
+    "context": "Concept of Strong AI and its potential implications for understanding consciousness."
+  },
+  {
+    "proposed_title": "Searle's Philosophy",
+    "context": "An exploration of Searle's ideas on Biological Naturalism and its impact on AI theories."
+  },
+  {
+    "proposed_title": "Backward Reasoning in AI",
+    "context": "The concept of using backward reasoning to start from a conclusion and work back to the axioms, as employed by Logic Theorist."
+  },
+  {
+    "proposed_title": "Displacement Vector Models",
+    "context": "Using displacement vector models for Src kinase to understand protein geometry shifts."
+  },
+  {
+    "proposed_title": "ESM-2 Embeddings",
+    "context": "ESM-2 embeddings used in protein language models for understanding protein grammar and structure."
+  },
+  {
+    "proposed_title": "Universal Characteristic",
+    "context": "A logical language proposed by Leibniz to resolve disagreements through calculation."
+  },
+  {
+    "proposed_title": "Analytical Engine",
+    "context": "Charles Babbage's design for a general-purpose computer capable of symbol manipulation."
+  },
+  {
+    "proposed_title": "Information Processing View",
+    "context": "Framework organizing AI's processing into layers like human body systems."
+  },
+  {
+    "proposed_title": "Robot Vacuum Cleaner AI",
+    "context": "Example of AI working in signal processing, neuro-fuzzy, and symbolic layers."
+  },
+  {
+    "proposed_title": "State Space in Chess",
+    "context": "Example of states and moves within a Chess game."
+  },
+  {
+    "proposed_title": "Expert Systems",
+    "context": "How 'Expert Systems' use formal rules to solve medical or legal problems."
+  },
+  {
+    "proposed_title": "Neuro-symbolic AI",
+    "context": "How Neuro-symbolic AI attempts to combine symbolic logic with machine learning."
+  },
+  {
+    "proposed_title": "Vector Embeddings in AI",
+    "context": "Discussion of how modern AI turns meaning into geometry with vector embeddings."
+  },
+  {
+    "proposed_title": "The Frame Problem in AI",
+    "context": "Exploration of the difficulty in representing infinite, common-sense changes in the real world using syntax."
+  },
+  {
+    "proposed_title": "Brute Force Search",
+    "context": "The note discusses the use of brute force searching within the generate and test cycle."
+  },
+  {
+    "proposed_title": "Intentionality in Artificial Intelligence",
+    "context": "The concept of intentionality, or 'true understanding,' as discussed in connection with Searle's argument."
+  },
+  {
+    "proposed_title": "Chess AI",
+    "context": "Chess AI uses symbols like pieces and board positions and processes such as game rules to exhibit intelligence."
+  },
+  {
+    "proposed_title": "Adam Optimizer Bias Correction",
+    "context": "Exploration of bias correction techniques within the ADAM optimizer to stabilize initial parameter updates."
+  },
+  {
+    "proposed_title": "AI vs Human Logic",
+    "context": "Exploration of the differences in reasoning between AI systems and human logic in the context of resolving language ambiguity."
+  },
+  {
+    "proposed_title": "The 'Special' Biological Ingredient",
+    "context": "Discussion on whether biological brains possess a unique method of 'understanding' physical reality that AI lacks."
+  },
+  {
+    "proposed_title": "Designing a Winograd Schema",
+    "context": "Instructions and examples on creating a Winograd Schema to evaluate AI's logical reasoning capabilities."
+  },
+  {
+    "proposed_title": "L Infinity Norm",
+    "context": "The section discusses the simplification of the LP Norm to the maximum absolute value as P tends to infinity, introducing the L Infinity Norm."
+  },
+  {
+    "proposed_title": "Bias Correction in Optimizers",
+    "context": "Addresses the initial zero bias issue with L2 Norm and how AdaMax eliminates this need."
+  },
+  {
+    "proposed_title": "Feature-Specific Learning Rates in Gradient Descent",
+    "context": "The need for individual learning rates for sparse and dense features in the training of neural networks."
+  },
+  {
+    "proposed_title": "Self-Attention",
+    "context": "Self-attention allows for parallel processing within input sequences through similarity computations."
+  },
+  {
+    "proposed_title": "Sigmoid Activation Function",
+    "context": "Referred in the section about activation functions and their derivatives."
+  },
+  {
+    "proposed_title": "Softmax Activation Function",
+    "context": "Discussed in the context of computing pre-activation for the output layer."
+  },
+  {
+    "proposed_title": "Data Augmentation",
+    "context": "Technique to increase the diversity of training data."
+  },
+  {
+    "proposed_title": "Regularization Techniques",
+    "context": "Methods to reduce model overfitting, such as dropout and L2 regularization."
+  },
+  {
+    "proposed_title": "Label Smoothing",
+    "context": "A method to reduce overconfidence of a model in its predictions."
+  },
+  {
+    "proposed_title": "Error Surface",
+    "context": "Contour plots are used to represent error surfaces in optimization."
+  },
+  {
+    "proposed_title": "Gradient Magnitude",
+    "context": "Contour line density relates to gradient magnitude in error surfaces."
+  },
+  {
+    "proposed_title": "Visualizing Optimization",
+    "context": "Using visual tools like contour plots for understanding optimization processes."
+  },
+  {
+    "proposed_title": "Inception Network",
+    "context": "This was the 'secret sauce' of the Inception network."
+  },
+  {
+    "proposed_title": "Nesterov Accelerated Gradient (NAG)",
+    "context": "Discusses its use in optimization formulas."
+  },
+  {
+    "proposed_title": "Epochs in Gradient Descent",
+    "context": "Explains how epochs relate to optimization cycles."
+  },
+  {
+    "proposed_title": "Convergence Noise in Optimization",
+    "context": "Examines its effects on gradient descent methods."
+  },
+  {
+    "proposed_title": "Parameter Sharing",
+    "context": "Parameter sharing and tying are mechanisms used to explicitly reduce the number of independent weights in the model, thereby reducing the model's complexity, which acts as a powerful regularizer."
+  },
+  {
+    "proposed_title": "Weight Tying in Neural Networks",
+    "context": "Weight tying is a specific application of parameter sharing often seen in autoencoders and complex modern architectures like Transformers."
+  },
+  {
+    "proposed_title": "Masking Noise and Dropout",
+    "context": "Conceptually, Dropout can be implemented by applying a masking noise to the hidden layer outputs."
+  },
+  {
+    "proposed_title": "Perceptron Learning Algorithm",
+    "context": "The need for a learning algorithm to adjust weights in perceptrons for high-dimensional datasets."
+  },
+  {
+    "proposed_title": "Psychological Origins of AI",
+    "context": "Detailed exploration of psychological theories and their influence on AI development."
+  },
+  {
+    "proposed_title": "Philosophical Underpinnings of AI",
+    "context": "Investigation of philosophical questions surrounding consciousness and intelligence, informing AI theories."
+  },
+  {
+    "proposed_title": "Gradient Vector",
+    "context": "The concept of gradient vectors in contour plots and their perpendicular relationship to contour lines."
+  },
+  {
+    "proposed_title": "Step Size",
+    "context": "The impact of gradient magnitude on step size in optimization problems."
+  },
+  {
+    "proposed_title": "Loss Function in Neural Networks",
+    "context": "The note references loss functions and their dependency on layers, which suggests further exploration."
+  },
+  {
+    "proposed_title": "Rumelhart",
+    "context": "Contribution to neural network revival through Backpropagation."
+  },
+  {
+    "proposed_title": "GoogLeNet",
+    "context": "In-depth architecture and role of ReLU."
+  },
+  {
+    "proposed_title": "Forgetting Mechanism in LSTM",
+    "context": "LSTMs use gates, particularly forget gates, to decide which information to retain or discard."
+  },
+  {
+    "proposed_title": "Smart Weight Initialization Methods",
+    "context": "Detailed techniques for initializing weights in deep learning to prevent gradient instability."
+  },
+  {
+    "proposed_title": "Gaussian Noise in Neural Networks",
+    "context": "The use of Gaussian noise in neural network inputs and its equivalence to $L_2$ regularization."
+  },
+  {
+    "proposed_title": "VGG-16",
+    "context": "Used as an example of a CNN to extract dense vectors."
+  },
+  {
+    "proposed_title": "Attention is All You Need Paper",
+    "context": "The Transformer architecture was introduced in this seminal paper."
+  },
+  {
+    "proposed_title": "Weight Decay",
+    "context": "L2 regularization in deep learning is often referred to as weight decay."
+  },
+  {
+    "proposed_title": "Vanishing Gradient Problem",
+    "context": "The solution to the vanishing gradient problem is addressed using gated structures in LSTMs."
+  },
+  {
+    "proposed_title": "Non-convex Surfaces",
+    "context": "Discuss the challenges non-convex surfaces present in optimization and how learning rate schedules can help navigate them."
+  },
+  {
+    "proposed_title": "Gradient Stability",
+    "context": "Explore the importance of gradient stability during training and how various techniques, including warm-up phases, contribute to it."
+  },
+  {
+    "proposed_title": "Cyclical Learning Rates",
+    "context": "Exploration of using cyclical schedules for learning rates to counteract saddle point problems in deep learning."
+  },
+  {
+    "proposed_title": "Hypothesis Space",
+    "context": "A dedicated note on the concept of hypothesis space and its role in model training."
+  },
+  {
+    "proposed_title": "Parameter Optimization",
+    "context": "Exploring methods to optimize parameters to fit training data effectively."
+  },
+  {
+    "proposed_title": "Nesterov Gradient Descent",
+    "context": "Discusses how Nesterov\u2019s look-ahead mechanism can improve optimization algorithms."
+  },
+  {
+    "proposed_title": "Momentum-Based Gradient Descent",
+    "context": "These algorithms enhance gradient descent by accelerating it across flat surfaces."
+  },
+  {
+    "proposed_title": "Batch Gradient Descent",
+    "context": "Calculates the true mathematical gradient using the entire training dataset before making a weight update."
+  },
+  {
+    "proposed_title": "Stochastic Gradient Descent",
+    "context": "Uses a single data point to estimate the gradient and makes an immediate update."
+  },
+  {
+    "proposed_title": "Vector Calculus",
+    "context": "Relation to gradients in optimization problems."
+  },
+  {
+    "proposed_title": "Steepest Ascent",
+    "context": "Discussion on direction calculations in optimization."
+  },
+  {
+    "proposed_title": "Real-World Application of Binary Classification by Perceptron",
+    "context": "The note explores the application of the perceptron in real-world binary classification, including movie recommendation scenarios."
+  },
+  {
+    "proposed_title": "Frank Rosenblatt",
+    "context": "The Perceptron, proposed by Frank Rosenblatt in 1958, was later analyzed by Minsky and Papert."
+  },
+  {
+    "proposed_title": "Universal Approximation Theorem and Linear Activation Functions",
+    "context": "Discussion on why using only linear activation functions prevents the creation of 'tower' functions and violates the UAT."
+  },
+  {
+    "proposed_title": "PReLU and ELU",
+    "context": "PReLU and ELU are variants of ReLU designed to address the dying neuron problem."
+  },
+  {
+    "proposed_title": "Truncated Backpropagation Through Time",
+    "context": "A method to limit the backpropagation window to recent time steps to handle vanishing and exploding gradients."
+  },
+  {
+    "proposed_title": "Relationship between Levy et al.'s Research and Word2Vec",
+    "context": "Study establishing the mathematical connection between Word2Vec and Singular Value Decomposition (SVD)."
+  },
+  {
+    "proposed_title": "XOR Function in Neural Networks",
+    "context": "Discussing how networks of perceptrons overcome the limitations of individual perceptrons, especially in implementing the XOR function."
+  },
+  {
+    "proposed_title": "Boolean Function Representation with Perceptrons",
+    "context": "Exploring the ability to represent any boolean function using a network of perceptrons with a hidden layer."
+  },
+  {
+    "proposed_title": "Residual Blocks",
+    "context": "Detailed exploration of residual blocks as used in ResNet architecture."
+  },
+  {
+    "proposed_title": "Skip Connections",
+    "context": "In-depth look at the concept of skip connections and their impact on learning and gradient flow in deep networks."
+  },
+  {
+    "proposed_title": "Optimization Algorithm",
+    "context": "Discusses various techniques for adjustment of learning rates and hyperparameters."
+  },
+  {
+    "proposed_title": "Positive Pointwise Mutual Information",
+    "context": "PPMI is used in conjunction with co-occurrence matrices to capture word contexts but suffers from dimensionality issues."
+  },
+  {
+    "proposed_title": "Latent Semantics in SVD",
+    "context": "SVD helps discover hidden semantic relationships between words by reducing matrix dimensionality."
+  },
+  {
+    "proposed_title": "Continuous Bag of Words Model",
+    "context": "CBOW tries to predict a target word given its surrounding context words, contrasting with Skip-gram's approach."
+  },
+  {
+    "proposed_title": "Mini-batch Gradient Descent",
+    "context": "Explanation and advantages of Mini-batch Gradient Descent in training models."
+  },
+  {
+    "proposed_title": "McCulloch-Pitts Model",
+    "context": "The McCulloch-Pitts model described neurons as sum-and-threshold logic gates capable of computing logical functions."
+  },
+  {
+    "proposed_title": "Saddle Point in Neural Networks",
+    "context": "Discussion of saddle points in high-dimensional spaces, especially concerning their impact on deep learning optimization."
+  },
+  {
+    "proposed_title": "Gradient Warm-up in Transformers",
+    "context": "Exploration of the gradient warm-up technique and its role in stabilizing training in Transformer models."
+  },
+  {
+    "proposed_title": "Gradient in Optimizations",
+    "context": "The note discusses the role of the gradient in optimizing loss functions using Taylor Series approximations."
+  },
+  {
+    "proposed_title": "Optimization",
+    "context": "Discuss concepts related to optimization in machine learning."
+  },
+  {
+    "proposed_title": "Update Rule",
+    "context": "Summarize the significance of update rules in iterative optimization processes."
+  },
+  {
+    "proposed_title": "McCulloch-Pitts Neuron",
+    "context": "Discusses the original 'hard-wired' logic of McCulloch-Pitts neurons before the advent of the Perceptron."
+  },
+  {
+    "proposed_title": "ResNet",
+    "context": "Outlines the architecture of ResNet as an example of a deep network utilizing backpropagation."
+  },
+  {
+    "proposed_title": "Contrastive Estimation",
+    "context": "An advanced probabilistic technique applied to learn word models."
+  },
+  {
+    "proposed_title": "Hierarchical Softmax",
+    "context": "Efficiently calculates the probabilities of output words, especially useful for models with large vocabularies."
+  },
+  {
+    "proposed_title": "Tower Function",
+    "context": "The note discusses the use of two sigmoid neurons to create a tower function, crucial for approximating complex curves in neural networks."
+  },
+  {
+    "proposed_title": "Hanahan and Weinberg Hallmarks of Cancer",
+    "context": "Cancerous cells acquire capabilities like sustaining proliferative signaling and avoiding immune destruction."
+  },
+  {
+    "proposed_title": "BRCA1 Gene",
+    "context": "Inherited mutations such as those found in BRCA1 can lead to cancer development."
+  },
+  {
+    "proposed_title": "Oncogenes",
+    "context": "Genes like KRAS, BRAF, and EGFR when mutated, are overactive, promoting cancer."
+  },
+  {
+    "proposed_title": "Tumor Suppressor Genes",
+    "context": "Genes like TP53 and RB can be turned off or lost in cancer, leading to uncontrolled cell growth."
+  },
+  {
+    "proposed_title": "Mutation Function Matcher",
+    "context": "A database or tool comparing functional impacts of mutations based on \u0394-saliency patterns."
+  },
+  {
+    "proposed_title": "Saliency Analysis in GCN",
+    "context": "Discussion on using GCN for saliency analysis and the meaning of saliency scores."
+  },
+  {
+    "proposed_title": "Cognitive Sciences",
+    "context": "Study of various branches that explore human cognition and its processes."
+  },
+  {
+    "proposed_title": "AI Models",
+    "context": "Artificial intelligence frameworks that incorporate aspects of human cognition for enhanced problem-solving and learning capabilities."
+  },
+  {
+    "proposed_title": "Cognitive Architecture",
+    "context": "The structural blueprint defining the capabilities and limitations of the human and AI mind."
+  },
+  {
+    "proposed_title": "ESM-1b Model Overview",
+    "context": "Describing ESM-1b's training on 250M UniRef50 sequences and its application."
+  },
+  {
+    "proposed_title": "Graph Convolutional Network (GCN)",
+    "context": "Detailing the integration of ESM embeddings as input node features for GCN."
+  },
+  {
+    "proposed_title": "Punnett Square",
+    "context": "A visual tool used to predict the genotypes of offspring."
+  },
+  {
+    "proposed_title": "Dominant and Recessive Traits",
+    "context": "How certain genes can 'hide' other genes in a genotype."
+  },
+  {
+    "proposed_title": "EGFR",
+    "context": "Kinases driving nonstop cell division include EGFR."
+  },
+  {
+    "proposed_title": "HER2",
+    "context": "Kinases in proliferative signaling, such as HER2, drive cancer growth."
+  },
+  {
+    "proposed_title": "RAS-RAF-MEK-ERK Cascade",
+    "context": "RAS-RAF-MEK-ERK is a kinase cascade involved in proliferative signaling."
+  },
+  {
+    "proposed_title": "CDK4/6 Kinases",
+    "context": "CDK4/6 kinases bypass tumor suppressors like RB in cancer."
+  },
+  {
+    "proposed_title": "VEGFR",
+    "context": "VEGFR drives blood vessel growth in cancer angiogenesis."
+  },
+  {
+    "proposed_title": "SRC Kinase",
+    "context": "SRC kinase is involved in cancer cell migration and invasion."
+  },
+  {
+    "proposed_title": "FAK Kinase",
+    "context": "FAK kinase regulates cell adhesion and migration."
+  },
+  {
+    "proposed_title": "JAK-STAT Pathway",
+    "context": "JAK-STAT pathway kinases assist tumors in evading immune destruction."
+  },
+  {
+    "proposed_title": "PD-L1 Pathway Kinases",
+    "context": "These kinases are crucial for immune evasion in cancer."
+  },
+  {
+    "proposed_title": "Mitogen-Activated Protein Kinases",
+    "context": "The MAPK pathway is a critical cellular mechanism involving Mitogen-Activated Protein Kinases."
+  },
+  {
+    "proposed_title": "EGF and EGFR",
+    "context": "EGF binds to EGFR, initiating the MAPK pathway."
+  },
+  {
+    "proposed_title": "BRAF V600E Mutation",
+    "context": "BRAF V600E is a mutation associated with the MAPK pathway in cancer."
+  },
+  {
+    "proposed_title": "Stem Cell Proliferation",
+    "context": "Discusses the role of stem cell proliferation in cancerous growths."
+  },
+  {
+    "proposed_title": "Emerging Targets in Cancer Therapy",
+    "context": "References the reclassification of certain proteins as targets despite initial skepticism."
+  },
+  {
+    "proposed_title": "Snakemake",
+    "context": "Bioinformatics workflow tool handling file dependencies."
+  },
+  {
+    "proposed_title": "Mutation Interpretation in Orphan Kinases",
+    "context": "Focus on clinically oriented mutation analysis."
+  },
+  {
+    "proposed_title": "\u0394-saliency",
+    "context": "A method for comparing mutation effects using saliency maps."
+  },
+  {
+    "proposed_title": "MEK",
+    "context": "MEK is a kinase in the MAPK pathway."
+  },
+  {
+    "proposed_title": "ERK",
+    "context": "ERK is a substrate of MEK in the MAPK pathway."
+  },
+  {
+    "proposed_title": "Spindle Assembly Checkpoint",
+    "context": "The dual-specificity protein kinase regulates this checkpoint during mitosis."
+  },
+  {
+    "proposed_title": "Triple-Negative Breast Cancer",
+    "context": "A type of cancer where the dual-specificity protein kinase is recurrently mutated."
+  },
+  {
+    "proposed_title": "Distributional Semantics",
+    "context": "Classic setup in distributional semantics involves using matrix products to represent word similarities."
+  },
+  {
+    "proposed_title": "Support Vector Machines",
+    "context": "RBF kernel is commonly used in support vector machines for non-linear classification."
+  },
+  {
+    "proposed_title": "XLRI",
+    "context": "XLRI is mentioned in relation to Indian Bank details. Clarify its significance."
+  },
+  {
+    "proposed_title": "Nosegay",
+    "context": "Nosegay appears among the account details. Investigate its relevance."
+  },
+  {
+    "proposed_title": "France",
+    "context": "France is listed alongside banking information. Explore its connection."
+  },
+  {
+    "proposed_title": "IOB",
+    "context": "IOB is mentioned with some association to Indian Bank. Determine its role or meaning in this context."
+  },
+  {
+    "proposed_title": "Neutral Frustration in Proteins",
+    "context": "Allosteric sites often exist in regions of neutral frustration, indicating flexibility and adaptability."
+  },
+  {
+    "proposed_title": "LANTERN - Bridging Epistasis",
+    "context": "LANTERN is a tool used to understand the complexity of epistasis by separating the hidden physical and the biological outcomes using processes like Gaussian Processes."
+  },
+  {
+    "proposed_title": "LANTERN Model",
+    "context": "Details on the LANTERN model's methods and applications."
+  },
+  {
+    "proposed_title": "Haploid Organisms in Genetic Research",
+    "context": "Discussion of organisms like viruses and engineered proteins that use single-stranded genetic material."
+  },
+  {
+    "proposed_title": "Gaussian Process in Genotype Modeling",
+    "context": "How Gaussian Processes are applied in predicting phenotypic traits from genetic data."
+  },
+  {
+    "proposed_title": "Epistasis in Genotype-Phenotype Landscapes",
+    "context": "Role of epistasis in genetic interactions."
+  },
+  {
+    "proposed_title": "Gaussian Process in Nonparametric Models",
+    "context": "A detailed examination of how Gaussian processes function as nonparametric models."
+  },
+  {
+    "proposed_title": "VUS.Life",
+    "context": "A model using residue-level delta-embeddings in protein language models."
+  },
+  {
+    "proposed_title": "pLM-SAV",
+    "context": "A model demonstrating the utility of delta-embeddings for variant effect classification."
+  },
+  {
+    "proposed_title": "ESM-Effect",
+    "context": "A model for predicting specific functional shifts in proteins using ESM-2."
+  },
+  {
+    "proposed_title": "idpSAM",
+    "context": "A structural autoencoder model mapping disordered protein sequences into structured ensembles."
+  },
+  {
+    "proposed_title": "Protein Engineering",
+    "context": "The use of structured maps in ESM-2 to inform protein engineering."
+  },
+  {
+    "proposed_title": "The LANTERN Method",
+    "context": "Discussed as a high-level pipeline for modeling genetic sequences and physical traits in computational biology."
+  },
+  {
+    "proposed_title": "Epistasis Detection in Computational Models",
+    "context": "Explored during the description of LANTERN's use of Gaussian Processes to account for nonlinear mutation interactions."
+  },
+  {
+    "proposed_title": "Amino Acids",
+    "context": "Discussion on proteins and how amino acids act as building blocks."
+  },
+  {
+    "proposed_title": "ESM-2",
+    "context": "Reference to the AI model ESM-2 used for understanding biological sequences."
+  },
+  {
+    "proposed_title": "Latent Space",
+    "context": "Explanation of how AI models translate biological sequences into a latent space."
+  },
+  {
+    "proposed_title": "Rank-k Approximation",
+    "context": "Application of SVD for dimensionality reduction by retaining top k singular values."
+  },
+  {
+    "proposed_title": "Feed Auditing Tool",
+    "context": "Tool for automating freshness checks on RSS feeds."
+  },
+  {
+    "proposed_title": "Behaviour Driven Design (BDD)",
+    "context": "Translating requirements into lightweight User Stories for Agile development."
+  },
+  {
+    "proposed_title": "Unified Modeling Language (UML)",
+    "context": "Representing designs visually using structural and dynamic views."
+  },
+  {
+    "proposed_title": "SOLID Principles",
+    "context": "Following five core guidelines to make code maintainable and extensible."
+  },
+  {
+    "proposed_title": "Prototyping Techniques",
+    "context": "Using Storyboards, Paper Prototypes, and Digital Mock-ups to gather feedback."
+  },
+  {
+    "proposed_title": "Test-Driven Development (TDD) Cycle",
+    "context": "Writing tests before functionality using the Red, Green, Refactor cycle."
+  },
+  {
+    "proposed_title": "Lecture 7.4 - Axiomatic Foundation",
+    "context": "Earlier lecture covering foundational axioms of probability."
+  },
+  {
+    "proposed_title": "Lecture 7.6 - Conditional Probability",
+    "context": "Subsequent lecture discussing conditional probability in more detail."
+  },
+  {
+    "proposed_title": "Properties of Probability",
+    "context": "This note could cover additional derived properties of probability based on the axioms."
+  },
+  {
+    "proposed_title": "Combinatorial Probability with Card Games",
+    "context": "The use of combinatorics to solve probability problems in scenarios such as card games, focusing on conditional probability and counting principles."
+  },
+  {
+    "proposed_title": "Circular Permutations",
+    "context": "Exploration of arranging items in a circle considering rotational symmetry."
+  },
+  {
+    "proposed_title": "Symmetry in Arrangements",
+    "context": "Investigation into how symmetry affects counting distinct arrangements."
+  },
+  {
+    "proposed_title": "Independence of Complement Events",
+    "context": "Linked in the Connected Topics section, but not found in current vault titles."
+  },
+  {
+    "proposed_title": "Equally Likely Method",
+    "context": "Use this method for uniform sample spaces like dice, cards, or marbles."
+  },
+  {
+    "proposed_title": "Geometry with Combinations",
+    "context": "Methods for calculating geometric properties using combinatorial techniques."
+  },
+  {
+    "proposed_title": "nC2 Logic in Line Counting",
+    "context": "Explanation of using the combination formula to count lines or pairs."
+  },
+  {
+    "proposed_title": "Medical Test Analogy in Hypothesis Testing",
+    "context": "Explains the concept of hypothesis testing using medical test scenarios, highlighting errors and test power."
+  },
+  {
+    "proposed_title": "Axioms and Basis of Probability Theory",
+    "context": "Exploration of foundational axioms that govern probability theory."
+  },
+  {
+    "proposed_title": "Event Types in Probability",
+    "context": "Detailed examination of various types of events, including elementary, compound, and impossible events."
+  },
+  {
+    "proposed_title": "Modeling Random Rainfall",
+    "context": "Referencing the use of geometric probability to model random rainfall over a farm."
+  },
+  {
+    "proposed_title": "Hypergeometric vs Binomial Distributions",
+    "context": "Dive deeper into the differences between the hypergeometric and binomial distributions, focusing on their assumptions and applicability."
+  },
+  {
+    "proposed_title": "Sampling Without Replacement Implications",
+    "context": "Explore the implications and scenarios where sampling without replacement is used, beyond hypergeometric distribution."
+  },
+  {
+    "proposed_title": "Testing Independence with Two-way Tables",
+    "context": "Testing independence can involve using a two-way table to analyze dependencies."
+  },
+  {
+    "proposed_title": "Mutual Exclusivity and Dependence",
+    "context": "Understanding why events that are mutually exclusive are also dependent."
+  },
+  {
+    "proposed_title": "Lecture 8.4 \u2013 Conditional Probability Review",
+    "context": "References to specific conditional probability review lectures."
+  },
+  {
+    "proposed_title": "Lecture 8.6 \u2013 Properties of Independence",
+    "context": "References to specific lectures on properties of event independence."
+  },
+  {
+    "proposed_title": "Tutorial 8.3 \u2013 Conditional Probabilities from Data Tables",
+    "context": "Specific tutorial lesson on conditional probability calculations."
+  },
+  {
+    "proposed_title": "Independence - Properties & Extensions",
+    "context": "Discuss various properties and extensions of independent events in probability theory."
+  },
+  {
+    "proposed_title": "Independent Events & Multiplication rule",
+    "context": "Explore the multiplication rule for independent events and its applications."
+  },
+  {
+    "proposed_title": "Conditional Probability & Independence",
+    "context": "Examine conditional probability in the context of independent events."
+  },
+  {
+    "proposed_title": "MCQ",
+    "context": "A type of question with multiple possible answers, commonly used in assessments."
+  },
+  {
+    "proposed_title": "Random Variables",
+    "context": "Variable whose possible values are numerical outcomes of a random event."
+  },
+  {
+    "proposed_title": "Mean and Variance in Moments",
+    "context": "Explanation of how mean and variance are considered moments of a distribution."
+  },
+  {
+    "proposed_title": "Multiplication Rule in Probability",
+    "context": "Explaining the multiplication rule for computing joint probability in both dependent and independent events."
+  },
+  {
+    "proposed_title": "Permutation and Combination Techniques",
+    "context": "The note discusses various probability problems that use combinatorial analysis, suggesting linking deeper into permutation and combination techniques as standalone subjects."
+  },
+  {
+    "proposed_title": "Probability Density Function Examples",
+    "context": "The note discusses integrating piecewise PDFs over different intervals to compute probabilities, suggesting examples could expand this."
+  },
+  {
+    "proposed_title": "Factorial Equations",
+    "context": "Use logic and algebra to solve: ${}_nP_r = \\frac{n!}{(n - r)!} \\Rightarrow n(n - 1)(n - 2)\u2026 = \\text{value}$"
+  },
+  {
+    "proposed_title": "Law of Total Probability",
+    "context": "Explored in context of conditional distributions related to Poisson and Binomial distributions."
+  },
+  {
+    "proposed_title": "Compound Poisson Process",
+    "context": "Mentioned in use cases for conditional probability analysis."
+  },
+  {
+    "proposed_title": "Classic Probability Result on Poisson Sums",
+    "context": "The sum of two independent Poisson random variables is Poisson with parameter equal to the sum of the parameters."
+  },
+  {
+    "proposed_title": "Fixed Element Permutations",
+    "context": "Permutations involving fixed elements such as letters A and B with specific spacing."
+  },
+  {
+    "proposed_title": "Vowel Constraints in Permutations",
+    "context": "Analyzing permutations with specific vowel constraints like the first letter being a vowel."
+  },
+  {
+    "proposed_title": "Tutorial 7.6 \u2013 Choosing Specific Subject Combinations",
+    "context": "Related topic discussing subject combinations."
+  },
+  {
+    "proposed_title": "Tutorial 6.4 \u2013 Combinatorial Partitioning",
+    "context": "Discusses ordering and grouping similar to the current topic."
+  },
+  {
+    "proposed_title": "Lecture 6.3 \u2013 Grouping with Restrictions",
+    "context": "Relevant when considering grouping with hierarchy or constrained conditions."
+  },
+  {
+    "proposed_title": "Tutorial 7.1 - Permutations with vowels/consonants",
+    "context": "Discusses permutations in sampling scenarios."
+  },
+  {
+    "proposed_title": "Lecture 8.1 - Conditional probability",
+    "context": "Explores conditional probability in different sampling types."
+  },
+  {
+    "proposed_title": "Discrete vs Continuous Distributions",
+    "context": "Comparison between discrete and continuous distributions in probability theory."
+  },
+  {
+    "proposed_title": "Memory",
+    "context": "Core components of AI involve memory as a crucial aspect for processing information."
+  },
+  {
+    "proposed_title": "Learning",
+    "context": "Learning is a fundamental component of AI, enabling systems to adapt based on data."
+  },
+  {
+    "proposed_title": "Dualism",
+    "context": "Descartes' dualism has influenced foundational philosophies in AI development."
+  },
+  {
+    "proposed_title": "Logic Theorist",
+    "context": "The Logic Theorist was an early AI program capable of proving mathematical theorems."
+  },
+  {
+    "proposed_title": "Analysis of Voting Behavior in Surveys",
+    "context": "A similar survey context involving multiple demographic categories like age and region with a focus on probability."
+  },
+  {
+    "proposed_title": "Translation Invariance in Deep Learning",
+    "context": "Translation invariance is a property provided by pooling techniques in neural networks. It allows for object recognition regardless of small shifts in position."
+  },
+  {
+    "proposed_title": "RESTful APIs",
+    "context": "Details about CRUD using HTTP Methods"
+  },
+  {
+    "proposed_title": "Flask Routing \u2013 Mapping URLs to Functions",
+    "context": "Explaining URL mapping in Flask for CRUD operations"
+  },
+  {
+    "proposed_title": "Flask Route Handlers",
+    "context": "Detailed use and best practices for route handlers in Flask."
+  },
+  {
+    "proposed_title": "Jinja Templating Syntax",
+    "context": "Details on Jinja templating syntax used in Flask applications, including control flow and data printing syntax."
+  },
+  {
+    "proposed_title": "OSI Model Overview",
+    "context": "Discuss the layers of the OSI model in relation to networking."
+  },
+  {
+    "proposed_title": "Throughput vs Bandwidth",
+    "context": "Explain the differences between throughput and bandwidth in network terms."
+  },
+  {
+    "proposed_title": "Hexadecimal Conversion Process",
+    "context": "Detailed steps for converting decimal to hexadecimal, including examples like 2863 to B2F."
+  },
+  {
+    "proposed_title": "Filtering with WHERE Clause",
+    "context": "The query uses a WHERE clause to filter results based on matching conditions."
+  },
+  {
+    "proposed_title": "Jaccard Similarity",
+    "context": "Jaccard similarity is used in the deduplication process in Layer 2 to compare the titles of articles."
+  }
+]

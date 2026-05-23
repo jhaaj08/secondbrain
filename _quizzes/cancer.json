@@ -1,0 +1,96 @@
+{
+  "domain": "cancer",
+  "generated": "2026-05-23",
+  "note_count": 1,
+  "question_count": 10,
+  "questions": [
+    {
+      "type": "mcq",
+      "topic": "kinases and angiogenesis",
+      "question": "Which signaling pathway, driven by specific kinases, plays a critical role in cancer-related angiogenesis?",
+      "options": {
+        "A": "PI3K\u2013AKT\u2013mTOR pathway",
+        "B": "VEGFR pathway",
+        "C": "JAK\u2013STAT pathway",
+        "D": "RAS\u2013RAF\u2013MEK\u2013ERK cascade"
+      },
+      "answer": "B",
+      "explanation": "VEGFR signaling is pivotal in promoting the growth of new blood vessels, which is crucial for tumor growth and survival."
+    },
+    {
+      "type": "short_answer",
+      "topic": "kinases in cancer metabolism",
+      "question": "Explain how the PI3K\u2013AKT\u2013mTOR pathway affects metabolic processes in cancer cells.",
+      "answer": "The PI3K\u2013AKT\u2013mTOR pathway induces a metabolic shift towards glycolysis, thus supporting rapid cell proliferation by adapting to high energy and biosynthetic precursors demands, known as the Warburg effect."
+    },
+    {
+      "type": "scenario",
+      "topic": "maximizing therapeutic impact",
+      "prompt": "A patient has a cancer type known to overexpress the EGFR kinase. Discuss two targeted therapy strategies and their mechanisms.",
+      "answer": "Therapies could include EGFR inhibitors, which block the extracellular domain of EGFR, preventing ligand binding and downstream signaling. Another strategy might be using monoclonal antibodies that target EGFR to flag cancer cells for the immune system."
+    },
+    {
+      "type": "mcq",
+      "topic": "resisting cell death",
+      "question": "Which pathway involves kinases that help cancer cells resist apoptosis by inhibiting pro-apoptotic proteins?",
+      "options": {
+        "A": "MAPK\u2013ERK pathway",
+        "B": "PI3K\u2013AKT\u2013mTOR pathway",
+        "C": "JAK\u2013STAT pathway",
+        "D": "VEGFR pathway"
+      },
+      "answer": "B",
+      "explanation": "The PI3K\u2013AKT\u2013mTOR pathway includes AKT which inactivates components that promote apoptosis, aiding cancer cell survival."
+    },
+    {
+      "type": "short_answer",
+      "topic": "DNA damage response",
+      "question": "Describe the role of ATM and ATR kinases in response to DNA damage in cancer cells.",
+      "answer": "ATM and ATR are part of a surveillance mechanism that detects DNA damage and halts cell cycle progression, allowing time for repair and thus aiding in maintaining genomic integrity."
+    },
+    {
+      "type": "scenario",
+      "topic": "genomic instability",
+      "prompt": "A cancer patient's genomic profile indicates ATM and ATR malfunction. How might this contribute to their cancer progression, and what treatment strategy could you suggest?",
+      "answer": "Loss of ATM and ATR function leads to increased genomic instability as DNA repair is compromised, allowing mutations to accumulate. PARP inhibitors could be a treatment option as they exploit the weakness in DNA repair."
+    },
+    {
+      "type": "mcq",
+      "topic": "kinome",
+      "question": "What does the term 'kinome' refer to in the study of cancer?",
+      "options": {
+        "A": "The total set of kinases in a species",
+        "B": "All kinase inhibitors",
+        "C": "Tumor microenvironment components",
+        "D": "Oncogenes library"
+      },
+      "answer": "A",
+      "explanation": "The 'kinome' encompasses the entire set of kinases, which are enzymes playing crucial roles in cancer cell signaling and regulation."
+    },
+    {
+      "type": "short_answer",
+      "topic": "orphan kinases",
+      "question": "What are orphan kinases and why are they significant in cancer research?",
+      "answer": "Orphan kinases are kinases whose biological functions or substrates remain unidentified, presenting potential new targets for cancer therapies as they might hold unexplored roles in cancer progression."
+    },
+    {
+      "type": "scenario",
+      "topic": "proliferative signaling",
+      "prompt": "A researcher is investigating a new cancer therapy that targets the RAS\u2013RAF\u2013MEK\u2013ERK cascade. Explain the potential impact of this therapy in terms of cancer cell proliferation.",
+      "answer": "By inhibiting the RAS\u2013RAF\u2013MEK\u2013ERK cascade, the therapy could prevent continuous cell division and proliferative signaling, thereby slowing or stopping tumor growth."
+    },
+    {
+      "type": "mcq",
+      "topic": "therapeutic targets",
+      "question": "Which characteristic of kinases makes them appealing targets for cancer therapy?",
+      "options": {
+        "A": "Their ubiquity across all species",
+        "B": "Their specificity to cancer cells only",
+        "C": "Their key regulatory roles in critical signaling pathways",
+        "D": "Their ability to act outside cellular environments"
+      },
+      "answer": "C",
+      "explanation": "Kinases regulate key signaling pathways involved in critical cancer cell functions like proliferation and survival, making them strategic therapeutic targets."
+    }
+  ]
+}

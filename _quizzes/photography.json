@@ -1,0 +1,96 @@
+{
+  "domain": "photography",
+  "generated": "2026-05-23",
+  "note_count": 3,
+  "question_count": 10,
+  "questions": [
+    {
+      "type": "mcq",
+      "topic": "cloning technique",
+      "question": "What is one of the main reasons photographers might prefer the cloning technique over Generative AI in editing?",
+      "options": {
+        "A": "Faster editing process",
+        "B": "Precise control over feature boundaries",
+        "C": "Automatically enhances image colors",
+        "D": "Increases overall image contrast"
+      },
+      "answer": "B",
+      "explanation": "Cloning provides precise control over how new features are blended with existing ones, making it suitable for detailed and nuanced edits."
+    },
+    {
+      "type": "short_answer",
+      "topic": "RAW vs JPEG format",
+      "question": "Explain why RAW format is preferred over JPEG for professional photography editing.",
+      "answer": "RAW format is preferred because it captures more detail and dynamic range, allowing for greater flexibility in post-processing, including recovering highlights and shadows."
+    },
+    {
+      "type": "scenario",
+      "topic": "masking technique",
+      "prompt": "You are editing a landscape photograph and want to darken the sky without affecting the rest of the image. Describe the steps and tools you would use to achieve this.",
+      "answer": "I would create a mask for the sky area and use the feather tool to soften the edges of the mask. Then, I would apply adjustments like lowering the exposure or darkening the shadows to the masked area only, ensuring a natural look."
+    },
+    {
+      "type": "mcq",
+      "topic": "photo editing workflow",
+      "question": "Why is adjusting white balance in photo editing considered a critical first step?",
+      "options": {
+        "A": "It changes the image resolution.",
+        "B": "It adjusts the exposure levels.",
+        "C": "It sets the tonal mood of the image.",
+        "D": "It sharpens the image details."
+      },
+      "answer": "C",
+      "explanation": "White balance affects the overall mood and color accuracy of the image, so adjusting it first sets the correct tonal foundation for subsequent edits."
+    },
+    {
+      "type": "short_answer",
+      "topic": "lens corrections",
+      "question": "Why is it advisable to apply lens corrections at the beginning of a photo editing workflow?",
+      "answer": "Applying lens corrections first helps in resolving chromatic aberration and distortion issues early, providing a clean base for further edits."
+    },
+    {
+      "type": "scenario",
+      "topic": "shadow lifting",
+      "prompt": "After lifting shadows too much in your portrait photo, the result looks flat and noisy. What corrective actions should you take to improve the image?",
+      "answer": "I would reduce the shadow lift to restore some contrast, then apply noise reduction techniques. Adjust highlights and mid-tones to maintain depth and detail without rescanning the image."
+    },
+    {
+      "type": "mcq",
+      "topic": "feather tool usage",
+      "question": "What is the main purpose of using the feather tool when applying masks in editing?",
+      "options": {
+        "A": "To sharpen the image",
+        "B": "To soften the edges of the mask",
+        "C": "To change the color",
+        "D": "To resize the photo"
+      },
+      "answer": "B",
+      "explanation": "The feather tool is used to smooth the transition between masked and unmasked areas, allowing for more seamless and natural-looking edits."
+    },
+    {
+      "type": "short_answer",
+      "topic": "local masks",
+      "question": "How do local masks in photo editing help direct viewer attention?",
+      "answer": "Local masks allow for targeted adjustments like enhancing colors or brightness in specific areas, leading the viewer\u2019s eye towards important elements within the image."
+    },
+    {
+      "type": "scenario",
+      "topic": "cloning technique usage",
+      "prompt": "You want to duplicate a natural feature like a tree in a landscape photograph without making the manipulation obvious. How would you use the cloning tool to achieve this, and what settings might you apply?",
+      "answer": "I would use the cloning tool to carefully select and duplicate the tree, ensuring alignment with the landscape for a natural look. I'd apply a feather setting (e.g., feather as 100) to soften the merge at the duplicate\u2019s edges."
+    },
+    {
+      "type": "mcq",
+      "topic": "shadow lifting effects",
+      "question": "What is a potential downside of lifting shadows too much in photo editing?",
+      "options": {
+        "A": "Sharper textures",
+        "B": "Washed out and noisy shadows",
+        "C": "Increased color saturation",
+        "D": "Enhanced image sharpness"
+      },
+      "answer": "B",
+      "explanation": "Excessive lifting of shadows can introduce noise and make them appear gray and washed out, detracting from the image quality."
+    }
+  ]
+}

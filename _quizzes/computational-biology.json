@@ -1,0 +1,121 @@
+{
+  "domain": "computational-biology",
+  "generated": "2026-05-23",
+  "note_count": 28,
+  "question_count": 13,
+  "questions": [
+    {
+      "type": "mcq",
+      "topic": "word representations",
+      "question": "What is the primary limitation of One Hot Representation in word embeddings?",
+      "options": {
+        "A": "It does not represent syntax.",
+        "B": "It fails to capture semantic similarity.",
+        "C": "It cannot encode numerical data.",
+        "D": "It requires massive storage."
+      },
+      "answer": "B",
+      "explanation": "One Hot Representation cannot capture semantic similarity as each word is represented as an independent vector."
+    },
+    {
+      "type": "short_answer",
+      "topic": "alpha carbon in proteins",
+      "question": "How does the alpha carbon in amino acids contribute to the construction of protein structures?",
+      "answer": "The alpha carbon forms the backbone of proteins and is crucial for defining residue\u2013residue distances, secondary structures, and residue contact graphs."
+    },
+    {
+      "type": "scenario",
+      "topic": "mutation impact analysis",
+      "prompt": "You perform mutation impact analysis on a dataset and notice multiple mutations labeled as 'Substitution - Missense'. Why might these particular mutations be of interest, and how should the 'Count' column be utilized?",
+      "answer": "Missense mutations are of interest because they result in amino acid changes which can alter protein function. The 'Count' column should be utilized to identify recurrent mutations, which signify frequent occurrences and possible functional significance."
+    },
+    {
+      "type": "mcq",
+      "topic": "glove word representations",
+      "question": "How do Glove representations differ from local context models like Word2Vec?",
+      "options": {
+        "A": "They represent words as binary vectors.",
+        "B": "They capture local contexts within sentences.",
+        "C": "They capture global corpus statistics.",
+        "D": "They use matrix factorization techniques."
+      },
+      "answer": "C",
+      "explanation": "Glove representations capture global statistics from the entire corpus, rather than focusing on local context windows."
+    },
+    {
+      "type": "short_answer",
+      "topic": "kinase mutations in cancer",
+      "question": "What is the significance of studying \u0394-saliency patterns in kinase mutations?",
+      "answer": "Studying \u0394-saliency patterns helps identify functional similarities between less-known kinase mutations and established oncogenic mutations, potentially highlighting new therapeutic targets."
+    },
+    {
+      "type": "scenario",
+      "topic": "graph neural networks",
+      "prompt": "Imagine you are tasked with analyzing a protein's 3D structure using a Graph Convolutional Network (GCN). What data would you input into the GCN, and why is an adjacency matrix important?",
+      "answer": "You would input the adjacency matrix and residue embeddings derived from the protein's 3D structure. The adjacency matrix is important because it represents the proximity and interaction relationships between residues, which the GCN uses to compute saliency and feature transformations."
+    },
+    {
+      "type": "mcq",
+      "topic": "cosmic mutations",
+      "question": "Why might the lack of annotations for COSMIC-derived mutations in ClinVar be significant for research?",
+      "options": {
+        "A": "They are unannotated and could represent novel research opportunities.",
+        "B": "They are irrelevant for clinical studies.",
+        "C": "They are already confirmed as non-cancerous.",
+        "D": "They indicate data entry errors."
+      },
+      "answer": "A",
+      "explanation": "The lack of annotations in ClinVar suggests these mutations have not been studied in clinical contexts and could offer novel insights."
+    },
+    {
+      "type": "short_answer",
+      "topic": "protein structure prediction",
+      "question": "Why is a GPU important for running OmegaFold on Google Colab?",
+      "answer": "A GPU accelerates the deep learning computations required for protein structure predictions, making the process more efficient."
+    },
+    {
+      "type": "scenario",
+      "topic": "MAPK pathway mutations",
+      "prompt": "If you discover a mutation within the RAS gene of the MAPK pathway that leads to uncontrolled cell growth, what might be the broader implications for cancer treatment?",
+      "answer": "Such a mutation can cause constitutive activation of the MAPK pathway, leading to cancerous growths. Understanding and targeting this mutation can guide the development of treatments to inhibit pathway activity."
+    },
+    {
+      "type": "mcq",
+      "topic": "esm-1b model",
+      "question": "What advantage do ESM-1b embeddings have over traditional methods such as one-hot encoding or BLOSUM?",
+      "options": {
+        "A": "They focus only on evolutionary information.",
+        "B": "They provide context-aware, rich structural, evolutionary, and biochemical features.",
+        "C": "They are the simplest representations.",
+        "D": "They ignore rare mutations for consistency."
+      },
+      "answer": "B",
+      "explanation": "ESM-1b provides context-aware embeddings that encode complex structural, evolutionary, and biochemical features, surpassing the limitations of simpler methods."
+    },
+    {
+      "type": "short_answer",
+      "topic": "epistasis in genetics",
+      "question": "How can epistasis introduce complexity into the fitness landscape of proteins?",
+      "answer": "Epistasis can create a rugged fitness landscape with sudden 'cliffs' and 'valleys', complicating predictions about protein function and the effects of mutations."
+    },
+    {
+      "type": "scenario",
+      "topic": "computational pipelines",
+      "prompt": "You've developed a Snakemake pipeline for a mutation analysis project. Why should you make your pipeline publicly available, and how might this benefit the scientific community?",
+      "answer": "Making your pipeline publicly available ensures transparency, reproducibility, and extensibility, allowing other researchers to build on your work and apply it to new mutations or datasets, thus advancing scientific discovery."
+    },
+    {
+      "type": "mcq",
+      "topic": "dual-specificity kinases",
+      "question": "What is one of the key limitations in the current research on dual-specificity protein kinases?",
+      "options": {
+        "A": "Excessive analysis of inhibitor studies.",
+        "B": "Lack of comprehensive structural and mutational analyses.",
+        "C": "Overabundance of molecular substrate findings.",
+        "D": "Restricted research to only benign mutations."
+      },
+      "answer": "B",
+      "explanation": "There is a lack of comprehensive structural and mutational analyses outside of inhibitor studies, limiting understanding."
+    }
+  ]
+}
