@@ -800,6 +800,9 @@ if ('serviceWorker' in navigator) {
 <script>
 function app() {
   return {
+    // Absolute origin — Safari PWA standalone mode breaks relative fetch() URLs
+    api: window.location.origin,
+
     view: 'loading',
     error: null,
     stats: null,
@@ -841,10 +844,9 @@ function app() {
     async loadHome() {
       this.error = null;
       try {
-        const [statsRes, quizRes, cardStatsRes] = await Promise.all([
-          fetch('/stats'),
-          fetch('/quiz/domains'),
-          fetch('/stats'),
+        const [statsRes, quizRes] = await Promise.all([
+          fetch(`${this.api}/stats`),
+          fetch(`${this.api}/quiz/domains`),
         ]);
         this.stats = await statsRes.json();
         const quizDomains = await quizRes.json();
@@ -872,8 +874,8 @@ function app() {
       this.view = 'loading';
       try {
         const url = domain
-          ? `/cards/due?limit=20&new_limit=10&domain=${encodeURIComponent(domain)}`
-          : '/cards/due?limit=20&new_limit=10';
+          ? `${this.api}/cards/due?limit=20&new_limit=10&domain=${encodeURIComponent(domain)}`
+          : `${this.api}/cards/due?limit=20&new_limit=10`;
         const data = await fetch(url).then(r => r.json());
 
         if (!data.cards || data.cards.length === 0) {
@@ -901,7 +903,7 @@ function app() {
       const card = this.reviewCards[this.reviewIndex];
       this.sessionStats[rating]++;
       try {
-        await fetch(`/cards/${card.id}/review`, {
+        await fetch(`${this.api}/cards/${card.id}/review`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ rating }),
@@ -921,7 +923,7 @@ function app() {
       this.error = null;
       this.view = 'loading';
       try {
-        const data = await fetch(`/quiz/${encodeURIComponent(domain)}?limit=10`).then(r => r.json());
+        const data = await fetch(`${this.api}/quiz/${encodeURIComponent(domain)}?limit=10`).then(r => r.json());
         this.quizDomain = domain;
         this.quizQuestions = data.questions;
         this.quizIndex = 0;
@@ -943,7 +945,7 @@ function app() {
       const correct = letter.toUpperCase() === (q.answer || '').toUpperCase();
       if (correct) this.quizCorrect++;
       try {
-        await fetch(`/quiz/${q.id}/attempt`, {
+        await fetch(`${this.api}/quiz/${q.id}/attempt`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ user_answer: letter, was_correct: correct }),
@@ -959,7 +961,7 @@ function app() {
       const q = this.currentQ;
       if (correct) this.quizCorrect++;
       try {
-        await fetch(`/quiz/${q.id}/attempt`, {
+        await fetch(`${this.api}/quiz/${q.id}/attempt`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ user_answer: correct ? 'yes' : 'no', was_correct: correct }),
