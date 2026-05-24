@@ -83,7 +83,9 @@ def icon_512():
 # ---------------------------------------------------------------------------
 
 def get_db():
-    conn = sqlite3.connect(DB_PATH)
+    # check_same_thread=False is required because FastAPI runs sync endpoints
+    # in a thread pool — the connection may be created and used in different threads.
+    conn = sqlite3.connect(DB_PATH, check_same_thread=False)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys = ON")
     conn.execute("PRAGMA journal_mode = WAL")
