@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Second Brain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #ede8df;
+      --surface:     #ffffff;
+      --surface-2:   #f5f0e8;
+      --border:      #ddd7cc;
+      --border-2:    #c8c1b4;
+      --text:        #1c1917;
+      --text-2:      #78716c;
+      --text-3:      #a8a29e;
+      --again:       #dc2626;
+      --hard:        #ea580c;
+      --good:        #16a34a;
+      --easy:        #2563eb;
+      --again-bg:    #fef2f2;
+      --hard-bg:     #fff7ed;
+      --good-bg:     #f0fdf4;
+      --easy-bg:     #eff6ff;
+    }
+
+    html, body { height: 100%; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    [x-cloak] { display: none !important; }
+
+    /* ── Layout ─────────────────────────────────────────── */
+    .page { min-height: 100vh; display: flex; flex-direction: column; }
+
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 32px;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+      position: sticky; top: 0; z-index: 10;
+    }
+    .topbar-left { display: flex; align-items: center; gap: 10px; }
+    .topbar-logo {
+      font-size: 15px; font-weight: 600; letter-spacing: -0.3px; color: var(--text);
+    }
+    .topbar-sep { color: var(--border-2); }
+    .topbar-crumb { font-size: 13px; color: var(--text-2); }
+    .topbar-right { display: flex; gap: 10px; align-items: center; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 500;
+      border: 1px solid var(--border); background: var(--surface);
+      color: var(--text); cursor: pointer; transition: all .12s;
+      font-family: inherit; line-height: 1; white-space: nowrap;
+      text-decoration: none;
+    }
+    .btn:hover { background: var(--surface-2); border-color: var(--border-2); }
+    .btn-primary {
+      background: var(--text); color: #fff; border-color: var(--text);
+    }
+    .btn-primary:hover { background: #2d2926; }
+    .btn-ghost { border-color: transparent; background: transparent; color: var(--text-2); }
+    .btn-ghost:hover { background: var(--surface-2); color: var(--text); border-color: transparent; }
+    .btn-sm { padding: 5px 10px; font-size: 12px; }
+
+    .content { flex: 1; padding: 40px 32px; max-width: 920px; margin: 0 auto; width: 100%; }
+
+    /* ── Progress bar ────────────────────────────────────── */
+    .progress-bar-track {
+      height: 2px; background: var(--border); width: 100%;
+      position: absolute; bottom: 0; left: 0;
+    }
+    .progress-bar-fill {
+      height: 100%; background: var(--text);
+      transition: width .3s ease;
+    }
+
+    /* ── Home ────────────────────────────────────────────── */
+    .home-hero { margin-bottom: 36px; }
+    .home-hero h1 { font-size: 26px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 4px; }
+    .home-hero p { color: var(--text-2); font-size: 14px; }
+
+    .stats-row {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+      margin-bottom: 40px;
+    }
+    .stat-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px 20px;
+    }
+    .stat-card .label { font-size: 11px; text-transform: uppercase; letter-spacing: .6px; color: var(--text-3); margin-bottom: 6px; font-weight: 500; }
+    .stat-card .value { font-size: 28px; font-weight: 600; letter-spacing: -1px; }
+    .stat-card .sub { font-size: 12px; color: var(--text-2); margin-top: 2px; }
+
+    .section-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .section-title { font-size: 13px; font-weight: 600; letter-spacing: .3px; text-transform: uppercase; color: var(--text-2); }
+
+    .domain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 40px; }
+
+    .domain-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px;
+      transition: border-color .12s, box-shadow .12s;
+    }
+    .domain-card:hover { border-color: var(--border-2); box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+    .domain-card .domain-name {
+      font-size: 14px; font-weight: 600; margin-bottom: 4px;
+      text-transform: capitalize; letter-spacing: -0.1px;
+    }
+    .domain-card .domain-meta {
+      font-size: 12px; color: var(--text-2); margin-bottom: 14px;
+    }
+    .domain-card .domain-due { color: var(--text); font-weight: 500; }
+    .domain-actions { display: flex; gap: 6px; }
+
+    /* ── Session topbar ──────────────────────────────────── */
+    .session-topbar {
+      position: relative;
+      padding: 16px 32px;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .session-meta { display: flex; align-items: flex-start; justify-content: space-between; }
+    .session-breadcrumb { font-size: 11px; text-transform: uppercase; letter-spacing: .7px; color: var(--text-2); font-weight: 500; margin-bottom: 2px; }
+    .session-counter { font-size: 14px; font-weight: 500; }
+
+    /* ── Flashcard ────────────────────────────────────────── */
+    .review-area {
+      flex: 1; display: flex; flex-direction: column; align-items: center;
+      justify-content: center; padding: 40px 24px;
+    }
+
+    .card-scene { width: 100%; max-width: 620px; perspective: 1400px; cursor: pointer; margin-bottom: 28px; }
+    .card-inner {
+      position: relative; min-height: 280px;
+      transition: transform .45s cubic-bezier(.4,0,.2,1);
+      transform-style: preserve-3d;
+    }
+    .card-inner.flipped { transform: rotateY(180deg); }
+
+    .card-face {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 40px;
+      backface-visibility: hidden; -webkit-backface-visibility: hidden;
+      display: flex; flex-direction: column; gap: 16px;
+      min-height: 280px;
+    }
+    .card-back-face {
+      position: absolute; inset: 0;
+      transform: rotateY(180deg);
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 40px;
+      backface-visibility: hidden; -webkit-backface-visibility: hidden;
+      display: flex; flex-direction: column; gap: 16px;
+      overflow-y: auto;
+    }
+
+    .card-type-badge {
+      font-size: 10px; text-transform: uppercase; letter-spacing: .7px;
+      font-weight: 600; color: var(--text-3);
+    }
+    .card-question {
+      font-size: 18px; font-weight: 500; line-height: 1.5; letter-spacing: -0.2px;
+      flex: 1;
+    }
+    .card-tap-hint {
+      font-size: 12px; color: var(--text-3); text-align: center; margin-top: auto;
+      padding-top: 16px;
+    }
+    .card-answer {
+      font-size: 16px; line-height: 1.6; color: var(--text);
+    }
+    .card-divider { height: 1px; background: var(--border); margin: 4px 0; }
+    .card-explanation { font-size: 13px; color: var(--text-2); line-height: 1.5; }
+
+    /* Cloze */
+    .cloze-blank {
+      display: inline-block;
+      background: var(--border); color: transparent;
+      border-radius: 4px; padding: 0 6px; min-width: 60px;
+      user-select: none;
+    }
+    .cloze-reveal {
+      background: #fef9c3; color: var(--text);
+      border-radius: 4px; padding: 0 4px; font-weight: 500;
+    }
+
+    /* MCQ options (in card) */
+    .card-options { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+    .card-option {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 10px 14px; border-radius: 8px;
+      border: 1px solid var(--border); font-size: 14px; line-height: 1.4;
+    }
+    .card-option.correct { background: var(--good-bg); border-color: var(--good); }
+    .card-option .opt-letter {
+      font-weight: 600; font-size: 12px; color: var(--text-3);
+      min-width: 16px; padding-top: 1px;
+    }
+    .card-option.correct .opt-letter { color: var(--good); }
+
+    /* Rating buttons */
+    .rating-row {
+      display: flex; gap: 10px; justify-content: center;
+      width: 100%; max-width: 620px;
+    }
+    .rating-btn {
+      flex: 1; padding: 12px 10px; border-radius: 10px;
+      font-size: 13px; font-weight: 600; cursor: pointer;
+      border: 1.5px solid; font-family: inherit;
+      display: flex; flex-direction: column; align-items: center; gap: 3px;
+      transition: transform .1s, box-shadow .1s;
+    }
+    .rating-btn:active { transform: scale(.97); }
+    .rating-btn .rating-key { font-size: 10px; font-weight: 400; opacity: .6; }
+    .rating-again { background: var(--again-bg); border-color: var(--again); color: var(--again); }
+    .rating-hard  { background: var(--hard-bg);  border-color: var(--hard);  color: var(--hard); }
+    .rating-good  { background: var(--good-bg);  border-color: var(--good);  color: var(--good); }
+    .rating-easy  { background: var(--easy-bg);  border-color: var(--easy);  color: var(--easy); }
+    .rating-btn:hover { box-shadow: 0 2px 6px rgba(0,0,0,.08); filter: brightness(.97); }
+
+    .flip-hint { font-size: 12px; color: var(--text-3); text-align: center; margin-bottom: 16px; }
+
+    /* ── Quiz ─────────────────────────────────────────────── */
+    .quiz-area {
+      flex: 1; display: flex; flex-direction: column; align-items: center;
+      justify-content: center; padding: 40px 24px;
+    }
+    .quiz-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 36px 40px;
+      width: 100%; max-width: 620px; margin-bottom: 24px;
+    }
+    .quiz-topic { font-size: 12px; color: var(--text-2); margin-bottom: 12px; }
+    .quiz-question { font-size: 19px; font-weight: 500; line-height: 1.45; letter-spacing: -0.3px; margin-bottom: 24px; }
+
+    .quiz-options { display: flex; flex-direction: column; gap: 8px; }
+    .quiz-option {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 13px 16px; border-radius: 10px;
+      border: 1px solid var(--border); background: var(--surface);
+      cursor: pointer; transition: all .1s; font-size: 14px; line-height: 1.4;
+      font-family: inherit;
+      width: 100%; text-align: left;
+    }
+    .quiz-option:hover:not(.answered) { background: var(--surface-2); border-color: var(--border-2); }
+    .quiz-option.selected { border-color: var(--text); background: var(--surface-2); }
+    .quiz-option.correct  { background: var(--good-bg); border-color: var(--good); }
+    .quiz-option.wrong    { background: var(--again-bg); border-color: var(--again); }
+
+    .opt-badge {
+      width: 22px; height: 22px; min-width: 22px; border-radius: 50%;
+      border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 600; color: var(--text-2);
+      transition: all .1s; margin-top: 1px;
+    }
+    .quiz-option.selected .opt-badge { background: var(--text); border-color: var(--text); color: #fff; }
+    .quiz-option.correct  .opt-badge { background: var(--good); border-color: var(--good); color: #fff; }
+    .quiz-option.wrong    .opt-badge { background: var(--again); border-color: var(--again); color: #fff; }
+
+    .quiz-explanation {
+      margin-top: 16px; padding: 12px 14px;
+      background: var(--surface-2); border-radius: 8px;
+      font-size: 13px; color: var(--text-2); line-height: 1.5;
+    }
+
+    /* Open-ended quiz */
+    .reveal-area { text-align: center; }
+    .reveal-btn { padding: 11px 24px; font-size: 14px; }
+    .answer-box {
+      background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: 10px; padding: 16px 20px;
+      font-size: 14px; line-height: 1.6; color: var(--text);
+      margin-bottom: 16px; text-align: left;
+    }
+    .self-assess-row { display: flex; gap: 10px; justify-content: center; }
+
+    .quiz-footer {
+      font-size: 12px; color: var(--text-3); text-align: center;
+      width: 100%; max-width: 620px;
+    }
+
+    .next-btn-row { display: flex; justify-content: flex-end; width: 100%; max-width: 620px; margin-top: 4px; }
+
+    /* ── Results ──────────────────────────────────────────── */
+    .results-area {
+      flex: 1; display: flex; flex-direction: column; align-items: center;
+      justify-content: center; padding: 40px 24px; text-align: center;
+    }
+    .results-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 20px; padding: 48px 40px;
+      width: 100%; max-width: 480px;
+    }
+    .results-emoji { font-size: 48px; margin-bottom: 16px; }
+    .results-title { font-size: 22px; font-weight: 600; letter-spacing: -0.4px; margin-bottom: 6px; }
+    .results-sub { font-size: 14px; color: var(--text-2); margin-bottom: 32px; }
+    .results-score { font-size: 56px; font-weight: 700; letter-spacing: -3px; margin-bottom: 4px; }
+    .results-score span { font-size: 20px; font-weight: 400; letter-spacing: -0.5px; color: var(--text-2); }
+    .results-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0; }
+    .rs { background: var(--surface-2); border-radius: 10px; padding: 14px; }
+    .rs .v { font-size: 22px; font-weight: 700; }
+    .rs .l { font-size: 11px; color: var(--text-2); text-transform: uppercase; letter-spacing: .5px; font-weight: 500; margin-top: 2px; }
+    .rs.green .v { color: var(--good); }
+    .rs.red   .v { color: var(--again); }
+    .results-actions { display: flex; gap: 10px; justify-content: center; }
+
+    /* Review done */
+    .session-stat-row { display: flex; gap: 10px; justify-content: center; margin: 24px 0; }
+    .ss-pill {
+      padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 500;
+      display: flex; gap: 6px; align-items: center;
+    }
+    .ss-again { background: var(--again-bg); color: var(--again); }
+    .ss-hard  { background: var(--hard-bg);  color: var(--hard); }
+    .ss-good  { background: var(--good-bg);  color: var(--good); }
+    .ss-easy  { background: var(--easy-bg);  color: var(--easy); }
+
+    /* ── Loading ──────────────────────────────────────────── */
+    .loading-screen {
+      position: fixed; inset: 0; background: var(--bg);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .spinner {
+      width: 24px; height: 24px; border-radius: 50%;
+      border: 2px solid var(--border);
+      border-top-color: var(--text);
+      animation: spin .6s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .error-banner {
+      background: var(--again-bg); border: 1px solid var(--again);
+      border-radius: 8px; padding: 10px 14px;
+      font-size: 13px; color: var(--again); margin-bottom: 16px;
+    }
+
+    /* ── Empty state ─────────────────────────────────────── */
+    .empty {
+      text-align: center; padding: 60px 24px;
+    }
+    .empty-icon { font-size: 36px; margin-bottom: 12px; }
+    .empty h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+    .empty p { font-size: 14px; color: var(--text-2); }
+
+    @media (max-width: 720px) {
+      .topbar { padding: 14px 16px; }
+      .content { padding: 24px 16px; }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .domain-grid { grid-template-columns: 1fr; }
+      .session-topbar { padding: 12px 16px; }
+      .review-area, .quiz-area, .results-area { padding: 24px 16px; }
+      .quiz-card { padding: 24px 20px; }
+      .rating-btn { padding: 10px 6px; font-size: 12px; }
+    }
+  </style>
+</head>
+
+<body x-data="app()" x-init="init()" @keydown.window="handleKey($event)">
+
+  <!-- ── Loading ───────────────────────────── -->
+  <div class="loading-screen" x-show="view === 'loading'">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- ── HOME ──────────────────────────────── -->
+  <div class="page" x-show="view === 'home'" x-cloak>
+    <div class="topbar">
+      <div class="topbar-left">
+        <span class="topbar-logo">Second Brain</span>
+      </div>
+      <div class="topbar-right">
+        <button class="btn btn-primary" @click="startReview(null)">Review all due</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <div x-show="error" class="error-banner" x-text="error"></div>
+
+      <div class="home-hero">
+        <h1>Your knowledge, spaced.</h1>
+        <p x-text="stats ? `${stats.due_today} cards due · ${stats.new_cards} new · ${stats.reviewed_today} reviewed today` : ''"></p>
+      </div>
+
+      <!-- Stats row -->
+      <div class="stats-row" x-show="stats">
+        <div class="stat-card">
+          <div class="label">Due today</div>
+          <div class="value" x-text="stats?.due_today ?? '—'"></div>
+          <div class="sub">overdue cards</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">New cards</div>
+          <div class="value" x-text="stats?.new_cards ?? '—'"></div>
+          <div class="sub">never reviewed</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Today</div>
+          <div class="value" x-text="stats?.reviewed_today ?? '—'"></div>
+          <div class="sub">reviewed today</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Total</div>
+          <div class="value" x-text="stats?.total_reviews ?? '—'"></div>
+          <div class="sub">all-time reviews</div>
+        </div>
+      </div>
+
+      <!-- Domains -->
+      <div class="section-header">
+        <span class="section-title">Domains</span>
+      </div>
+      <div class="domain-grid">
+        <template x-for="d in domainList" :key="d.domain">
+          <div class="domain-card">
+            <div class="domain-name" x-text="d.domain.replace(/-/g,' ')"></div>
+            <div class="domain-meta">
+              <span x-text="d.total_cards"></span> cards ·
+              <span class="domain-due" x-text="d.due_cards"></span> due ·
+              <span x-text="d.question_count"></span> quiz q
+            </div>
+            <div class="domain-actions">
+              <button class="btn btn-sm" @click="startReview(d.domain)">Review</button>
+              <button class="btn btn-sm btn-primary" @click="startQuiz(d.domain)">Quiz</button>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── REVIEW ─────────────────────────────── -->
+  <div class="page" x-show="view === 'review'" x-cloak>
+    <div class="session-topbar">
+      <div class="session-meta">
+        <div>
+          <div class="session-breadcrumb">
+            REVIEW<span x-show="reviewDomain"> · <span x-text="(reviewDomain||'').toUpperCase().replace(/-/g,' ')"></span></span>
+          </div>
+          <div class="session-counter">
+            Card <span x-text="reviewIndex + 1"></span> of <span x-text="reviewCards.length"></span>
+          </div>
+        </div>
+        <button class="btn btn-ghost btn-sm" @click="goHome()">End session</button>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" :style="`width:${((reviewIndex) / reviewCards.length) * 100}%`"></div>
+      </div>
+    </div>
+
+    <div class="review-area">
+      <template x-if="reviewCards.length > 0">
+        <div style="width:100%;max-width:620px;display:flex;flex-direction:column;align-items:center;">
+
+          <!-- Card -->
+          <div class="card-scene" @click="!flipped && flip()">
+            <div class="card-inner" :class="{ flipped }">
+
+              <!-- Front -->
+              <div class="card-face">
+                <div class="card-type-badge" x-text="currentCard?.card_type"></div>
+
+                <!-- basic / mcq question -->
+                <template x-if="currentCard?.card_type !== 'cloze'">
+                  <div class="card-question" x-text="currentCard?.question"></div>
+                </template>
+
+                <!-- cloze front: blanked text -->
+                <template x-if="currentCard?.card_type === 'cloze'">
+                  <div class="card-question" x-html="clozeFront(currentCard?.cloze_text)"></div>
+                </template>
+
+                <!-- mcq: show options (non-interactive on front) -->
+                <template x-if="currentCard?.card_type === 'mcq'">
+                  <div class="card-options">
+                    <template x-for="[k,v] in Object.entries(currentCard?.options||{})" :key="k">
+                      <div class="card-option">
+                        <span class="opt-letter" x-text="k"></span>
+                        <span x-text="v"></span>
+                      </div>
+                    </template>
+                  </div>
+                </template>
+
+                <div class="card-tap-hint">Click to reveal answer</div>
+              </div>
+
+              <!-- Back -->
+              <div class="card-back-face">
+                <div class="card-type-badge" x-text="currentCard?.card_type"></div>
+
+                <!-- basic back: answer -->
+                <template x-if="currentCard?.card_type === 'basic'">
+                  <>
+                    <div class="card-question" style="color:var(--text-2);font-size:15px" x-text="currentCard?.question"></div>
+                    <div class="card-divider"></div>
+                    <div class="card-answer" x-text="currentCard?.answer"></div>
+                  </>
+                </template>
+
+                <!-- cloze back: revealed text -->
+                <template x-if="currentCard?.card_type === 'cloze'">
+                  <>
+                    <div class="card-answer" x-html="clozeBack(currentCard?.cloze_text)"></div>
+                    <template x-if="currentCard?.hint">
+                      <div class="card-explanation">Hint: <span x-text="currentCard?.hint"></span></div>
+                    </template>
+                  </>
+                </template>
+
+                <!-- mcq back: highlight correct + explanation -->
+                <template x-if="currentCard?.card_type === 'mcq'">
+                  <>
+                    <div class="card-question" style="color:var(--text-2);font-size:15px" x-text="currentCard?.question"></div>
+                    <div class="card-options">
+                      <template x-for="[k,v] in Object.entries(currentCard?.options||{})" :key="k">
+                        <div class="card-option" :class="{ correct: k === currentCard?.answer }">
+                          <span class="opt-letter" x-text="k"></span>
+                          <span x-text="v"></span>
+                        </div>
+                      </template>
+                    </div>
+                    <template x-if="currentCard?.explanation">
+                      <div class="card-explanation" x-text="currentCard?.explanation"></div>
+                    </template>
+                  </>
+                </template>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rating (only after flip) -->
+          <template x-if="flipped">
+            <div style="width:100%;">
+              <div class="flip-hint">How well did you remember?</div>
+              <div class="rating-row">
+                <button class="rating-btn rating-again" @click="rate('again')">
+                  Again <span class="rating-key">1</span>
+                </button>
+                <button class="rating-btn rating-hard" @click="rate('hard')">
+                  Hard <span class="rating-key">2</span>
+                </button>
+                <button class="rating-btn rating-good" @click="rate('good')">
+                  Good <span class="rating-key">3</span>
+                </button>
+                <button class="rating-btn rating-easy" @click="rate('easy')">
+                  Easy <span class="rating-key">4</span>
+                </button>
+              </div>
+            </div>
+          </template>
+
+          <template x-if="!flipped">
+            <div class="flip-hint" style="margin-top:8px">Press <kbd>Space</kbd> to flip</div>
+          </template>
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <!-- ── REVIEW DONE ────────────────────────── -->
+  <div class="page" x-show="view === 'review-done'" x-cloak>
+    <div class="topbar">
+      <span class="topbar-logo">Second Brain</span>
+    </div>
+    <div class="results-area">
+      <div class="results-card">
+        <div class="results-emoji">🎯</div>
+        <div class="results-title">Session complete</div>
+        <div class="results-sub">
+          You reviewed <strong x-text="reviewCards.length"></strong> cards
+        </div>
+        <div class="session-stat-row">
+          <span class="ss-pill ss-again"><span x-text="sessionStats.again"></span> Again</span>
+          <span class="ss-pill ss-hard"><span  x-text="sessionStats.hard"></span> Hard</span>
+          <span class="ss-pill ss-good"><span  x-text="sessionStats.good"></span> Good</span>
+          <span class="ss-pill ss-easy"><span  x-text="sessionStats.easy"></span> Easy</span>
+        </div>
+        <div class="results-actions">
+          <button class="btn" @click="startReview(reviewDomain)">Review again</button>
+          <button class="btn btn-primary" @click="goHome()">Back to home</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── QUIZ ───────────────────────────────── -->
+  <div class="page" x-show="view === 'quiz'" x-cloak>
+    <div class="session-topbar">
+      <div class="session-meta">
+        <div>
+          <div class="session-breadcrumb">
+            QUIZ · <span x-text="(quizDomain||'').toUpperCase().replace(/-/g,' ')"></span>
+          </div>
+          <div class="session-counter">
+            Question <span x-text="quizIndex + 1"></span> of <span x-text="quizQuestions.length"></span>
+          </div>
+        </div>
+        <button class="btn btn-ghost btn-sm" @click="goHome()">End quiz</button>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" :style="`width:${(quizIndex / quizQuestions.length) * 100}%`"></div>
+      </div>
+    </div>
+
+    <div class="quiz-area">
+      <template x-if="quizQuestions.length > 0">
+        <div style="width:100%;max-width:620px;display:flex;flex-direction:column;align-items:stretch;">
+
+          <div class="quiz-card">
+            <div class="quiz-topic">Topic: <span x-text="currentQ?.topic"></span></div>
+            <div class="quiz-question" x-text="currentQ?.question"></div>
+
+            <!-- MCQ options -->
+            <template x-if="currentQ?.item_type === 'mcq'">
+              <div class="quiz-options">
+                <template x-for="[k,v] in Object.entries(currentQ?.options||{})" :key="k">
+                  <button
+                    class="quiz-option"
+                    :class="{
+                      answered: quizAnswered,
+                      selected:  !quizAnswered && selectedAnswer === k,
+                      correct:   quizAnswered && k === currentQ.answer,
+                      wrong:     quizAnswered && selectedAnswer === k && k !== currentQ.answer
+                    }"
+                    @click="answerMCQ(k)"
+                    :disabled="quizAnswered"
+                  >
+                    <span class="opt-badge" x-text="k"></span>
+                    <span x-text="v"></span>
+                  </button>
+                </template>
+
+                <template x-if="quizAnswered && currentQ?.explanation">
+                  <div class="quiz-explanation" x-text="currentQ.explanation"></div>
+                </template>
+              </div>
+            </template>
+
+            <!-- Open-ended (short_answer / scenario) -->
+            <template x-if="currentQ?.item_type !== 'mcq'">
+              <div>
+                <template x-if="!quizAnswered">
+                  <div class="reveal-area">
+                    <button class="btn reveal-btn" @click="revealAnswer()">Reveal answer</button>
+                  </div>
+                </template>
+                <template x-if="quizAnswered">
+                  <div>
+                    <div class="answer-box" x-text="currentQ?.answer"></div>
+                    <div class="self-assess-row">
+                      <button class="btn" style="color:var(--again);border-color:var(--again);background:var(--again-bg)" @click="selfAssess(false)">
+                        Missed it
+                      </button>
+                      <button class="btn" style="color:var(--good);border-color:var(--good);background:var(--good-bg)" @click="selfAssess(true)">
+                        Got it ✓
+                      </button>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </template>
+          </div>
+
+          <!-- Next button (MCQ: show after answer; open-ended: shown after self-assess) -->
+          <template x-if="quizAnswered && (currentQ?.item_type === 'mcq')">
+            <div class="next-btn-row">
+              <button class="btn btn-primary" @click="nextQuestion()">
+                <span x-text="quizIndex < quizQuestions.length - 1 ? 'Next →' : 'See results'"></span>
+              </button>
+            </div>
+          </template>
+
+          <template x-if="!quizAnswered && currentQ?.item_type === 'mcq'">
+            <div class="quiz-footer">Press A / B / C / D to answer</div>
+          </template>
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <!-- ── QUIZ RESULTS ──────────────────────── -->
+  <div class="page" x-show="view === 'quiz-results'" x-cloak>
+    <div class="topbar">
+      <span class="topbar-logo">Second Brain</span>
+    </div>
+    <div class="results-area">
+      <div class="results-card">
+        <div class="results-emoji" x-text="quizEmoji"></div>
+        <div class="results-title" x-text="quizResultTitle"></div>
+        <div class="results-sub">
+          <span x-text="quizDomain?.replace(/-/g,' ')"></span> ·
+          <span x-text="quizQuestions.length"></span> questions
+        </div>
+        <div class="results-score">
+          <span x-text="quizCorrect"></span>
+          <span>/ <span x-text="quizQuestions.length"></span></span>
+        </div>
+        <div class="results-stats">
+          <div class="rs green">
+            <div class="v" x-text="quizCorrect"></div>
+            <div class="l">Correct</div>
+          </div>
+          <div class="rs red">
+            <div class="v" x-text="quizQuestions.length - quizCorrect"></div>
+            <div class="l">Missed</div>
+          </div>
+          <div class="rs">
+            <div class="v" x-text="Math.round((quizCorrect/quizQuestions.length)*100) + '%'"></div>
+            <div class="l">Accuracy</div>
+          </div>
+        </div>
+        <div class="results-actions">
+          <button class="btn" @click="startQuiz(quizDomain)">Retry quiz</button>
+          <button class="btn btn-primary" @click="goHome()">Back to home</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+function app() {
+  return {
+    view: 'loading',
+    error: null,
+    stats: null,
+    domainList: [],
+
+    // Review
+    reviewDomain: null,
+    reviewCards: [],
+    reviewIndex: 0,
+    flipped: false,
+    sessionStats: { again: 0, hard: 0, good: 0, easy: 0 },
+
+    // Quiz
+    quizDomain: null,
+    quizQuestions: [],
+    quizIndex: 0,
+    selectedAnswer: null,
+    quizAnswered: false,
+    quizCorrect: 0,
+    openAnswerCorrect: null,
+
+    // ── Computed ─────────────────────────
+    get currentCard() { return this.reviewCards[this.reviewIndex] || null; },
+    get currentQ()    { return this.quizQuestions[this.quizIndex] || null; },
+    get quizEmoji() {
+      const pct = this.quizCorrect / (this.quizQuestions.length || 1);
+      return pct >= .9 ? '🏆' : pct >= .7 ? '🎯' : pct >= .5 ? '📚' : '💪';
+    },
+    get quizResultTitle() {
+      const pct = this.quizCorrect / (this.quizQuestions.length || 1);
+      return pct >= .9 ? 'Excellent!' : pct >= .7 ? 'Great job!' : pct >= .5 ? 'Good effort' : 'Keep studying';
+    },
+
+    // ── Init ─────────────────────────────
+    async init() {
+      await this.loadHome();
+    },
+
+    async loadHome() {
+      this.error = null;
+      try {
+        const [statsRes, quizRes, cardStatsRes] = await Promise.all([
+          fetch('/stats'),
+          fetch('/quiz/domains'),
+          fetch('/stats'),
+        ]);
+        this.stats = await statsRes.json();
+        const quizDomains = await quizRes.json();
+
+        // Merge card stats + quiz question counts per domain
+        const domainMap = {};
+        for (const d of (this.stats.domains || [])) {
+          domainMap[d.domain] = { ...d, question_count: 0 };
+        }
+        for (const q of quizDomains) {
+          if (domainMap[q.domain]) domainMap[q.domain].question_count = q.question_count;
+          else domainMap[q.domain] = { domain: q.domain, total_cards: 0, new_cards: 0, due_cards: 0, question_count: q.question_count };
+        }
+        this.domainList = Object.values(domainMap).sort((a, b) => b.total_cards - a.total_cards);
+        this.view = 'home';
+      } catch(e) {
+        this.error = 'Could not connect to the API. ' + e.message;
+        this.view = 'home';
+      }
+    },
+
+    // ── Review ────────────────────────────
+    async startReview(domain) {
+      this.error = null;
+      this.view = 'loading';
+      try {
+        const url = domain
+          ? `/cards/due?limit=20&new_limit=10&domain=${encodeURIComponent(domain)}`
+          : '/cards/due?limit=20&new_limit=10';
+        const data = await fetch(url).then(r => r.json());
+
+        if (!data.cards || data.cards.length === 0) {
+          alert('No cards due for review right now. Check back later or try another domain.');
+          this.view = 'home';
+          return;
+        }
+        this.reviewDomain = domain;
+        this.reviewCards = data.cards;
+        this.reviewIndex = 0;
+        this.flipped = false;
+        this.sessionStats = { again: 0, hard: 0, good: 0, easy: 0 };
+        this.view = 'review';
+      } catch(e) {
+        this.error = 'Failed to load cards: ' + e.message;
+        this.view = 'home';
+      }
+    },
+
+    flip() {
+      this.flipped = true;
+    },
+
+    async rate(rating) {
+      const card = this.reviewCards[this.reviewIndex];
+      this.sessionStats[rating]++;
+      try {
+        await fetch(`/cards/${card.id}/review`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ rating }),
+        });
+      } catch(e) { /* non-fatal, continue */ }
+
+      if (this.reviewIndex < this.reviewCards.length - 1) {
+        this.reviewIndex++;
+        this.flipped = false;
+      } else {
+        this.view = 'review-done';
+      }
+    },
+
+    // ── Quiz ──────────────────────────────
+    async startQuiz(domain) {
+      this.error = null;
+      this.view = 'loading';
+      try {
+        const data = await fetch(`/quiz/${encodeURIComponent(domain)}?limit=10`).then(r => r.json());
+        this.quizDomain = domain;
+        this.quizQuestions = data.questions;
+        this.quizIndex = 0;
+        this.selectedAnswer = null;
+        this.quizAnswered = false;
+        this.quizCorrect = 0;
+        this.view = 'quiz';
+      } catch(e) {
+        this.error = 'Failed to load quiz: ' + e.message;
+        this.view = 'home';
+      }
+    },
+
+    async answerMCQ(letter) {
+      if (this.quizAnswered) return;
+      this.selectedAnswer = letter;
+      this.quizAnswered = true;
+      const q = this.currentQ;
+      const correct = letter.toUpperCase() === (q.answer || '').toUpperCase();
+      if (correct) this.quizCorrect++;
+      try {
+        await fetch(`/quiz/${q.id}/attempt`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ user_answer: letter, was_correct: correct }),
+        });
+      } catch(e) { /* non-fatal */ }
+    },
+
+    revealAnswer() {
+      this.quizAnswered = true;
+    },
+
+    async selfAssess(correct) {
+      const q = this.currentQ;
+      if (correct) this.quizCorrect++;
+      try {
+        await fetch(`/quiz/${q.id}/attempt`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ user_answer: correct ? 'yes' : 'no', was_correct: correct }),
+        });
+      } catch(e) { /* non-fatal */ }
+      this.nextQuestion();
+    },
+
+    nextQuestion() {
+      if (this.quizIndex < this.quizQuestions.length - 1) {
+        this.quizIndex++;
+        this.selectedAnswer = null;
+        this.quizAnswered = false;
+      } else {
+        this.view = 'quiz-results';
+      }
+    },
+
+    goHome() {
+      this.loadHome();
+    },
+
+    // ── Keyboard ──────────────────────────
+    handleKey(e) {
+      const k = e.key;
+
+      if (this.view === 'review') {
+        if ((k === ' ' || k === 'Enter') && !this.flipped) {
+          e.preventDefault(); this.flip();
+        } else if (this.flipped) {
+          if (k === '1') this.rate('again');
+          else if (k === '2') this.rate('hard');
+          else if (k === '3') this.rate('good');
+          else if (k === '4') this.rate('easy');
+        }
+      }
+
+      if (this.view === 'quiz' && this.currentQ?.item_type === 'mcq') {
+        const upper = k.toUpperCase();
+        if (['A','B','C','D'].includes(upper) && !this.quizAnswered) {
+          this.answerMCQ(upper);
+        } else if ((k === ' ' || k === 'Enter') && this.quizAnswered) {
+          e.preventDefault(); this.nextQuestion();
+        }
+      }
+    },
+
+    // ── Cloze helpers ─────────────────────
+    clozeFront(text) {
+      if (!text) return '';
+      return text.replace(/\{\{(.+?)\}\}/g,
+        (_, w) => `<span class="cloze-blank">${'&nbsp;'.repeat(Math.max(6, w.length))}</span>`
+      );
+    },
+    clozeBack(text) {
+      if (!text) return '';
+      return text.replace(/\{\{(.+?)\}\}/g,
+        (_, w) => `<span class="cloze-reveal">${w}</span>`
+      );
+    },
+  };
+}
+</script>
+</body>
+</html>

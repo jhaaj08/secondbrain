@@ -24,6 +24,8 @@ from typing import Optional
 
 from fastapi import Depends, FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from app.sm2 import sm2_update
@@ -53,6 +55,12 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+STATIC_DIR = Path(__file__).parent.parent / "static"
+
+@app.get("/", include_in_schema=False)
+def index():
+    return FileResponse(str(STATIC_DIR / "index.html"))
 
 # ---------------------------------------------------------------------------
 # DB dependency
