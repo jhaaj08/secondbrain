@@ -15,12 +15,13 @@ Usage:
 from __future__ import annotations
 
 import json
+import os
 import sqlite3
 import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent
-DB_PATH = REPO_ROOT / "second_brain.db"
+DB_PATH = Path(os.environ.get("DATABASE_PATH", str(REPO_ROOT / "second_brain.db")))
 FLASHCARDS_DIR = REPO_ROOT / "_flashcards"
 QUIZZES_DIR = REPO_ROOT / "_quizzes"
 
