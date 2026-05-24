@@ -326,3 +326,120 @@ def record_attempt(
     )
     db.commit()
     return {"recorded": True, "item_id": item_id, "was_correct": body.was_correct}
+
+# ---------------------------------------------------------------------------
+# Admin — sync
+# ---------------------------------------------------------------------------
+
+class SyncPayload(BaseModel):
+    flashcards: dict  # domain → list of note entries (from _flashcards/*.json)
+    quizzes: dict     # domain → quiz object (from _quizzes/*.json)
+
+
+@app.post("/admin/sync", tags=["admin"])
+def sync_data(payload: SyncPayload, db: sqlite3.Connection = Depends(get_db)):
+    """
+    Additive-only upsert of notes, cards, and quiz items.
+
+    - New notes  → inserted with all their cards (status='new', no due_date)
+    - Existing notes → skipped entirely so SM-2 review state is never lost
+    - Quiz items → inserted only if (domain, question) pair is not already present
+    """
+    notes_inserted    = 0
+    notes_skipped     = 0
+    cards_inserted    = 0
+    quiz_items_inserted = 0
+    quiz_items_skipped  = 0
+
+    # ── Flashcards ──────────────────────────────────────────────────────
+    for _domain, entries in payload.flashcards.items():
+        for entry in entries:
+            note_id = entry.get("note_id", "")
+            if not note_id:
+                continue
+
+            existing_note = db.execute(
+                "SELECT id FROM notes WHERE id = ?", (note_id,)
+            ).fetchone()
+
+            if existing_note:
+                notes_skipped += 1
+                continue
+
+            # Insert note
+            tags = entry.get("tags", [])
+            db.execute(
+                "INSERT INTO notes (id, title, domain, tags, source_path, updated) VALUES (?, ?, ?, ?, ?, ?)",
+                (
+                    note_id,
+                    entry.get("title", ""),
+                    entry.get("domain", "general"),
+                    json.dumps(tags),
+                    entry.get("source_note"),
+                    entry.get("updated", ""),
+                ),
+            )
+            notes_inserted += 1
+
+            # Insert all cards for this new note
+            for card in entry.get("cards", []):
+                ctype = card.get("type", "basic")
+                db.execute(
+                    """
+                    INSERT INTO cards
+                        (note_id, card_type, question, answer, cloze_text, hint, options, explanation)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                    """,
+                    (
+                        note_id, ctype,
+                        card.get("question"),
+                        card.get("answer"),
+                        card.get("text"),
+                        card.get("hint"),
+                        json.dumps(card["options"]) if "options" in card else None,
+                        card.get("explanation"),
+                    ),
+                )
+                cards_inserted += 1
+
+    # ── Quiz items ───────────────────────────────────────────────────────
+    for domain, quiz in payload.quizzes.items():
+        for q in quiz.get("questions", []):
+            question_text = q.get("question") or q.get("prompt", "")
+            if not question_text:
+                continue
+
+            existing = db.execute(
+                "SELECT id FROM quiz_items WHERE domain = ? AND question = ?",
+                (domain, question_text),
+            ).fetchone()
+
+            if existing:
+                quiz_items_skipped += 1
+                continue
+
+            db.execute(
+                """
+                INSERT INTO quiz_items (domain, topic, item_type, question, answer, options, explanation)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    domain,
+                    q.get("topic", ""),
+                    q.get("type", "mcq"),
+                    question_text,
+                    q.get("answer", ""),
+                    json.dumps(q["options"]) if "options" in q else None,
+                    q.get("explanation"),
+                ),
+            )
+            quiz_items_inserted += 1
+
+    db.commit()
+    return {
+        "notes_inserted":     notes_inserted,
+        "notes_skipped":      notes_skipped,
+        "cards_inserted":     cards_inserted,
+        "quiz_items_inserted": quiz_items_inserted,
+        "quiz_items_skipped":  quiz_items_skipped,
+    }
