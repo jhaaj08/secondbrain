@@ -62,6 +62,22 @@ STATIC_DIR = Path(__file__).parent.parent / "static"
 def index():
     return FileResponse(str(STATIC_DIR / "index.html"))
 
+@app.get("/manifest.json", include_in_schema=False)
+def manifest():
+    return FileResponse(str(STATIC_DIR / "manifest.json"), media_type="application/manifest+json")
+
+@app.get("/sw.js", include_in_schema=False)
+def service_worker():
+    return FileResponse(str(STATIC_DIR / "sw.js"), media_type="application/javascript")
+
+@app.get("/icon-192.png", include_in_schema=False)
+def icon_192():
+    return FileResponse(str(STATIC_DIR / "icon-192.png"), media_type="image/png")
+
+@app.get("/icon-512.png", include_in_schema=False)
+def icon_512():
+    return FileResponse(str(STATIC_DIR / "icon-512.png"), media_type="image/png")
+
 # ---------------------------------------------------------------------------
 # DB dependency
 # ---------------------------------------------------------------------------
