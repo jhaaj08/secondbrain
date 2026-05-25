@@ -158,21 +158,30 @@
 
     .card-scene { width: 100%; max-width: 620px; perspective: 1400px; cursor: pointer; margin-bottom: 28px; }
     .card-inner {
-      position: relative; height: 280px;
+      position: relative;
       transition: transform .45s cubic-bezier(.4,0,.2,1);
       transform-style: preserve-3d;
     }
     .card-inner.flipped { transform: rotateY(180deg); }
 
-    .card-face, .card-back-face {
+    /* card-face stays in normal flow so card-inner grows with content */
+    .card-face {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 40px;
+      backface-visibility: hidden; -webkit-backface-visibility: hidden;
+      display: flex; flex-direction: column; gap: 16px;
+      min-height: 280px;
+    }
+    /* card-back-face overlays card-face exactly */
+    .card-back-face {
       position: absolute; inset: 0;
+      transform: rotateY(180deg);
       background: var(--surface); border: 1px solid var(--border);
       border-radius: 16px; padding: 40px;
       backface-visibility: hidden; -webkit-backface-visibility: hidden;
       display: flex; flex-direction: column; gap: 16px;
       overflow-y: auto;
     }
-    .card-back-face { transform: rotateY(180deg); }
 
     .card-type-badge {
       font-size: 10px; text-transform: uppercase; letter-spacing: .7px;
@@ -404,9 +413,10 @@
       }
 
       /* Cards fill more of the screen */
-      .card-face, .card-back-face { padding: 28px 24px; }
-      .card-question { font-size: 17px; }
-      .card-inner { min-height: 240px; }
+      .card-face, .card-back-face { padding: 20px 16px; gap: 10px; }
+      .card-face { min-height: 0; }
+      .card-question { font-size: 16px; }
+      .card-answer { font-size: 15px; }
 
       .results-card { padding: 36px 24px; }
       .results-score { font-size: 48px; }
