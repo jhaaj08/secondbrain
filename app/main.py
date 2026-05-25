@@ -139,7 +139,12 @@ def get_stats(db: sqlite3.Connection = Depends(get_db)):
     total          = db.execute("SELECT COUNT(*) FROM cards WHERE status != 'archived'").fetchone()[0]
     new_cards      = db.execute("SELECT COUNT(*) FROM cards WHERE status = 'new'").fetchone()[0]
     due_today      = db.execute(
-        "SELECT COUNT(*) FROM cards WHERE status != 'archived' AND due_date <= ? AND due_date IS NOT NULL",
+        """SELECT COUNT(*) FROM cards
+           WHERE status != 'archived'
+             AND (
+               (due_date IS NOT NULL AND due_date <= ?)
+               OR status = 'new'
+             )""",
         (today,),
     ).fetchone()[0]
     reviewed_today = db.execute(
@@ -153,7 +158,8 @@ def get_stats(db: sqlite3.Connection = Depends(get_db)):
             n.domain,
             COUNT(c.id)                                                       AS total_cards,
             SUM(CASE WHEN c.status = 'new' THEN 1 ELSE 0 END)                AS new_cards,
-            SUM(CASE WHEN c.due_date <= ? AND c.status != 'archived'
+            SUM(CASE WHEN c.status != 'archived'
+                          AND ((c.due_date IS NOT NULL AND c.due_date <= ?) OR c.status = 'new')
                      THEN 1 ELSE 0 END)                                       AS due_cards,
             SUM(CASE WHEN c.status = 'reviewing' THEN 1 ELSE 0 END)          AS reviewing
         FROM cards c
