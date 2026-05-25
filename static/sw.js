@@ -1,4 +1,4 @@
-const CACHE = 'second-brain-v1';
+const CACHE = 'second-brain-v2';
 
 // Cache only the app shell on install
 self.addEventListener('install', e => {

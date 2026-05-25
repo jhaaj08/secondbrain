@@ -158,28 +158,21 @@
 
     .card-scene { width: 100%; max-width: 620px; perspective: 1400px; cursor: pointer; margin-bottom: 28px; }
     .card-inner {
-      position: relative; min-height: 280px;
+      position: relative; height: 280px;
       transition: transform .45s cubic-bezier(.4,0,.2,1);
       transform-style: preserve-3d;
     }
     .card-inner.flipped { transform: rotateY(180deg); }
 
-    .card-face {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 16px; padding: 40px;
-      backface-visibility: hidden; -webkit-backface-visibility: hidden;
-      display: flex; flex-direction: column; gap: 16px;
-      min-height: 280px;
-    }
-    .card-back-face {
+    .card-face, .card-back-face {
       position: absolute; inset: 0;
-      transform: rotateY(180deg);
       background: var(--surface); border: 1px solid var(--border);
       border-radius: 16px; padding: 40px;
       backface-visibility: hidden; -webkit-backface-visibility: hidden;
       display: flex; flex-direction: column; gap: 16px;
       overflow-y: auto;
     }
+    .card-back-face { transform: rotateY(180deg); }
 
     .card-type-badge {
       font-size: 10px; text-transform: uppercase; letter-spacing: .7px;
@@ -559,42 +552,38 @@
               <div class="card-back-face">
                 <div class="card-type-badge" x-text="currentCard?.card_type"></div>
 
-                <!-- basic back: answer -->
-                <template x-if="currentCard?.card_type === 'basic'">
-                  <div style="display:contents">
-                    <div class="card-question" style="color:var(--text-2);font-size:15px" x-text="currentCard?.question"></div>
-                    <div class="card-divider"></div>
-                    <div class="card-answer" x-text="currentCard?.answer"></div>
-                  </div>
-                </template>
+                <!-- question context (basic + mcq) -->
+                <div class="card-question" style="color:var(--text-2);font-size:15px"
+                     x-show="currentCard?.card_type === 'basic' || currentCard?.card_type === 'mcq'"
+                     x-text="currentCard?.question"></div>
+                <div class="card-divider" x-show="currentCard?.card_type === 'basic'"></div>
 
-                <!-- cloze back: revealed text -->
-                <template x-if="currentCard?.card_type === 'cloze'">
-                  <div style="display:contents">
-                    <div class="card-answer" x-html="clozeBack(currentCard?.cloze_text)"></div>
-                    <template x-if="currentCard?.hint">
-                      <div class="card-explanation">Hint: <span x-text="currentCard?.hint"></span></div>
-                    </template>
-                  </div>
-                </template>
+                <!-- basic: answer -->
+                <div class="card-answer"
+                     x-show="currentCard?.card_type === 'basic'"
+                     x-text="currentCard?.answer"></div>
 
-                <!-- mcq back: highlight correct + explanation -->
-                <template x-if="currentCard?.card_type === 'mcq'">
-                  <div style="display:contents">
-                    <div class="card-question" style="color:var(--text-2);font-size:15px" x-text="currentCard?.question"></div>
-                    <div class="card-options">
-                      <template x-for="[k,v] in Object.entries(currentCard?.options||{})" :key="k">
-                        <div class="card-option" :class="{ correct: k === currentCard?.answer }">
-                          <span class="opt-letter" x-text="k"></span>
-                          <span x-text="v"></span>
-                        </div>
-                      </template>
+                <!-- cloze: revealed text -->
+                <div class="card-answer"
+                     x-show="currentCard?.card_type === 'cloze'"
+                     x-html="clozeBack(currentCard?.cloze_text)"></div>
+                <div class="card-explanation"
+                     x-show="currentCard?.card_type === 'cloze' && currentCard?.hint">
+                  Hint: <span x-text="currentCard?.hint"></span>
+                </div>
+
+                <!-- mcq: options with correct highlighted + explanation -->
+                <div class="card-options" x-show="currentCard?.card_type === 'mcq'">
+                  <template x-for="[k,v] in Object.entries(currentCard?.options||{})" :key="k">
+                    <div class="card-option" :class="{ correct: k === currentCard?.answer }">
+                      <span class="opt-letter" x-text="k"></span>
+                      <span x-text="v"></span>
                     </div>
-                    <template x-if="currentCard?.explanation">
-                      <div class="card-explanation" x-text="currentCard?.explanation"></div>
-                    </template>
-                  </div>
-                </template>
+                  </template>
+                </div>
+                <div class="card-explanation"
+                     x-show="currentCard?.card_type === 'mcq' && currentCard?.explanation"
+                     x-text="currentCard?.explanation"></div>
               </div>
             </div>
           </div>
