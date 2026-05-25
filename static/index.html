@@ -873,8 +873,8 @@ function app() {
       this.view = 'loading';
       try {
         const url = domain
-          ? `${this.api}/cards/due?limit=20&new_limit=10&domain=${encodeURIComponent(domain)}`
-          : `${this.api}/cards/due?limit=20&new_limit=10`;
+          ? `${this.api}/cards/due?due_limit=10&new_limit=10&domain=${encodeURIComponent(domain)}`
+          : `${this.api}/cards/due?due_limit=10&new_limit=10`;
         const data = await fetch(url).then(r => r.json());
 
         if (!data.cards || data.cards.length === 0) {

@@ -142,11 +142,11 @@ def get_stats(db: sqlite3.Connection = Depends(get_db)):
         "SELECT COUNT(*) FROM cards WHERE status != 'archived' AND due_date IS NOT NULL AND due_date <= ?",
         (today,),
     ).fetchone()[0]
-    due_today      = min(overdue_count, 10) + min(new_cards, 10)
     reviewed_today = db.execute(
         "SELECT COUNT(*) FROM reviews WHERE DATE(reviewed_at) = ?", (today,)
     ).fetchone()[0]
     total_reviews  = db.execute("SELECT COUNT(*) FROM reviews").fetchone()[0]
+    due_today      = max(0, min(overdue_count, 10) + min(new_cards, 10) - reviewed_today)
 
     domains = db.execute(
         """
