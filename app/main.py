@@ -138,15 +138,11 @@ def get_stats(db: sqlite3.Connection = Depends(get_db)):
 
     total          = db.execute("SELECT COUNT(*) FROM cards WHERE status != 'archived'").fetchone()[0]
     new_cards      = db.execute("SELECT COUNT(*) FROM cards WHERE status = 'new'").fetchone()[0]
-    due_today      = db.execute(
-        """SELECT COUNT(*) FROM cards
-           WHERE status != 'archived'
-             AND (
-               (due_date IS NOT NULL AND due_date <= ?)
-               OR status = 'new'
-             )""",
+    overdue_count  = db.execute(
+        "SELECT COUNT(*) FROM cards WHERE status != 'archived' AND due_date IS NOT NULL AND due_date <= ?",
         (today,),
     ).fetchone()[0]
+    due_today      = min(overdue_count, 10) + min(new_cards, 10)
     reviewed_today = db.execute(
         "SELECT COUNT(*) FROM reviews WHERE DATE(reviewed_at) = ?", (today,)
     ).fetchone()[0]
@@ -158,8 +154,7 @@ def get_stats(db: sqlite3.Connection = Depends(get_db)):
             n.domain,
             COUNT(c.id)                                                       AS total_cards,
             SUM(CASE WHEN c.status = 'new' THEN 1 ELSE 0 END)                AS new_cards,
-            SUM(CASE WHEN c.status != 'archived'
-                          AND ((c.due_date IS NOT NULL AND c.due_date <= ?) OR c.status = 'new')
+            SUM(CASE WHEN c.status != 'archived' AND c.due_date IS NOT NULL AND c.due_date <= ?
                      THEN 1 ELSE 0 END)                                       AS due_cards,
             SUM(CASE WHEN c.status = 'reviewing' THEN 1 ELSE 0 END)          AS reviewing
         FROM cards c
@@ -173,6 +168,7 @@ def get_stats(db: sqlite3.Connection = Depends(get_db)):
     return {
         "total_cards":     total,
         "new_cards":       new_cards,
+        "overdue_count":   overdue_count,
         "due_today":       due_today,
         "reviewed_today":  reviewed_today,
         "total_reviews":   total_reviews,
@@ -185,20 +181,20 @@ def get_stats(db: sqlite3.Connection = Depends(get_db)):
 
 @app.get("/cards/due", tags=["cards"])
 def get_due_cards(
-    limit:     int = Query(20, ge=1, le=100),
+    due_limit: int = Query(10, ge=0, le=50),
     new_limit: int = Query(10, ge=0, le=50),
     domain:    Optional[str] = Query(None),
     db: sqlite3.Connection = Depends(get_db),
 ):
     """
-    Returns cards due for review today (overdue first), then fills remaining
-    slots with new (never-seen) cards up to `new_limit`.
+    Returns up to `due_limit` overdue cards + up to `new_limit` new cards.
+    Default daily session: 10 due + 10 new = 20 cards.
     Optionally filter by `domain`.
     """
     today = date.today().isoformat()
     domain_filter = "AND n.domain = ?" if domain else ""
-    params_base   = (today, limit) if not domain else (today, domain, limit)
-    params_new    = (new_limit,)   if not domain else (domain, new_limit)
+    params_due = (today, domain, due_limit) if domain else (today, due_limit)
+    params_new = (domain, new_limit)        if domain else (new_limit,)
 
     due = db.execute(
         f"""
@@ -211,21 +207,19 @@ def get_due_cards(
         ORDER BY c.due_date ASC
         LIMIT ?
         """,
-        params_base,
+        params_due,
     ).fetchall()
 
-    new_cards = []
-    if len(due) < limit:
-        new_cards = db.execute(
-            f"""
-            SELECT c.*, n.domain, n.title
-            FROM cards c JOIN notes n ON c.note_id = n.id
-            WHERE c.status = 'new' AND c.due_date IS NULL
-              {domain_filter}
-            LIMIT ?
-            """,
-            params_new,
-        ).fetchall()
+    new_cards = db.execute(
+        f"""
+        SELECT c.*, n.domain, n.title
+        FROM cards c JOIN notes n ON c.note_id = n.id
+        WHERE c.status = 'new' AND c.due_date IS NULL
+          {domain_filter}
+        LIMIT ?
+        """,
+        params_new,
+    ).fetchall()
 
     cards = [deserialize_row(r) for r in due] + [deserialize_row(r) for r in new_cards]
     return {

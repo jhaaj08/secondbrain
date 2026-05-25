@@ -442,15 +442,15 @@
 
       <div class="home-hero">
         <h1>Your knowledge, spaced.</h1>
-        <p x-text="stats ? `${stats.due_today} cards due · ${stats.new_cards} new · ${stats.reviewed_today} reviewed today` : ''"></p>
+        <p x-text="stats ? `${stats.due_today} in today's queue · ${stats.reviewed_today} reviewed today` : ''"></p>
       </div>
 
       <!-- Stats row -->
       <div class="stats-row" x-show="stats">
         <div class="stat-card">
-          <div class="label">Due today</div>
+          <div class="label">Today's queue</div>
           <div class="value" x-text="stats?.due_today ?? '—'"></div>
-          <div class="sub">overdue cards</div>
+          <div class="sub" x-text="stats ? `${stats.overdue_count} overdue · ${Math.min(stats.new_cards, 10)} new` : ''"></div>
         </div>
         <div class="stat-card">
           <div class="label">New cards</div>
